@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.gradient-text {
+  -webkit-text-fill-color: #0000;
+  background: -webkit-linear-gradient(#3dfff5, #34ff82);
+  -webkit-background-clip: text;
+}
+
+.heading {
+  -webkit-text-fill-color: #0000;
+  background: linear-gradient(90deg, #6c6c6c, #fff);
+  -webkit-background-clip: text;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #404040; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
