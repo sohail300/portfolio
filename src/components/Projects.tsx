@@ -44,6 +44,7 @@ const Projects = () => {
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+    console.log(event)
   };
 
   return (

@@ -5,7 +5,17 @@ import {
   getStatusTextColor,
 } from "../utils/statusColor";
 
-const Card = ({
+interface CardProps {
+  title: string;
+  status: string;
+  description: string;
+  imageUrl: string;
+  techStack: string[];
+  gitLink: string;
+  liveLink: string;
+}
+
+const Card: React.FC<CardProps> = ({
   title,
   status,
   description,
@@ -14,7 +24,6 @@ const Card = ({
   gitLink,
   liveLink,
 }) => {
-  console.log(liveLink);
   return (
     <div
       className=" w-96 rounded-lg"
@@ -61,7 +70,7 @@ const Card = ({
           className=" grid grid-cols-4 gap-1 mt-4 text-center"
           style={{ fontSize: "12px" }}
         >
-          {techStack.map((item) => {
+          {techStack.map((item: string) => {
             return (
               <span
                 key={item}

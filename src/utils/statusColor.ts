@@ -1,4 +1,4 @@
-export function getStatusBackgroundColor(status) {
+export function getStatusBackgroundColor(status:string) {
   switch (status) {
     case "Under Development":
       return "rgba(101, 55, 103, .262)";
@@ -11,7 +11,7 @@ export function getStatusBackgroundColor(status) {
   }
 }
 
-export function getStatusTextColor(status) {
+export function getStatusTextColor(status:string) {
   switch (status) {
     case "Under Development":
       return "#de83ff";

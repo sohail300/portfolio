@@ -1,4 +1,3 @@
-import SVG from "./SVG"
 
 const Education = () => {
   return (

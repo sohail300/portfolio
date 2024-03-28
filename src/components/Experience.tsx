@@ -42,6 +42,7 @@ const Experience = () => {
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+    console.log(event)
   };
 
   return (
@@ -120,19 +121,19 @@ const Experience = () => {
             }}
           />
         </Tabs>
-        <CustomTabPanel value={value} index={0} style={{ color: "#fff" }}>
+        <CustomTabPanel value={value} index={0}>
           <div className=" flex flex-row justify-around items-center">
              <img src="./experience1.png" alt="" className=" w-80" />
             <img src="./Glocybs.png" alt="" className=" h-40 w-40" />
           </div>
         </CustomTabPanel>
-        <CustomTabPanel value={value} index={1} style={{ color: "#fff" }}>
+        <CustomTabPanel value={value} index={1}>
           <div className=" flex flex-row justify-around items-center">
           <img src="./experience2.png" alt="" className=" w-80" />
             <img src="./locus-white.png" alt="" className=" h-24" />
           </div>
         </CustomTabPanel>
-        <CustomTabPanel value={value} index={2} style={{ color: "#fff" }}>
+        <CustomTabPanel value={value} index={2}>
           <div className=" flex flex-row justify-around items-center">
           <img src="./experience3.png" alt="" className=" w-80" />
             <img src="./Streeya.png" alt="" className=" h-20" />
