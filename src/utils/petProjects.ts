@@ -15,7 +15,7 @@ const petProjects = [
     description:
       "An exchange rate calculator is a tool that allows users to convert the value of one currency into another currency.",
     imageUrl: "./pet2.png",
-    techStack: ["Next JS", "JavaScript"],
+    techStack: ["HTML", "CSS", "JavaScript"],
     gitLink: "https://github.com/sohail300/04-Exchange-Rate-Calculator",
     liveLink: "https://sohail300.github.io/04-Exchange-Rate-Calculator/",
   },
