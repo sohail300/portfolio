@@ -36,23 +36,26 @@ const Hero = () => {
             repeat={Infinity}
             className="gradient-text"
           />
-          <div className=" flex flex-row items-center w-72 mb-4">
+          <div className=" flex flex-row items-center w-72 mb-8">
             <PlaceIcon className=" mr-2" />
             Dhanbad, Jharkhand, India
-            <ReactCountryFlag countryCode="IN" svg className=" ml-4"/>
+            <ReactCountryFlag countryCode="IN" svg className=" ml-4" />
           </div>
-          <div
-            className=" px-4 py-2 mb-4 w-56 bg-white text-black text-center rounded-md font-semibold"
+          <a
+            href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
+            target="_blank"
+            className=" px-20 py-2 bg-white text-black text-center rounded-md font-semibold"
             style={{ color: "#004632" }}
           >
-            <a href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link" target="_blank">
             View CV ⚡
-            </a>
-          </div>
+          </a>
         </div>
 
         <div>
-          <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872116/portfolio/hero_nd6kag.png" alt="" />
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872116/portfolio/hero_nd6kag.png"
+            alt=""
+          />
         </div>
       </div>
     </div>
