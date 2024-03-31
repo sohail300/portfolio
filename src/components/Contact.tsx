@@ -9,7 +9,7 @@ const Contact = () => {
         }}
       >
         <img
-          src="./contact/contact1.jpg"
+          src="https://res.cloudinary.com/dwuzfbivo/image/upload/v1711872073/portfolio/contact/contact1_j2rkzp.jpg"
           alt=""
           className=" rounded-full w-40 h-40 object-cover "
           style={{ border: "3px solid #bbbbbb", filter: "grayscale(25%)" }}

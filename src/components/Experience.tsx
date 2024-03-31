@@ -123,20 +123,20 @@ const Experience = () => {
         </Tabs>
         <CustomTabPanel value={value} index={0}>
           <div className=" flex flex-row justify-around items-center">
-             <img src="./experience/experience1.png" alt="" className=" w-80" />
-            <img src="./companies/Glocybs.png" alt="" className=" h-40 w-40" />
+             <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872079/portfolio/experience/experience1_jvofke.png" alt="" className=" w-80" />
+            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872070/portfolio/companies/Glocybs_hv9uux.png" alt="" className=" h-40 w-40" />
           </div>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           <div className=" flex flex-row justify-around items-center">
-          <img src="./experience/experience2.png" alt="" className=" w-80" />
-            <img src="./companies/locus-white.png" alt="" className=" h-24" />
+          <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872080/portfolio/experience/experience2_qkjx4b.png" alt="" className=" w-80" />
+            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872071/portfolio/companies/locus-white_eadeih.png" alt="" className=" h-24" />
           </div>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
           <div className=" flex flex-row justify-around items-center">
-          <img src="./experience/experience3.png" alt="" className=" w-80" />
-            <img src="./companies/Streeya.png" alt="" className=" h-20" />
+          <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872081/portfolio/experience/experience3_n2ji1u.png" alt="" className=" w-80" />
+            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872072/portfolio/companies/Streeya_ltbp0q.png" alt="" className=" h-20" />
           </div>
         </CustomTabPanel>
       </div>

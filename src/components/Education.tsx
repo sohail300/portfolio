@@ -9,10 +9,10 @@ const Education = () => {
           width: "100vw",
         }}
       >
-            <img src="./education/about.png" alt="" className=" h-80"/>
+            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png" alt="" className=" h-80"/>
         <div>
             <div className=" font-heading text-heading mb-8 heading">Education</div>
-            <img src="./education/svg.png" alt="" className=" h-64" />            
+            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872078/portfolio/education/svg_yywt4z.png" alt="" className=" h-64" />            
         </div>
       </div>
       </div>
