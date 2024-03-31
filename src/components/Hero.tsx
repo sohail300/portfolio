@@ -1,16 +1,31 @@
 import { TypeAnimation } from "react-type-animation";
 import PlaceIcon from "@mui/icons-material/Place";
 import ReactCountryFlag from "react-country-flag";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div>
-      <div
-        className=" flex flex-row justify-between items-center z-0 px-48"
-        style={{
-          backgroundImage: "url(./hero-grid.svg)",
-          width: "100vw",
-          height: "100vh",
+    <div
+      style={{
+        backgroundImage: "url(./hero-grid.svg)",
+        width: "100vw",
+        height: "100vh",
+      }}
+      className=" flex flex-row justify-between items-center z-0 px-48"
+    >
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 100,
+          scale: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          transition: {
+            duration: 1, // Animation duration
+          },
         }}
       >
         <div className=" text-white">
@@ -50,14 +65,26 @@ const Hero = () => {
             View CV ⚡
           </a>
         </div>
+      </motion.div>
 
-        <div>
-          <img
-            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872116/portfolio/hero_nd6kag.png"
-            alt=""
-          />
-        </div>
-      </div>
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            duration: 1,
+          },
+        }}
+      >
+        <img
+          src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872116/portfolio/hero_nd6kag.png"
+          alt=""
+        />
+      </motion.div>
     </div>
   );
 };

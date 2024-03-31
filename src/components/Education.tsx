@@ -1,22 +1,58 @@
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
-    <div>
       <div
-        className=" flex flex-row z-0 px-32 py-10 justify-between"
         style={{
           backgroundImage: "url(./grid.svg)",
           width: "100vw",
         }}
+        className=" flex flex-row z-0 px-32 py-10 justify-between"
       >
-            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png" alt="" className=" h-80"/>
-        <div>
-            <div className=" font-heading text-heading mb-8 heading">Education</div>
-            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872078/portfolio/education/svg_yywt4z.png" alt="" className=" h-64" />            
-        </div>
-      </div>
-      </div>
-  )
-}
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: -50,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, // Slide in to its original position
+            transition: {
+              duration: 1, // Animation duration
+            },
+          }}
+        >
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png"
+            alt=""
+            className=" h-80"
+          />
+        </motion.div>
 
-export default Education
+        <motion.div
+          initial={{
+            opacity: 0,
+            x: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, // Slide in to its original position
+            transition: {
+              duration: 1, // Animation duration
+            },
+          }}
+        >
+          <div className=" font-heading text-heading mb-8 heading">
+            Education
+          </div>
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872078/portfolio/education/svg_yywt4z.png"
+            alt=""
+            className=" h-64"
+          />
+        </motion.div>
+      </div>
+  );
+};
+
+export default Education;
