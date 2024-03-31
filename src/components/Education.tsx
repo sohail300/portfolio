@@ -9,10 +9,10 @@ const Education = () => {
           width: "100vw",
         }}
       >
-            <img src="./about.png" alt="" className=" h-80"/>
+            <img src="./education/about.png" alt="" className=" h-80"/>
         <div>
             <div className=" font-heading text-heading mb-8 heading">Education</div>
-            <img src="./svg.png" alt="" className=" h-64" />            
+            <img src="./education/svg.png" alt="" className=" h-64" />            
         </div>
       </div>
       </div>
