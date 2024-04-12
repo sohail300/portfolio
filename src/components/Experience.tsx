@@ -51,7 +51,6 @@ const Experience = () => {
         id="experience"
         style={{
           backgroundImage: "url(./grid.svg)",
-          width: "100vw",
         }}
       >
         <div className=" font-heading text-heading heading text-center">
