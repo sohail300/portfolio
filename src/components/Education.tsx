@@ -48,7 +48,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872078/portfolio/education/svg_yywt4z.png"
             alt=""
-            className=" h-64"
+            className=" h-32"
           />
         </motion.div>
       </div>

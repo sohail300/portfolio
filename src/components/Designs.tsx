@@ -6,7 +6,7 @@ const Designs = () => {
       style={{
         backgroundImage: "url(./grid.svg)",
       }}
-      className=" flex flex-col z-0 px-24 py-8"
+      className=" flex flex-col z-0 px-12 py-8"
       >
         <div className=" font-heading text-heading heading text-center">
           Hello Designers

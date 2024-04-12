@@ -1,4 +1,5 @@
 import { HashLink } from "react-router-hash-link";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
   return (
@@ -59,13 +60,25 @@ const Navbar = () => {
           position: "fixed",
           top: 0,
           right: 0,
+          zIndex: 10,
+        }}
+        className=" visible 2xl:hidden"
+      >
+        <MenuIcon />
+
+      </div>
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          right: 0,
           backgroundImage:
             "linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1))" /* Gradient background */,
           backdropFilter: "blur(10px)",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
           zIndex: 10,
         }}
-        className=" w-56 visible 2xl:hidden"
+        className=" w-56 hidden 2xl:hidden"
       >
         <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4">
           <li className=" cursor-pointer heading font-heading mb-4">

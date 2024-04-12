@@ -9,7 +9,7 @@ const Hero = () => {
       style={{
         backgroundImage: "url(./hero-grid.svg)",
       }}
-      className=" flex flex-col-reverse items-center justify-center py-32"
+      className=" flex flex-col-reverse items-center justify-center py-16 "
       id="home"
     >
       <motion.div
@@ -23,11 +23,11 @@ const Hero = () => {
           y: 0,
           scale: 1,
           transition: {
-            duration: 1, // Animation duration
+            duration: 1,
           },
         }}
       >
-        <div className=" text-white">
+        <div className=" text-white px-4" style={{ width: "100vw" }}>
           <TypeAnimation
             sequence={[
               "Hey, I'm Sohail",
@@ -42,13 +42,13 @@ const Hero = () => {
             wrapper="div"
             speed={50}
             style={{
-              fontSize: "44px",
+              fontSize: "28px",
               display: "inline-block",
               marginBottom: "16px",
               fontWeight: "800",
             }}
             repeat={Infinity}
-            className="gradient-text"
+            className="gradient-text "
           />
           <div className=" flex flex-row items-center w-72 mb-8">
             <PlaceIcon className=" mr-2" />
@@ -56,14 +56,17 @@ const Hero = () => {
             <ReactCountryFlag countryCode="IN" svg className=" ml-4" />
           </div>
 
-          <a
-            href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
-            target="_blank"
-            className=" px-20 py-2 bg-white text-black text-center rounded-md font-semibold"
-            style={{ color: "#004632" }}
+          <div
+            className=" border px-20 py-2 bg-white text-center rounded-md font-semibold"
           >
-            View Resume ⚡
-          </a>
+            <a
+              href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
+              target="_blank"
+              style={{ color: "#004632" }}
+            >
+              View Resume ⚡
+            </a>
+          </div>
         </div>
       </motion.div>
 
