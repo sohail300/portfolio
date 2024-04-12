@@ -2,6 +2,7 @@ const Skills = () => {
   return (
     <div
       className=" flex flex-col z-0 px-24 py-8"
+      id="skills"
       style={{
         backgroundImage: "url(./grid.svg)",
         width: "100vw",

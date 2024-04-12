@@ -46,9 +46,9 @@ const Experience = () => {
   };
 
   return (
-    <div>
       <div
         className=" flex flex-col z-0 px-24 py-8"
+        id="experience"
         style={{
           backgroundImage: "url(./grid.svg)",
           width: "100vw",
@@ -140,7 +140,6 @@ const Experience = () => {
           </div>
         </CustomTabPanel>
       </div>
-    </div>
   );
 };
 

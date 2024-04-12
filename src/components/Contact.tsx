@@ -1,8 +1,8 @@
 const Contact = () => {
   return (
-    <div>
       <div
         className=" flex flex-col justify-center items-center z-0 px-24 py-8"
+        id="contact"
         style={{
           backgroundImage: "url(./grid.svg)",
           width: "100vw",
@@ -100,7 +100,6 @@ const Contact = () => {
           </a>
         </div>
       </div>
-    </div>
   );
 };
 

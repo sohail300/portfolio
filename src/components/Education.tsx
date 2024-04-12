@@ -5,9 +5,9 @@ const Education = () => {
       <div
         style={{
           backgroundImage: "url(./grid.svg)",
-          width: "100vw",
         }}
-        className=" flex flex-row z-0 px-32 py-10 justify-between"
+        className=" flex flex-col-reverse py-20 px-8 items-center"
+        id="education"
       >
         <motion.div
           initial={{
@@ -25,7 +25,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png"
             alt=""
-            className=" h-80"
+            className=" h-80 "
           />
         </motion.div>
 
