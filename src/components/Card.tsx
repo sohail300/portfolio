@@ -26,20 +26,20 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className=" w-96 rounded-lg"
+      className=" rounded-lg mb-8"
       style={{ backgroundColor: "#2b2b2bc6", border: ".5px solid #5a5a5a" }}
     >
       <a href={liveLink} target="_blank">
         <img
           src={imageUrl}
           alt=""
-          className=" h-48 w-96 rounded-lg object-cover"
+          className=" w-full rounded-lg object-cover"
         />
       </a>
-      <div className=" w-96 rounded-lg px-3 py-4">
+      <div className=" rounded-lg px-3 py-4">
         <div className=" flex flex-row justify-between items-center">
           <div
-            style={{ color: "#2bd3fd", fontWeight: "500", fontSize: "20px" }}
+            style={{ color: "#2bd3fd", fontWeight: "500", fontSize: "14px" }}
           >
             {title}
           </div>
@@ -49,7 +49,7 @@ const Card: React.FC<CardProps> = ({
               style={{
                 backgroundColor: getStatusBackgroundColor(status),
                 color: getStatusTextColor(status),
-                fontSize: "10px",
+                fontSize: "8px",
               }}
             >
               {status}
@@ -68,13 +68,13 @@ const Card: React.FC<CardProps> = ({
         </div>
         <div
           className=" grid grid-cols-4 gap-1 mt-4 text-center"
-          style={{ fontSize: "12px" }}
+          style={{ fontSize: "7px" }}
         >
           {techStack.map((item: string) => {
             return (
               <span
                 key={item}
-                className=" rounded-md border text-white py-1.5 px-2 mx-0.5 my-0.5"
+                className=" rounded-md border text-white py-1.5 px-2 mx-0.5 my-0.5 text-center"
                 style={{ color: "#b6b6b6", border: "1px solid #3ee5ff" }}
               >
                 {item}

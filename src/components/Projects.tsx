@@ -49,7 +49,7 @@ const Projects = () => {
 
   return (
       <div
-        className=" flex flex-col z-0 px-24 py-8"
+        className=" flex flex-col z-0 px-8 py-8"
         id="projects"
         style={{
           backgroundImage: "url(./grid.svg)",
@@ -93,7 +93,7 @@ const Projects = () => {
               color: "#fff",
               borderRadius: "4px",
               fontWeight: "500",
-              marginRight: "40px",
+              marginRight: "20px",
               boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
             }}
           />
@@ -106,13 +106,13 @@ const Projects = () => {
               color: "#fff",
               borderRadius: "4px",
               fontWeight: "500",
-              marginLeft: "40px",
+              marginLeft: "20px",
               boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
             }}
           />
         </Tabs>
-        <CustomTabPanel value={value} index={0}>
-          <div className=" grid grid-cols-3 gap-12 px-16">
+        <CustomTabPanel value={value} index={0} >
+          <div className=" flex flex-col ">
             {megaProjects.map((item) => {
               return (
                 <Card
@@ -131,7 +131,7 @@ const Projects = () => {
         </CustomTabPanel>
 
         <CustomTabPanel value={value} index={1}>
-          <div className=" grid grid-cols-3 gap-12 px-16">
+          <div className=" flex flex-col ">
             {petProjects.map((item) => {
               return (
                 <Card

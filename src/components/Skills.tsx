@@ -1,7 +1,7 @@
 const Skills = () => {
   return (
     <div
-      className=" flex flex-col z-0 px-24 py-8"
+      className=" flex flex-col z-0 px-8 py-8"
       id="skills"
       style={{
         backgroundImage: "url(./grid.svg)",
@@ -16,9 +16,9 @@ const Skills = () => {
         applied its knowledge to real-time tasks.
       </div>
       <div>
-        <div className=" flex flex-row items-center justify-between mx-auto px-32 mb-6">
+        <div className=" flex flex-col items-center justify-between mb-6">
           <span
-            className=" py-2 px-8 rounded-md"
+            className=" py-2 px-8 rounded-md "
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -31,46 +31,46 @@ const Skills = () => {
           >
             Languages
           </span>
-          <div className=" flex flex-row">
+          <div className=" flex flex-row w-full justify-between mt-4 mb-4">
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/lang/java.png" alt="" className=" h-14" />
+              <img src="./skills/lang/java.png" alt="" className=" h-8" />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
               <img
                 src="./skills/lang/javascript.png"
                 alt=""
-                className=" h-14 "
+                className=" h-8 "
               />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
               <img
                 src="./skills/lang/typescript.png"
                 alt=""
-                className=" h-14"
+                className=" h-8"
               />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/lang/python.png" alt="" className=" h-14" />
+              <img src="./skills/lang/python.png" alt="" className=" h-8" />
             </div>
           </div>
         </div>
 
-        <div className=" flex flex-row items-center justify-between mx-auto px-32 mb-6">
+        <div className=" flex flex-col items-center justify-between mb-6">
           <span
             className=" py-2 px-8 rounded-md"
             style={{
@@ -85,43 +85,43 @@ const Skills = () => {
           >
             Frameworks/Libraries
           </span>
-          <div className=" flex flex-row">
+          <div className=" flex flex-row w-full justify-between mt-4 mb-4">
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
               <img
                 src="./skills/frameworks/nodejs.png"
                 alt=""
-                className=" h-14"
+                className=" h-8"
               />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
               <img
                 src="./skills/frameworks/react.png"
                 alt=""
-                className=" h-14 "
+                className=" h-8 "
               />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
               <img
                 src="./skills/frameworks/next.webp"
                 alt=""
-                className=" h-14"
+                className=" h-8"
               />
             </div>
           </div>
         </div>
 
-        <div className=" flex flex-row items-center justify-between mx-auto px-32 mb-6">
+        <div className=" flex flex-col items-center justify-between mb-6">
           <span
             className=" py-2 px-8 rounded-md"
             style={{
@@ -136,31 +136,31 @@ const Skills = () => {
           >
             Databases
           </span>
-          <div className=" flex flex-row">
+          <div className=" flex flex-row w-full justify-between mt-4 mb-4">
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/db/mongo.png" alt="" className=" h-14" />
+              <img src="./skills/db/mongo.png" alt="" className=" h-8" />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/db/firebase.webp" alt="" className=" h-14 " />
+              <img src="./skills/db/firebase.webp" alt="" className=" h-8 " />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/db/postgresql.webp" alt="" className=" h-14" />
+              <img src="./skills/db/postgresql.webp" alt="" className=" h-8" />
             </div>
           </div>
         </div>
 
-        <div className=" flex flex-row items-center justify-between mx-auto px-32 mb-6">
+        <div className=" flex flex-col items-center justify-between mb-6">
           <span
             className=" py-2 px-8 rounded-md"
             style={{
@@ -175,47 +175,47 @@ const Skills = () => {
           >
             Tools
           </span>
-          <div className=" flex flex-row">
+          <div className=" flex flex-row w-full justify-between mt-4 ">
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/tools/figma.png" alt="" className=" h-14" />
+              <img src="./skills/tools/figma.png" alt="" className=" h-8" />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/tools/git.png" alt="" className=" h-14 " />
+              <img src="./skills/tools/git.png" alt="" className=" h-8 " />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/tools/github.png" alt="" className=" h-14" />
+              <img src="./skills/tools/github.png" alt="" className=" h-8" />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/tools/linux.png" alt="" className=" h-14" />
+              <img src="./skills/tools/linux.png" alt="" className=" h-8" />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/tools/api.webp" alt="" className=" h-14" />
+              <img src="./skills/tools/api.webp" alt="" className=" h-8" />
             </div>
 
             <div
-              className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
               style={{ backgroundColor: "#0d0d0d9d" }}
             >
-              <img src="./skills/tools/docker.webp" alt="" className=" h-14" />
+              <img src="./skills/tools/docker.webp" alt="" className=" h-8" />
             </div>
           </div>
         </div>

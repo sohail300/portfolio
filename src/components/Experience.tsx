@@ -42,103 +42,128 @@ const Experience = () => {
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
-    console.log(event)
+    console.log(event);
   };
 
   return (
-      <div
-        className=" flex flex-col z-0 px-24 py-8"
-        id="experience"
-        style={{
-          backgroundImage: "url(./grid.svg)",
+    <div
+      className=" flex flex-col z-0 px-8 py-8"
+      id="experience"
+      style={{
+        backgroundImage: "url(./grid.svg)",
+      }}
+    >
+      <div className=" font-heading text-heading heading text-center">
+        Experience
+      </div>
+      <div className=" heading text-center mb-8">
+        Companies where I can applied my skills
+      </div>
+
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        sx={{
+          display: "flex",
+          // justifyContent: "space-between",
+          outline: "none",
+          margin: "auto",
+          marginBottom: "16px",
+          "& button.Mui-selected": {
+            background:
+              "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
+            color: "#fff",
+          },
+        }}
+        TabIndicatorProps={{
+          style: {
+            background: "none",
+          },
         }}
       >
-        <div className=" font-heading text-heading heading text-center">
-          Experience
-        </div>
-        <div className=" heading text-center mb-8">
-          Companies where I can applied my skills
-        </div>
-        <Tabs
-          value={value}
-          onChange={handleChange}
+        <Tab
+          label="GLOCYBS"
+          {...a11yProps(0)}
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            outline: "none",
-            margin: "auto",
-            marginBottom: "16px",
-            "& button.Mui-selected": {
-              background:
-                "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
-              color: "#fff",
-            },
+            flexGrow: 1,
+            border: "1px solid rgba(66, 66, 66, .623)",
+            color: "#fff",
+            borderRadius: "4px",
+            fontWeight: "500",
+            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
           }}
-          TabIndicatorProps={{
-            style: {
-              background: "none",
-            },
+        />
+        <Tab
+          label="BHAGALPUR POLICE"
+          {...a11yProps(1)}
+          sx={{
+            flexGrow: 1,
+            border: "1px solid rgba(66, 66, 66, .623)",
+            color: "#fff",
+            borderRadius: "4px",
+            fontWeight: "500",
+            marginRight: "20px",
+            marginLeft: "20px",
+            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
           }}
-        >
-          <Tab
-            label="GLOCYBS"
-            {...a11yProps(0)}
-            sx={{
-              flexGrow: 1,
-              border: "1px solid rgba(66, 66, 66, .623)",
-              color: "#fff",
-              borderRadius: "4px",
-              fontWeight: "500",
-              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
-            }}
+        />
+        <Tab
+          label="STREEYA"
+          {...a11yProps(2)}
+          sx={{
+            flexGrow: 1,
+            width: 4,
+            border: "1px solid rgba(66, 66, 66, .623)",
+            color: "#fff",
+            borderRadius: "4px",
+            fontWeight: "500",
+            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
+          }}
+        />
+      </Tabs>
+      <CustomTabPanel value={value} index={0}>
+        <div className=" flex flex-col justify-between items-center">
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872079/portfolio/experience/experience1_jvofke.png"
+            alt=""
+            className=" w-60"
           />
-          <Tab
-            label="BHAGALPUR POLICE"
-            {...a11yProps(1)}
-            sx={{
-              flexGrow: 1,
-              border: "1px solid rgba(66, 66, 66, .623)",
-              color: "#fff",
-              borderRadius: "4px",
-              fontWeight: "500",
-              marginRight: "40px",
-              marginLeft: "40px",
-              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
-            }}
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872070/portfolio/companies/Glocybs_hv9uux.png"
+            alt=""
+            className=" h-40 w-40 mt-8"
           />
-          <Tab
-            label="STREEYA"
-            {...a11yProps(2)}
-            sx={{
-              flexGrow: 1,
-              width: 4,
-              border: "1px solid rgba(66, 66, 66, .623)",
-              color: "#fff",
-              borderRadius: "4px",
-              fontWeight: "500",
-              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
-            }}
+        </div>
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={1}>
+        <div className=" flex flex-col justify-around items-center">
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872080/portfolio/experience/experience2_qkjx4b.png"
+            alt=""
+            className=" w-60"
           />
-        </Tabs>
-        <CustomTabPanel value={value} index={0}>
-          <div className=" flex flex-row justify-around items-center">
-             <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872079/portfolio/experience/experience1_jvofke.png" alt="" className=" w-80" />
-            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872070/portfolio/companies/Glocybs_hv9uux.png" alt="" className=" h-40 w-40" />
-          </div>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-          <div className=" flex flex-row justify-around items-center">
-          <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872080/portfolio/experience/experience2_qkjx4b.png" alt="" className=" w-80" />
-            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872071/portfolio/companies/locus-white_eadeih.png" alt="" className=" h-24" />
-          </div>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          <div className=" flex flex-row justify-around items-center">
-          <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872081/portfolio/experience/experience3_n2ji1u.png" alt="" className=" w-80" />
-            <img src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872072/portfolio/companies/Streeya_ltbp0q.png" alt="" className=" h-20" />
-          </div>
-        </CustomTabPanel>
-      </div>
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872071/portfolio/companies/locus-white_eadeih.png"
+            alt=""
+            className=" h-24 mt-8"
+          />
+        </div>
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={2}>
+        <div className=" flex flex-col justify-around items-center">
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872081/portfolio/experience/experience3_n2ji1u.png"
+            alt=""
+            className=" w-60"
+          />
+          <img
+            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872072/portfolio/companies/Streeya_ltbp0q.png"
+            alt=""
+            className=" h-20 mt-8"
+          />
+        </div>
+      </CustomTabPanel>
+    </div>
   );
 };
 
