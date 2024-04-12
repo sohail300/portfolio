@@ -6,7 +6,7 @@ const Education = () => {
         style={{
           backgroundImage: "url(./grid.svg)",
         }}
-        className=" flex flex-col-reverse py-20 px-8 items-center"
+        className=" flex flex-col-reverse py-8 px-8 items-center"
         id="education"
       >
         <motion.div
@@ -25,7 +25,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png"
             alt=""
-            className=" h-80 "
+            className=" h-64 "
           />
         </motion.div>
 
@@ -36,9 +36,9 @@ const Education = () => {
           }}
           whileInView={{
             opacity: 1,
-            x: 0, // Slide in to its original position
+            x: 0, 
             transition: {
-              duration: 1, // Animation duration
+              duration: 1, 
             },
           }}
         >
