@@ -8,13 +8,14 @@ const Hero = () => {
     <div
       style={{
         backgroundImage: "url(./hero-grid.svg)",
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
       className=" flex flex-col-reverse items-center justify-center py-20 md:py-40"
       id="home"
     >
       <motion.div
+      className=" flex flex-col items-center justify-center"
         initial={{
           opacity: 0,
           y: 100,
@@ -57,18 +58,17 @@ const Hero = () => {
             Dhanbad, Jharkhand, India
             <ReactCountryFlag countryCode="IN" svg className=" ml-4" />
           </div>
+        </div>
 
-          <div
-            className=" border px-20 py-2 bg-white text-center rounded-md font-semibold"
+        <div className=" ">
+          <a
+          className=" py-2 px-28 bg-white rounded-md text-center font-semibold w-full"
+            href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
+            target="_blank"
+            style={{ color: "#004632" }}
           >
-            <a
-              href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
-              target="_blank"
-              style={{ color: "#004632" }}
-            >
-              View Resume ⚡
-            </a>
-          </div>
+            View Resume ⚡
+          </a>
         </div>
       </motion.div>
 
@@ -88,7 +88,7 @@ const Hero = () => {
         <img
           src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872116/portfolio/hero_nd6kag.png"
           alt=""
-          className=" w-80 mb-32"
+          className=" w-80 md:w-auto mb-16 md:mb-32"
         />
       </motion.div>
     </div>
