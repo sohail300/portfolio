@@ -8,7 +8,7 @@ const Education = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
-        className=" flex flex-col-reverse py-8 px-8 items-center sm:flex-row sm:justify-between border"
+        className=" flex flex-col-reverse py-8 px-8 items-center sm:flex-row sm:justify-between "
         id="education"
       >
         <motion.div
@@ -32,7 +32,7 @@ const Education = () => {
         </motion.div>
 
         <motion.div
-        className=" border "
+        className=" "
           initial={{
             opacity: 0,
             x: 50,
