@@ -25,7 +25,7 @@ const Achievements = () => {
               href={item.figmaLink}
               target="_blank"
               key={index}
-              className="w-full sm:w-1/2 px-4 py-2"
+              className="w-full sm:w-1/2 px-4 py-4"
             >
               <img
                 src={item.imageLink}

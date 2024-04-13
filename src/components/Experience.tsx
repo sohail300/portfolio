@@ -126,7 +126,7 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872079/portfolio/experience/experience1_jvofke.png"
             alt=""
-            className=" w-60"
+            className=" w-60 sm:w-80"
           />
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872070/portfolio/companies/Glocybs_hv9uux.png"
@@ -140,7 +140,7 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872080/portfolio/experience/experience2_qkjx4b.png"
             alt=""
-            className=" w-60"
+            className=" w-60 sm:w-80"
           />
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872071/portfolio/companies/locus-white_eadeih.png"
@@ -154,7 +154,7 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872081/portfolio/experience/experience3_n2ji1u.png"
             alt=""
-            className=" w-60 sm:mt-0"
+            className=" w-60 sm:w-80"
           />
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872072/portfolio/companies/Streeya_ltbp0q.png"

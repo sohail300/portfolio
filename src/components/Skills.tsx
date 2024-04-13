@@ -18,9 +18,9 @@ const Skills = () => {
         applied its knowledge to real-time tasks.
       </div>
       <div>
-        <div className=" flex flex-col items-center justify-between mb-6">
+        <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
           <span
-            className=" py-2 px-8 rounded-md "
+            className=" py-2 px-8 rounded-md md:mr-16"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -33,7 +33,7 @@ const Skills = () => {
           >
             Languages
           </span>
-          <div className=" flex flex-row w-full justify-between mt-4 mb-4">
+          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
             {skills.language.map((item, index) => {
               return (
                 <div
@@ -52,9 +52,9 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col items-center justify-between mb-6">
+        <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
           <span
-            className=" py-2 px-8 rounded-md"
+            className=" py-2 px-8 rounded-md md:mr-16"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -67,7 +67,7 @@ const Skills = () => {
           >
             Frameworks/Libraries
           </span>
-          <div className=" flex flex-row w-full justify-between mt-4 mb-4">
+          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
             {skills.framework.map((item, index) => {
               return (
                 <div
@@ -86,9 +86,9 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col items-center justify-between mb-6">
+        <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
           <span
-            className=" py-2 px-8 rounded-md"
+            className=" py-2 px-8 rounded-md md:mr-16"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -101,7 +101,7 @@ const Skills = () => {
           >
             Databases
           </span>
-          <div className=" flex flex-row w-full justify-between mt-4 mb-4">
+          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
             {skills.database.map((item, index) => {
               return (
                 <div
@@ -120,9 +120,9 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col items-center justify-between mb-6">
+        <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
           <span
-            className=" py-2 px-8 rounded-md"
+            className=" py-2 px-8 rounded-md md:mr-16"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -135,7 +135,7 @@ const Skills = () => {
           >
             Tools
           </span>
-          <div className=" flex flex-row w-full justify-between mt-4 ">
+          <div className=" flex flex-row w-full justify-between mt-4 md:justify-center md:w-fit">
             {skills.tools.map((item, index) => {
               return (
                 <div
