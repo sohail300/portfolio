@@ -122,7 +122,7 @@ const Experience = () => {
         />
       </Tabs>
       <CustomTabPanel value={value} index={0}>
-        <div className=" flex flex-col justify-between items-center">
+        <div className=" flex flex-col justify-between items-center sm:flex-row sm:justify-around w-full">
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872079/portfolio/experience/experience1_jvofke.png"
             alt=""
@@ -131,12 +131,12 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872070/portfolio/companies/Glocybs_hv9uux.png"
             alt=""
-            className=" h-40 w-40 mt-8"
+            className=" h-40 w-40 mt-8 sm:mt-0"
           />
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <div className=" flex flex-col justify-around items-center">
+        <div className=" flex flex-col justify-around items-center sm:flex-row sm:justify-around w-full">
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872080/portfolio/experience/experience2_qkjx4b.png"
             alt=""
@@ -145,16 +145,16 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872071/portfolio/companies/locus-white_eadeih.png"
             alt=""
-            className=" h-24 mt-8"
+            className=" h-24 mt-8 sm:mt-0"
           />
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        <div className=" flex flex-col justify-around items-center">
+        <div className=" flex flex-col justify-around items-center sm:flex-row sm:justify-around w-full">
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872081/portfolio/experience/experience3_n2ji1u.png"
             alt=""
-            className=" w-60"
+            className=" w-60 sm:mt-0"
           />
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872072/portfolio/companies/Streeya_ltbp0q.png"

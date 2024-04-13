@@ -7,8 +7,9 @@ export default {
     extend: {
       screens: {
         // 'mobile': { 'max': '768px' },
-        'mobile': '768px',
-        '2xl': '1280px',
+        // 'mobile': '768px',
+        'mid': '850px',
+        // '2xl': '1280px',
         // '2xl': { 'max': '1280px' },
       },
       fontWeight: {
@@ -16,6 +17,12 @@ export default {
       },
       fontSize: {
         heading: '30px',
+        '14px': '14px',
+        '8px': '8px',
+        '7px': '7px',
+        '20px': '20px',
+        '10px': '10px',
+        '12px': '12px',
       },
     },
   },

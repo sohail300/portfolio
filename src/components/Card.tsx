@@ -37,19 +37,18 @@ const Card: React.FC<CardProps> = ({
         />
       </a>
       <div className=" rounded-lg px-3 py-4">
-        <div className=" flex flex-row justify-between items-center">
+        <div className=" flex flex-row justify-between items-center text-14px mid:text-20px">
           <div
-            style={{ color: "#2bd3fd", fontWeight: "500", fontSize: "14px" }}
+            style={{ color: "#2bd3fd", fontWeight: "500", }}
           >
             {title}
           </div>
           <div className=" flex flex-row justify-between items-center">
             <span
-              className=" rounded-2xl text-center py-1 px-2"
+              className=" rounded-2xl text-center py-1 px-2 text-8px mid:text-10px"
               style={{
                 backgroundColor: getStatusBackgroundColor(status),
                 color: getStatusTextColor(status),
-                fontSize: "8px",
               }}
             >
               {status}
@@ -67,8 +66,7 @@ const Card: React.FC<CardProps> = ({
           {description}
         </div>
         <div
-          className=" grid grid-cols-4 gap-1 mt-4 text-center"
-          style={{ fontSize: "7px" }}
+          className=" grid grid-cols-4 gap-1 mt-4 text-center text-7px mid:text-12px"
         >
           {techStack.map((item: string) => {
             return (

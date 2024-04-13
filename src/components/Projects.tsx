@@ -44,76 +44,77 @@ const Projects = () => {
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
-    console.log(event)
+    console.log(event);
   };
 
   return (
-      <div
-        className=" flex flex-col z-0 px-8 py-8"
-        id="projects"
-        style={{
-          backgroundImage: "url(./grid.svg)",
+    <div
+      className=" flex flex-col z-0 px-8 py-8"
+      id="projects"
+      style={{
+        backgroundImage: "url(./grid.svg)",
+      }}
+    >
+      <div className=" font-heading text-heading heading text-center">
+        Projects
+      </div>
+      <div className=" heading text-center mb-8">
+        What value does that skill hold if you're unable to apply it to the
+        project?
+      </div>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          outline: "none",
+          margin: "auto",
+          marginBottom: "16px",
+          "& button.Mui-selected": {
+            background:
+              "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
+            color: "#fff",
+          },
+        }}
+        TabIndicatorProps={{
+          style: {
+            background: "none",
+          },
         }}
       >
-        <div className=" font-heading text-heading heading text-center">
-          Projects
-        </div>
-        <div className=" heading text-center mb-8">
-          What value does that skill hold if you're unable to apply it to the
-          project?
-        </div>
-        <Tabs
-          value={value}
-          onChange={handleChange}
+        <Tab
+          label="Mega Projects"
+          {...a11yProps(0)}
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            outline: "none",
-            margin: "auto",
-            marginBottom: "16px",
-            "& button.Mui-selected": {
-              background:
-                "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
-              color: "#fff",
-            },
+            flexGrow: 1,
+            border: "1px solid rgba(66, 66, 66, .623)",
+            color: "#fff",
+            borderRadius: "4px",
+            fontWeight: "500",
+            marginRight: "20px",
+            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
           }}
-          TabIndicatorProps={{
-            style: {
-              background: "none",
-            },
+        />
+        <Tab
+          label="Pet Projects"
+          {...a11yProps(1)}
+          sx={{
+            flexGrow: 1,
+            border: "1px solid rgba(66, 66, 66, .623)",
+            color: "#fff",
+            borderRadius: "4px",
+            fontWeight: "500",
+            marginLeft: "20px",
+            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
           }}
-        >
-          <Tab
-            label="Mega Projects"
-            {...a11yProps(0)}
-            sx={{
-              flexGrow: 1,
-              border: "1px solid rgba(66, 66, 66, .623)",
-              color: "#fff",
-              borderRadius: "4px",
-              fontWeight: "500",
-              marginRight: "20px",
-              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
-            }}
-          />
-          <Tab
-            label="Pet Projects"
-            {...a11yProps(1)}
-            sx={{
-              flexGrow: 1,
-              border: "1px solid rgba(66, 66, 66, .623)",
-              color: "#fff",
-              borderRadius: "4px",
-              fontWeight: "500",
-              marginLeft: "20px",
-              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
-            }}
-          />
-        </Tabs>
-        <CustomTabPanel value={value} index={0} >
-          <div className=" flex flex-col ">
-            {megaProjects.map((item) => {
-              return (
+        />
+      </Tabs>
+      <CustomTabPanel value={value} index={0}>
+        <div className=" flex flex-col sm:flex-row sm:flex-wrap">
+          {megaProjects.map((item) => {
+            return (
+              <div key={item.title} className="w-full sm:w-1/2 py-2 px-4">
                 <Card
                   key={item.title}
                   title={item.title}
@@ -124,30 +125,33 @@ const Projects = () => {
                   gitLink={item.gitLink}
                   liveLink={item.liveLink}
                 />
-              );
-            })}
-          </div>
-        </CustomTabPanel>
+              </div>
+            );
+          })}
+        </div>
+      </CustomTabPanel>
 
-        <CustomTabPanel value={value} index={1}>
-          <div className=" flex flex-col ">
-            {petProjects.map((item) => {
-              return (
-                <Card
-                  key={item.title}
-                  title={item.title}
-                  description={item.description}
-                  status={item.status}
-                  imageUrl={item.imageUrl}
-                  techStack={item.techStack}
-                  gitLink={item.gitLink}
-                  liveLink={item.liveLink}
-                />
-              );
-            })}
-          </div>
-        </CustomTabPanel>
-      </div>
+      <CustomTabPanel value={value} index={1}>
+        <div className=" flex flex-col sm:flex-row sm:flex-wrap">
+          {petProjects.map((item) => {
+            return (
+              <div key={item.title} className="w-full sm:w-1/2 py-2 px-4">
+              <Card
+                key={item.title}
+                title={item.title}
+                description={item.description}
+                status={item.status}
+                imageUrl={item.imageUrl}
+                techStack={item.techStack}
+                gitLink={item.gitLink}
+                liveLink={item.liveLink}
+              />
+              </div>
+            );
+          })}
+        </div>
+      </CustomTabPanel>
+    </div>
   );
 };
 
