@@ -114,7 +114,7 @@ const Projects = () => {
         <div className=" flex flex-col sm:flex-row sm:flex-wrap">
           {megaProjects.map((item) => {
             return (
-              <div key={item.title} className="w-full sm:w-1/2 py-2 px-4">
+              <div key={item.title} className="w-full sm:w-1/2 py-2 px-0">
                 <Card
                   key={item.title}
                   title={item.title}
