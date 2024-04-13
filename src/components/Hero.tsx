@@ -9,7 +9,7 @@ const Hero = () => {
       style={{
         backgroundImage: "url(./hero-grid.svg)",
       }}
-      className=" flex flex-col-reverse items-center justify-center py-16 "
+      className=" flex flex-col-reverse items-center justify-center py-20 "
       id="home"
     >
       <motion.div
