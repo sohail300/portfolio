@@ -1,3 +1,5 @@
+import { skills } from "../utils/skills";
+
 const Skills = () => {
   return (
     <div
@@ -32,41 +34,21 @@ const Skills = () => {
             Languages
           </span>
           <div className=" flex flex-row w-full justify-between mt-4 mb-4">
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/lang/java.png" alt="" className=" h-8" />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img
-                src="./skills/lang/javascript.png"
-                alt=""
-                className=" h-8 "
-              />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img
-                src="./skills/lang/typescript.png"
-                alt=""
-                className=" h-8"
-              />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/lang/python.png" alt="" className=" h-8" />
-            </div>
+            {skills.language.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  style={{ backgroundColor: "#0d0d0d9d" }}
+                >
+                  <img
+                    src={`./skills/language/${item}`}
+                    alt=""
+                    className=" h-12"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -86,38 +68,21 @@ const Skills = () => {
             Frameworks/Libraries
           </span>
           <div className=" flex flex-row w-full justify-between mt-4 mb-4">
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img
-                src="./skills/frameworks/nodejs.png"
-                alt=""
-                className=" h-8"
-              />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img
-                src="./skills/frameworks/react.png"
-                alt=""
-                className=" h-8 "
-              />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img
-                src="./skills/frameworks/next.webp"
-                alt=""
-                className=" h-8"
-              />
-            </div>
+            {skills.framework.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  style={{ backgroundColor: "#0d0d0d9d" }}
+                >
+                  <img
+                    src={`./skills/framework/${item}`}
+                    alt=""
+                    className=" h-12"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -137,26 +102,21 @@ const Skills = () => {
             Databases
           </span>
           <div className=" flex flex-row w-full justify-between mt-4 mb-4">
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/db/mongo.png" alt="" className=" h-8" />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/db/firebase.webp" alt="" className=" h-8 " />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/db/postgresql.webp" alt="" className=" h-8" />
-            </div>
+            {skills.database.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  style={{ backgroundColor: "#0d0d0d9d" }}
+                >
+                  <img
+                    src={`./skills/database/${item}`}
+                    alt=""
+                    className=" h-12"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -176,47 +136,21 @@ const Skills = () => {
             Tools
           </span>
           <div className=" flex flex-row w-full justify-between mt-4 ">
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/tools/figma.png" alt="" className=" h-8" />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/tools/git.png" alt="" className=" h-8 " />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/tools/github.png" alt="" className=" h-8" />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/tools/linux.png" alt="" className=" h-8" />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/tools/api.webp" alt="" className=" h-8" />
-            </div>
-
-            <div
-              className=" rounded-md h-12 w-12 flex flex-row justify-center items-center mr-4"
-              style={{ backgroundColor: "#0d0d0d9d" }}
-            >
-              <img src="./skills/tools/docker.webp" alt="" className=" h-8" />
-            </div>
+            {skills.tools.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  style={{ backgroundColor: "#0d0d0d9d" }}
+                >
+                  <img
+                    src={`./skills/tools/${item}`}
+                    alt=""
+                    className=" h-12"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
