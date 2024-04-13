@@ -7,7 +7,8 @@ const Achievements = () => {
       id="achievements"
       style={{
         backgroundImage: "url(./grid.svg)",
-        width: "100vw",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
       <div className=" font-heading text-heading heading text-center">
@@ -25,7 +26,7 @@ const Achievements = () => {
               href={item.figmaLink}
               target="_blank"
               key={index}
-              className="w-full sm:w-1/2 px-0 py-4"
+              className="w-full sm:w-1/2 px-0 py-4 sm:px-4"
             >
               <img
                 src={item.imageLink}

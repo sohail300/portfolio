@@ -8,8 +8,10 @@ const Hero = () => {
     <div
       style={{
         backgroundImage: "url(./hero-grid.svg)",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
       }}
-      className=" flex flex-col-reverse items-center justify-center py-20 "
+      className=" flex flex-col-reverse items-center justify-center py-20 md:py-40"
       id="home"
     >
       <motion.div
@@ -86,7 +88,7 @@ const Hero = () => {
         <img
           src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872116/portfolio/hero_nd6kag.png"
           alt=""
-          className=" w-80 mb-16"
+          className=" w-80 mb-32"
         />
       </motion.div>
     </div>

@@ -6,6 +6,8 @@ const Designs = () => {
       id="designs"
       style={{
         backgroundImage: "url(./grid.svg)",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
       className=" flex flex-col z-0 px-8 pb-8"
     >
@@ -18,7 +20,7 @@ const Designs = () => {
       <div className=" flex flex-col items-center sm:flex-row sm:flex-wrap">
         {designs.map((item, index) => {
           return (
-            <a href={item.figmaLink} target="_blank" key={index} className="w-full sm:w-1/2 px-0 py-4">
+            <a href={item.figmaLink} target="_blank" key={index} className="w-full sm:w-1/2 px-0 py-4 sm:px-4">
               <img
                 src={item.imageLink}
                 alt=""

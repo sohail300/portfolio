@@ -5,8 +5,10 @@ const Education = () => {
       <div
         style={{
           backgroundImage: "url(./grid.svg)",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
-        className=" flex flex-col-reverse py-8 px-8 items-center sm:flex-row sm:justify-around border"
+        className=" flex flex-col-reverse py-8 px-8 items-center sm:flex-row sm:justify-between border"
         id="education"
       >
         <motion.div
@@ -25,7 +27,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png"
             alt=""
-            className=" w-full sm:w-3/4"
+            className=" w-full sm:h-72"
           />
         </motion.div>
 
@@ -49,7 +51,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872078/portfolio/education/svg_yywt4z.png"
             alt=""
-            className=" "
+            className=" w-full sm:h-48"
           />
         </motion.div>
       </div>

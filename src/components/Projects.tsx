@@ -53,6 +53,8 @@ const Projects = () => {
       id="projects"
       style={{
         backgroundImage: "url(./grid.svg)",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
     >
       <div className=" font-heading text-heading heading text-center">
@@ -114,7 +116,7 @@ const Projects = () => {
         <div className=" flex flex-col sm:flex-row sm:flex-wrap">
           {megaProjects.map((item) => {
             return (
-              <div key={item.title} className="w-full sm:w-1/2 pt-2 px-0">
+              <div key={item.title} className="w-full sm:w-1/2 pt-2 px-0 sm:px-4">
                 <Card
                   key={item.title}
                   title={item.title}
@@ -135,7 +137,7 @@ const Projects = () => {
         <div className=" flex flex-col sm:flex-row sm:flex-wrap">
           {petProjects.map((item) => {
             return (
-              <div key={item.title} className="w-full sm:w-1/2 pt-2 px-0">
+              <div key={item.title} className="w-full sm:w-1/2 pt-2 px-0 sm:px-4">
               <Card
                 key={item.title}
                 title={item.title}

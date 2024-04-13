@@ -5,7 +5,8 @@ const Contact = () => {
         id="contact"
         style={{
           backgroundImage: "url(./grid.svg)",
-          width: "100vw",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
       >
         <img
