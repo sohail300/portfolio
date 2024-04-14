@@ -49,7 +49,7 @@ const Projects = () => {
 
   return (
     <div
-      className=" flex flex-col z-0 px-4 py-8"
+      className=" flex flex-col z-0 px-4 py-8 lg:px-24"
       id="projects"
       style={{
         backgroundImage: "url(./grid.svg)",
@@ -116,7 +116,7 @@ const Projects = () => {
         <div className=" flex flex-col sm:flex-row sm:flex-wrap">
           {megaProjects.map((item) => {
             return (
-              <div key={item.title} className="w-full sm:w-1/2 pt-2 px-0 sm:px-4">
+              <div key={item.title} className="w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3">
                 <Card
                   key={item.title}
                   title={item.title}

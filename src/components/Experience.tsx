@@ -47,7 +47,7 @@ const Experience = () => {
 
   return (
     <div
-      className=" flex flex-col z-0 px-8 py-8"
+      className=" flex flex-col z-0 px-8 py-8 lg:py-12"
       id="experience"
       style={{
         backgroundImage: "url(./grid.svg)",
@@ -133,7 +133,7 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872070/portfolio/companies/Glocybs_hv9uux.png"
             alt=""
-            className=" h-40 w-40 mt-8 sm:mt-0"
+            className=" h-40 w-40 mt-8 sm:mt-0 lg:h-48 lg:w-48"
           />
         </div>
       </CustomTabPanel>

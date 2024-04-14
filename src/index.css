@@ -29,16 +29,28 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: transparent; 
+  background: transparent;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #404040; 
+  background: #404040;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+@media only screen and (min-width: 1024px) {
+  .text-animation {
+    font-size: 44px !important;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .text-animation {
+    font-size: 36px !important;
+  }
 }

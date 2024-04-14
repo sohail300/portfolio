@@ -3,7 +3,7 @@ import { skills } from "../utils/skills";
 const Skills = () => {
   return (
     <div
-      className=" flex flex-col z-0 px-8 py-8"
+      className=" flex flex-col z-0 px-8 py-8 lg:px-24"
       id="skills"
       style={{
         backgroundImage: "url(./grid.svg)",
@@ -18,7 +18,7 @@ const Skills = () => {
         Skills in which I have invested significant time and have consistently
         applied its knowledge to real-time tasks.
       </div>
-      <div>
+      <div className=" lg:px-32">
         <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
           <span
             className=" py-2 px-8 rounded-md md:mr-16"

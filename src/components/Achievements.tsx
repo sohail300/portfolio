@@ -19,20 +19,19 @@ const Achievements = () => {
         real-world accomplishments.
       </div>
 
-      <div className=" flex flex-col items-center sm:flex-row sm:flex-wrap">
+      <div className=" flex flex-col items-center sm:flex-row sm:flex-wrap lg:mx-auto lg:justify-between lg:px-32">
         {achievements.map((item, index) => {
           return (
             <a
               href={item.figmaLink}
               target="_blank"
               key={index}
-              className="w-full sm:w-1/2 px-0 py-4 sm:px-4"
+              className="w-full sm:w-1/2 px-0 py-4 sm:px-4 lg:w-1/3 "
             >
               <img
                 src={item.imageLink}
                 alt=""
-                className=" w-full rounded-lg cursor-pointer "
-                // filter grayscale hover:filter-none
+                className=" w-full rounded-lg cursor-pointer lg:filter lg:grayscale lg:hover:filter-none lg:rounded-sm"
               />
             </a>
           );
