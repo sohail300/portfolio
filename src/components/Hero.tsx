@@ -11,11 +11,12 @@ const Hero = () => {
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
-      className=" flex flex-col-reverse items-center justify-center py-20 md:py-40 lg:flex-row lg:justify-evenly "
+      className=" flex flex-col-reverse items-center justify-center py-20 md:flex-row lg:justify-evenly"
+      // md:py-40 
       id="home"
     >
       <motion.div
-        className=" flex flex-col items-center justify-center lg:w-2/5 lg:items-start"
+        className=" flex flex-col items-center justify-center md:w-2/5 md:items-start"
         initial={{
           opacity: 0,
           y: 100,
@@ -30,7 +31,7 @@ const Hero = () => {
           },
         }}
       >
-        <div className=" text-white px-4 w-screen lg:w-auto lg:px-0 lg:mx-0">
+        <div className=" text-white px-4 w-screen md:w-auto md:px-0">
           <TypeAnimation
             sequence={[
               "Hey, I'm Sohail",
@@ -61,9 +62,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className=" lg:self-start">
+        <div className=" md:self-start">
           <a
-            className=" py-2 px-28 bg-white rounded-md text-center font-semibold w-full lg:px-20 "
+            className=" py-2 px-28 bg-white rounded-md text-center font-semibold w-full md:px-20 "
             href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
             target="_blank"
             style={{ color: "#004632" }}
@@ -89,7 +90,7 @@ const Hero = () => {
         <img
           src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872116/portfolio/hero_nd6kag.png"
           alt=""
-          className=" w-80 md:w-auto lg:w-auto mb-16 md:mb-32 lg:mb-0"
+          className=" w-80 lg:w-auto mb-16 md:mb-0"
         />
       </motion.div>
     </div>
