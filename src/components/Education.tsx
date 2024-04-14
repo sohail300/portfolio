@@ -27,7 +27,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png"
             alt=""
-            className=" w-full sm:h-56 lg:h-80"
+            className=" w-full sm:h-48 lg:h-80 border"
           />
         </motion.div>
 
@@ -51,7 +51,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872078/portfolio/education/svg_yywt4z.png"
             alt=""
-            className=" w-full sm:h-36 lg:h-64"
+            className=" w-full sm:h-44 lg:h-64 border"
           />
         </motion.div>
       </div>
