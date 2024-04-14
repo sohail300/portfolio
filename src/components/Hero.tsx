@@ -45,7 +45,6 @@ const Hero = () => {
             wrapper="div"
             speed={50}
             style={{
-              // fontSize: "44px",
               fontSize: "28px",
               display: "inline-block",
               marginBottom: "16px",
