@@ -8,7 +8,6 @@ const Skills = () => {
       style={{
         backgroundImage: "url(./grid.svg)",
         backgroundPosition: "center",
-        backgroundSize: "cover",
       }}
     >
       <div className=" font-heading text-heading heading text-center">

@@ -7,7 +7,6 @@ const Designs = () => {
       style={{
         backgroundImage: "url(./grid.svg)",
         backgroundPosition: "center",
-        backgroundSize: "cover",
       }}
       className=" flex flex-col z-0 px-8 pb-8 lg:px-24"
     >

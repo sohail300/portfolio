@@ -6,7 +6,6 @@ const Education = () => {
         style={{
           backgroundImage: "url(./grid.svg)",
           backgroundPosition: "center",
-          backgroundSize: "cover",
         }}
         className=" flex flex-col-reverse py-8 px-8 items-center lg:flex-row lg:justify-between lg:px-32 "
         id="education"

@@ -9,7 +9,6 @@ const Hero = () => {
       style={{
         backgroundImage: "url(./hero-grid.svg)",
         backgroundPosition: "center",
-        backgroundSize: "cover",
       }}
       className=" flex flex-col-reverse items-center justify-center py-20 md:py-40 lg:flex-row lg:justify-evenly "
       id="home"
