@@ -6,7 +6,7 @@ const Skills = () => {
       className=" flex flex-col z-0 px-8 py-8 lg:px-24"
       id="skills"
       style={{
-        backgroundImage: "url(./grid.svg)",
+        backgroundImage: "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
         backgroundPosition: "center",
       }}
     >

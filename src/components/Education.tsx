@@ -4,10 +4,10 @@ const Education = () => {
   return (
       <div
         style={{
-          backgroundImage: "url(./grid.svg)",
+          backgroundImage: "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
           backgroundPosition: "center",
         }}
-        className=" flex flex-col-reverse py-8 px-8 items-center lg:flex-row lg:justify-between lg:px-32 "
+        className=" flex flex-col-reverse py-8 px-8 items-center lg:flex-row lg:justify-between large:justify-around lg:px-32 "
         id="education"
       >
         <motion.div
@@ -26,7 +26,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png"
             alt=""
-            className=" w-full lg:h-80"
+            className=" w-full lg:h-80 large:h-96"
           />
         </motion.div>
 
@@ -50,7 +50,7 @@ const Education = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872078/portfolio/education/svg_yywt4z.png"
             alt=""
-            className=" w-full lg:h-64"
+            className=" w-full lg:h-64 large:h-72"
           />
         </motion.div>
       </div>

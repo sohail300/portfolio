@@ -40,3 +40,5 @@ const megaProjects = [
 ];
 
 export default megaProjects;
+
+export const noOfMegaProjects=3;

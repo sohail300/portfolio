@@ -7,10 +7,10 @@ const Hero = () => {
   return (
     <div
       style={{
-        backgroundImage: "url(./hero-grid.svg)",
+        backgroundImage: "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872117/portfolio/hero-grid_jfaegn.svg)",
         backgroundPosition: "center",
       }}
-      className=" flex flex-col-reverse items-center justify-center py-20 md:py-40 lg:flex-row lg:justify-evenly "
+      className=" flex flex-col-reverse items-center justify-center py-20 md:py-40 lg:flex-row lg:justify-evenly large:py-64"
       id="home"
     >
       <motion.div

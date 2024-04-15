@@ -50,7 +50,7 @@ const Experience = () => {
       className=" flex flex-col z-0 px-8 py-8 lg:py-12"
       id="experience"
       style={{
-        backgroundImage: "url(./grid.svg)",
+        backgroundImage: "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
         backgroundPosition: "center",
       }}
     >
@@ -127,7 +127,7 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872079/portfolio/experience/experience1_jvofke.png"
             alt=""
-            className=" w-80 sm:w-80"
+            className=" w-80 large:w-96"
           />
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872070/portfolio/companies/Glocybs_hv9uux.png"
@@ -141,7 +141,7 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872080/portfolio/experience/experience2_qkjx4b.png"
             alt=""
-            className=" w-80 sm:w-80"
+            className=" w-80 large:w-96"
           />
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872071/portfolio/companies/locus-white_eadeih.png"
@@ -155,7 +155,7 @@ const Experience = () => {
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872081/portfolio/experience/experience3_n2ji1u.png"
             alt=""
-            className=" w-80 sm:w-80"
+            className=" w-80 large:w-96"
           />
           <img
             src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872072/portfolio/companies/Streeya_ltbp0q.png"

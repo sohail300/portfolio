@@ -6,11 +6,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        // 'mobile': { 'max': '768px' },
-        // 'mobile': '768px',
         'mid': '850px',
-        // '2xl': '1280px',
-        // '2xl': { 'max': '1280px' },
+        'large': '1800px'
       },
       fontWeight: {
         heading: '800'

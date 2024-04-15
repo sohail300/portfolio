@@ -4,7 +4,7 @@ const Contact = () => {
         className=" flex flex-col justify-center items-center z-0 px-24 py-8"
         id="contact"
         style={{
-          backgroundImage: "url(./grid.svg)",
+          backgroundImage: "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
           backgroundPosition: "center",
         }}
       >

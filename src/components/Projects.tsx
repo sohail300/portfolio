@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useState } from "react";
 import petProjects from "../utils/petProjects";
+import { noOfMegaProjects } from "../utils/megaProjects";
+import { noOfPetProjects } from "../utils/petProjects";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -52,7 +54,8 @@ const Projects = () => {
       className=" flex flex-col z-0 px-4 py-8 lg:px-24"
       id="projects"
       style={{
-        backgroundImage: "url(./grid.svg)",
+        backgroundImage:
+          "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
         backgroundPosition: "center",
       }}
     >
@@ -115,7 +118,12 @@ const Projects = () => {
         <div className=" flex flex-col sm:flex-row sm:flex-wrap">
           {megaProjects.map((item) => {
             return (
-              <div key={item.title} className="w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3">
+              <div
+                key={item.title}
+                className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
+                  noOfMegaProjects % 4 == 0 ? "large:w-1/4" : ""
+                }`}
+              >
                 <Card
                   key={item.title}
                   title={item.title}
@@ -136,17 +144,23 @@ const Projects = () => {
         <div className=" flex flex-col sm:flex-row sm:flex-wrap">
           {petProjects.map((item) => {
             return (
-              <div key={item.title} className="w-full sm:w-1/2 pt-2 px-0 sm:px-4">
-              <Card
+              //
+              <div
                 key={item.title}
-                title={item.title}
-                description={item.description}
-                status={item.status}
-                imageUrl={item.imageUrl}
-                techStack={item.techStack}
-                gitLink={item.gitLink}
-                liveLink={item.liveLink}
-              />
+                className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
+                  noOfPetProjects % 4 == 0 ? "large:w-1/4" : ""
+                }`}
+              >
+                <Card
+                  key={item.title}
+                  title={item.title}
+                  description={item.description}
+                  status={item.status}
+                  imageUrl={item.imageUrl}
+                  techStack={item.techStack}
+                  gitLink={item.gitLink}
+                  liveLink={item.liveLink}
+                />
               </div>
             );
           })}
