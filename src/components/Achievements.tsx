@@ -30,7 +30,7 @@ const Achievements = () => {
               <img
                 src={item.imageLink}
                 alt=""
-                className=" w-full rounded-lg cursor-pointer lg:filter lg:grayscale lg:hover:filter-none lg:rounded-sm"
+                className=" w-full rounded-lg cursor-pointer lg:rounded-sm lg:filter lg:grayscale lg:hover:filter-none "
               />
             </a>
           );
