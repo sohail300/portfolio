@@ -21,6 +21,11 @@ body {
   -webkit-background-clip: text;
 }
 
+.navbar-link {
+  color: #ffffff90;
+  font-weight: 200;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 0px;
@@ -55,3 +60,39 @@ body {
   }
 }
 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); /* Starting position and reset position */
+  }
+  40% {
+    transform: translateY(-20px); /* Bounce up */
+  }
+  60% {
+    transform: translateY(-10px); /* Bounce down */
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s ease-in-out 3s infinite; /* Play bounce animation infinitely */
+}
+
+/*  */
+.chat {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 15px);
+  max-height: 500px;
+  z-index: 10;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}

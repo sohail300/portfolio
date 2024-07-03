@@ -14,28 +14,28 @@ const Navbar = () => {
         className=" w-56 top-0 right-0 z-10 hidden lg:block lg:w-screen"
       >
         <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4 lg:flex-row ">
-          <li className=" cursor-pointer heading font-heading mb-4 lg:mb-0">
+          <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink to="#home">Home</HashLink>
           </li>
-          <li className=" cursor-pointer heading font-heading mb-4 lg:mb-0">
+          <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink to="#education">Education</HashLink>
           </li>
-          <li className=" cursor-pointer heading font-heading mb-4 lg:mb-0">
+          <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink to="#experience">Experience</HashLink>
           </li>
-          <li className=" cursor-pointer heading font-heading mb-4 lg:mb-0">
+          <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink to="#projects">Projects</HashLink>
           </li>
-          <li className=" cursor-pointer heading font-heading mb-4 lg:mb-0">
+          <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink to="#designs">Designs</HashLink>
           </li>
-          <li className=" cursor-pointer heading font-heading mb-4 lg:mb-0">
+          <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink to="#achievements">Achievements</HashLink>
           </li>
-          <li className=" cursor-pointer heading font-heading mb-4 lg:mb-0">
+          <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink to="#skills">Skills</HashLink>
           </li>
-          <li className=" cursor-pointer heading font-heading mb-4 lg:mb-0">
+          <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink to="#contact">Contact Me</HashLink>
           </li>
           <li className=" mb-2 lg:mb-0">
