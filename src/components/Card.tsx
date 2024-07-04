@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className=" rounded-lg mb-8"
+      className=" rounded-lg mb-8 font-manrope"
       style={{ backgroundColor: "#2b2b2bc6", border: ".5px solid #5a5a5a" }}
     >
       <a href={liveLink} target="_blank">
@@ -39,7 +39,8 @@ const Card: React.FC<CardProps> = ({
       <div className=" rounded-lg px-3 py-4">
         <div className=" flex flex-row justify-between items-center text-14px md:text-20px">
           <div
-            style={{ color: "#2bd3fd", fontWeight: "500", }}
+            style={{ color: "#2bd3fd", fontWeight: "500" }}
+            className=" font-space"
           >
             {title}
           </div>
@@ -65,9 +66,7 @@ const Card: React.FC<CardProps> = ({
         <div className=" mt-2" style={{ color: "#b6b6b6", fontSize: "12px" }}>
           {description}
         </div>
-        <div
-          className=" grid grid-cols-4 gap-1 mt-4 text-center text-7px sm:text-10px md:text-12px"
-        >
+        <div className=" grid grid-cols-4 gap-1 mt-4 text-center text-7px sm:text-10px md:text-12px">
           {techStack.map((item: string) => {
             return (
               <span

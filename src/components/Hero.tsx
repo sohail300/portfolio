@@ -1,9 +1,43 @@
 import { TypeAnimation } from "react-type-animation";
-import PlaceIcon from "@mui/icons-material/Place";
-import ReactCountryFlag from "react-country-flag";
 import { motion } from "framer-motion";
+import { Bounce, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Hero = () => {
+  async function copytoClipboard() {
+    const blob = new Blob(["npx sohail"], { type: "text/plain" });
+    const clipboardItem = new ClipboardItem({ "text/plain": blob });
+
+    try {
+      await navigator.clipboard.write([clipboardItem]);
+      toast.success(
+        <>
+          <div className=" font-medium text-lg">
+            <b>Copied to clipboard!</b>
+          </div>
+          <div className=" text-[13px]">
+            Make sure you run this on your terminal.
+          </div>
+        </>,
+        {
+          position: "bottom-right",
+          autoClose: 2500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+        }
+      );
+      console.log("Text copied to clipboard as ClipboardItem");
+    } catch (err) {
+      toast("Opsiee! Error occured.");
+      console.error("Failed to copy: ", err);
+    }
+  }
+
   return (
     <div
       style={{
@@ -39,8 +73,6 @@ const Hero = () => {
               1000,
               "Hey, I'm a Web Designer",
               1000,
-              "Hey, I'm a Web App Tester",
-              1000,
             ]}
             wrapper="div"
             speed={50}
@@ -53,22 +85,34 @@ const Hero = () => {
             repeat={Infinity}
             className="gradient-text text-animation"
           />
-          <div className=" flex flex-row items-center justify-center lg:justify-start lg:w-72 lg:mb-8">
-            <PlaceIcon className=" mr-2" />
-            Dhanbad, Jharkhand, India
-            <ReactCountryFlag countryCode="IN" svg className=" ml-4" />
-          </div>
         </div>
 
-        <div className=" mt-8 lg:mt-0 lg:self-start">
-          <a
-            className=" py-2 px-28 bg-white rounded-md text-center font-semibold w-full lg:px-20 "
-            href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
-            target="_blank"
-            style={{ color: "#004632" }}
+        <div className=" flex flex-row items-center justify-center lg:justify-start lg:w-72 lg:mb-8 navbar-link font-heading ">
+          I convert air💨 into code💻!
+        </div>
+
+        <div
+          className=" mt-8 lg:mt-0 lg:self-start bg-black py-4 px-8 rounded-md flex flex-row items-center justify-between cursor-pointer"
+          onClick={() => copytoClipboard()}
+        >
+          <div className=" text-green-500 text-2xl font-robot">
+            👨🏻‍💻 npx sohail
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="lucide lucide-clipboard text-green-500 ml-6"
           >
-            View Resume ⚡
-          </a>
+            <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+          </svg>
         </div>
       </motion.div>
 
@@ -86,9 +130,9 @@ const Hero = () => {
         }}
       >
         <img
-          src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872116/portfolio/hero_nd6kag.png"
+          src="https://res.cloudinary.com/dwuzfbivo/image/upload//v1720037749/portfolio/hero_ituxzz.jpg"
           alt=""
-          className=" w-80 md:w-auto lg:w-auto mb-16 md:mb-32 lg:mb-0"
+          className=" w-2/4 m-auto rounded-md mb-16 lg:rounded-3xl lg:w-[360px] lg:mb-0"
         />
       </motion.div>
     </div>

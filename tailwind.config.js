@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html",
+  content: [
+    "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -10,7 +11,8 @@ export default {
         'large': '1800px'
       },
       fontWeight: {
-        heading: '800'
+        heading: '800',
+        space: '600'
       },
       fontSize: {
         heading: '30px',
@@ -21,8 +23,15 @@ export default {
         '10px': '10px',
         '12px': '12px',
       },
+      fontFamily: {
+        robot: ["VT323", "monospace"],
+        space: ["Space Grotesk", 'sans-serif'],
+        manrope: ["Manrope", 'sans-serif'],
+      },
+      colors: {
+        gray: "#b6b6b6"
+      }
     },
   },
-  plugins: [],
 }
 

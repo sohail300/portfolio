@@ -26,25 +26,8 @@ body {
   font-weight: 200;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 0px;
-  background-color: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #404040;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
   background-color: transparent;
 }
 

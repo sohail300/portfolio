@@ -19,8 +19,8 @@ function App() {
       <Experience />
       <Projects />
       <Designs />
-      <Achievements />
       <Skills />
+      <Achievements />
       {/* <Chatbot /> */}
       <Contact />
     </>

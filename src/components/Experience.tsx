@@ -3,6 +3,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -50,7 +51,8 @@ const Experience = () => {
       className=" flex flex-col z-0 px-8 py-8 lg:py-12"
       id="experience"
       style={{
-        backgroundImage: "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
+        backgroundImage:
+          "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
         backgroundPosition: "center",
       }}
     >
@@ -83,7 +85,7 @@ const Experience = () => {
         }}
       >
         <Tab
-          label="GLOCYBS"
+          label="WEBYAPAR"
           {...a11yProps(0)}
           sx={{
             flexGrow: 1,
@@ -94,8 +96,9 @@ const Experience = () => {
             boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
           }}
         />
+
         <Tab
-          label="BHAGALPUR POLICE"
+          label="GLOCYBS"
           {...a11yProps(1)}
           sx={{
             flexGrow: 1,
@@ -109,8 +112,20 @@ const Experience = () => {
           }}
         />
         <Tab
-          label="STREEYA"
+          label="BHAGALPUR POLICE"
           {...a11yProps(2)}
+          sx={{
+            flexGrow: 1,
+            border: "1px solid rgba(66, 66, 66, .623)",
+            color: "#fff",
+            borderRadius: "4px",
+            fontWeight: "500",
+            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
+          }}
+        />
+        {/* <Tab
+          label="STREEYA"
+          {...a11yProps(3)}
           sx={{
             flexGrow: 1,
             width: 4,
@@ -120,50 +135,163 @@ const Experience = () => {
             fontWeight: "500",
             boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
           }}
-        />
+        /> */}
       </Tabs>
       <CustomTabPanel value={value} index={0}>
-        <div className=" flex flex-col justify-between items-center sm:flex-row sm:justify-around w-full">
-          <img
-            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872079/portfolio/experience/experience1_jvofke.png"
-            alt=""
-            className=" w-80 large:w-96"
-          />
-          <img
-            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872070/portfolio/companies/Glocybs_hv9uux.png"
-            alt=""
-            className=" h-40 w-40 mt-8 sm:mt-0 lg:h-48 lg:w-48"
-          />
+        <div
+          className=" m-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 font-manrope text-gray 
+        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[2px_6px_0px_1px_#a52241] md:shadow-[6px_6px_0px_1px_#a52241] md:w-[800px] w-fit flex flex-col"
+        >
+          <div className=" flex justify-between items-center">
+            <div className=" flex flex-row items-end justify-center">
+              <span className=" text-heading font-space heading">Webyapar</span>
+              {/* <img
+                src="https://res.cloudinary.com/dwuzfbivo/image/upload/v1720098765/portfolio/companies/webyapar_ladowq.png"
+                alt=""
+                className=" w-auto h-5 ml-2 my-auto"
+              /> */}
+            </div>
+            <span className="font-manrope">May 2024 - June 2024</span>
+          </div>
+          <div className=" flex justify-between mt-4 items-center">
+            <span className=" text-xl">Frontend Web Developer Intern</span>
+            <span>Remote</span>
+          </div>
+
+          <ul className=" text-zinc-300 mt-4">
+            <li>
+              • Developed a static and responsive website using HTML5, CSS3,
+              Javascript and Bootstrap to meet the requirements of the client.
+            </li>
+          </ul>
+          <div className=" mt-4">Tech Stack: HTML5, CSS3, Bootstrap, Figma</div>
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <div className=" flex flex-col justify-around items-center sm:flex-row sm:justify-around w-full">
-          <img
-            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872080/portfolio/experience/experience2_qkjx4b.png"
-            alt=""
-            className=" w-80 large:w-96"
-          />
-          <img
-            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872071/portfolio/companies/locus-white_eadeih.png"
-            alt=""
-            className=" h-24 mt-8 sm:mt-0"
-          />
+        <div
+          className=" m-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 font-manrope text-gray 
+        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[2px_6px_0px_1px_#06b6d4] md:shadow-[6px_6px_0px_1px_#06b6d4] md:w-[800px] w-fit flex flex-col"
+        >
+          <div className=" flex justify-between items-center">
+            <div className=" flex flex-row items-center justify-center">
+              <span className=" text-heading font-space heading">Glocybs</span>
+              {/* <img
+                src="https://res.cloudinary.com/dwuzfbivo/image/upload/v1711872070/portfolio/companies/Glocybs_hv9uux.png"
+                alt=""
+                className=" w-auto h-6 ml-2"
+              /> */}
+            </div>
+            <span className="font-manrope">February 2024 - April 2024</span>
+          </div>
+          <div className=" flex justify-between mt-4 items-center">
+            <span className=" text-xl">Full Stack Web Developer Intern</span>
+            <span>Remote</span>
+          </div>
+
+          <ul className=" text-zinc-300 mt-4">
+            <li>
+              • Developed a Document Generator using ReactJS and ExpressJS as an
+              internal tool to automate the generation of documents like Offer
+              Letters, Non-Disclosure Agreements, Bonds etc, in the
+              organization.
+            </li>
+            <li className=" mt-2">
+              • Directly communicated and worked for a client, building their
+              website using ReactJS, ExpressJS, Google Sheets API.
+            </li>
+          </ul>
+          <div className=" mt-4">
+            Tech Stack: ReactJS, NodeJS, ExpressJS, MongoDB, HTML5, CSS3
+          </div>
         </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        <div className=" flex flex-col justify-around items-center sm:flex-row sm:justify-around w-full">
-          <img
-            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872081/portfolio/experience/experience3_n2ji1u.png"
-            alt=""
-            className=" w-80 large:w-96"
-          />
-          <img
-            src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872072/portfolio/companies/Streeya_ltbp0q.png"
-            alt=""
-            className=" h-20 mt-8"
-          />
+        <div
+          className=" m-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 font-manrope text-gray 
+        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[2px_6px_0px_1px_#A38F58] md:shadow-[6px_6px_0px_1px_#A38F58] md:w-[800px] w-fit flex flex-col"
+        >
+          <div className=" flex justify-between items-center">
+            <div className=" flex flex-row items-center justify-center">
+              <span className=" text-heading font-space heading">
+                Bhagalpur Police
+              </span>
+              {/* <img
+                src="https://res.cloudinary.com/dwuzfbivo/image/upload/v1711872071/portfolio/companies/locus-white_eadeih.png"
+                alt=""
+                className=" w-auto h-6 ml-2"
+              /> */}
+            </div>
+            <span className="font-manrope">August 2023 - January 2024</span>
+          </div>
+          <div className=" flex justify-between mt-4 items-center">
+            <span className=" text-xl">UI/UX + Frontend Developer</span>
+            <span>Bhagalpur, Bihar, India</span>
+          </div>
+
+          <ul className=" text-zinc-300 mt-4">
+            <li>
+              • Received Project offer from Bhagalpur Police: Member of a team
+              of 10+ students, collaborated with 6 officers to simplify the FIR
+              progress tracking, multilevel reporting and analytics.
+            </li>
+            <li className=" mt-2">
+              • Featured in Newspapers,
+              <Link
+                to={
+                  "https://timesofindia.indiatimes.com/city/patna/iiit-bhagalpur-and-police-ink-mou-to-develop-ai-based-app/articleshow/102066581.cms"
+                }
+                className=" underline mx-1"
+              >
+                TimesofIndia
+              </Link>
+              and Youtube Channels,
+              <Link
+                to={
+                  "https://timesofindia.indiatimes.com/city/patna/iiit-bhagalpur-and-police-ink-mou-to-develop-ai-based-app/articleshow/102066581.cms"
+                }
+                className=" underline mx-1"
+              >
+                The Bihar Bulletin
+              </Link>
+            </li>
+          </ul>
+          <div className=" mt-4">Tech Stack: ReactJS, HTML5, CSS3, Figma</div>
         </div>
       </CustomTabPanel>
+      {/* <CustomTabPanel value={value} index={3}>
+        <div
+          className=" m-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 font-manrope text-gray 
+        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[2px_6px_0px_1px_#a52241] md:shadow-[6px_6px_0px_1px_#a52241] md:w-[800px] w-fit flex flex-col"
+        >
+          <div className=" flex justify-between items-center">
+            <div className=" flex flex-row items-end justify-center">
+              <span className=" text-heading font-space heading">Streeya</span>
+              <img
+                src="https://res.cloudinary.com/dwuzfbivo/image/upload/v1711872072/portfolio/companies/Streeya_ltbp0q.png"
+                alt=""
+                className=" w-auto h-5 ml-2 my-auto"
+              />
+            </div>
+            <span className="font-manrope">July 2023 - August 2023</span>
+          </div>
+          <div className=" flex justify-between mt-4 items-center">
+            <span className=" text-xl">UI/UX Designer</span>
+            <span>Remote</span>
+          </div>
+
+          <ul className=" text-zinc-300 mt-4">
+            <li>
+              • Designed 50+ web pages for their website establishing a strong
+              brand identity.
+            </li>
+            <li className=" mt-2">
+              • Crafted a responsive design strategy, ensuring a seamless user
+              experience across various devices.
+            </li>
+          </ul>
+          <div className=" mt-4">Tech Stack: Figma</div>
+        </div>
+      </CustomTabPanel> */}
     </div>
   );
 };

@@ -7,11 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "ssr": "npm run build && node server/index.js"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@babel/register": "^7.24.6",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.14",
@@ -19,14 +17,15 @@
     "@types/react-router-hash-link": "^2.4.9",
     "compression": "^1.7.4",
     "express": "^4.19.2",
-    "framer-motion": "^11.0.24",
-    "ignore-styles": "^5.0.1",
+    "framer-motion": "^11.2.12",
+    "lucide-react": "^0.400.0",
     "react": "^18.2.0",
     "react-country-flag": "^3.1.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-router-hash-link": "^2.4.3",
     "react-scroll-motion": "^0.3.3",
+    "react-toastify": "^10.0.5",
     "react-type-animation": "^3.2.0",
     "sirv": "^2.0.4"
   },
