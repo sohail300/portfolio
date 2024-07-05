@@ -6,7 +6,17 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        upDown: {
+          '0%, 100%': { transform: 'translateY(8px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+      },
+      animation: {
+        upDown: 'upDown 2s ease-in-out infinite',
+      },
       screens: {
+        'small': '550px',
         'mid': '850px',
         'large': '1800px'
       },

@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -40,6 +41,7 @@ function a11yProps(index: number) {
 
 const Experience = () => {
   const [value, setValue] = useState(0);
+  const text = "Companies where I can applied my skills".split(" ");
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -48,7 +50,7 @@ const Experience = () => {
 
   return (
     <div
-      className=" flex flex-col z-0 px-8 py-8 lg:py-12"
+      className=" flex flex-col z-0 px-4 py-8 lg:py-12"
       id="experience"
       style={{
         backgroundImage:
@@ -60,7 +62,20 @@ const Experience = () => {
         Experience
       </div>
       <div className=" heading text-center mb-8">
-        Companies where I can applied my skills
+        {text.map((el, i) => (
+          <motion.span
+            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.25,
+              delay: i / 10,
+            }}
+            key={i}
+          >
+            {el}{" "}
+          </motion.span>
+        ))}
       </div>
 
       <Tabs
@@ -138,9 +153,26 @@ const Experience = () => {
         /> */}
       </Tabs>
       <CustomTabPanel value={value} index={0}>
-        <div
+        <motion.div
           className=" m-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 font-manrope text-gray 
-        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[2px_6px_0px_1px_#a52241] md:shadow-[6px_6px_0px_1px_#a52241] md:w-[800px] w-fit flex flex-col"
+        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[4px_6px_0px_1px_#a52241] md:shadow-[6px_6px_0px_1px_#a52241] md:w-[800px] w-fit flex flex-col"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+              type: "spring",
+              duration: 1.2,
+              ease: "easeInOut",
+              bounce: 0.7,
+            },
+          }}
         >
           <div className=" flex justify-between items-center">
             <div className=" flex flex-row items-end justify-center">
@@ -151,26 +183,54 @@ const Experience = () => {
                 className=" w-auto h-5 ml-2 my-auto"
               /> */}
             </div>
-            <span className="font-manrope">May 2024 - June 2024</span>
+            <span className="font-manrope hidden small:block">
+              May 2024 - June 2024
+            </span>
           </div>
           <div className=" flex justify-between mt-4 items-center">
-            <span className=" text-xl">Frontend Web Developer Intern</span>
+            <span className=" text-base small:text-xl">
+              Frontend Web Developer Intern
+            </span>
+            <span className="hidden small:block">Remote</span>
+          </div>
+          <div className=" flex mt-4 items-center text-xs small:hidden">
+            <span className="font-manrope">May 2024 - June 2024</span>
+            <span className=" mx-1">•</span>
             <span>Remote</span>
           </div>
 
-          <ul className=" text-zinc-300 mt-4">
+          <ul className=" text-zinc-300 mt-4 text-sm small:text-base">
             <li>
               • Developed a static and responsive website using HTML5, CSS3,
               Javascript and Bootstrap to meet the requirements of the client.
             </li>
           </ul>
-          <div className=" mt-4">Tech Stack: HTML5, CSS3, Bootstrap, Figma</div>
-        </div>
+          <div className=" mt-4 text-sm small:text-base">
+            Tech Stack: HTML5, CSS3, Bootstrap, Figma
+          </div>
+        </motion.div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <div
+        <motion.div
           className=" m-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 font-manrope text-gray 
-        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[2px_6px_0px_1px_#06b6d4] md:shadow-[6px_6px_0px_1px_#06b6d4] md:w-[800px] w-fit flex flex-col"
+        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[4px_6px_0px_1px_#06b6d4] md:shadow-[6px_6px_0px_1px_#06b6d4] md:w-[800px] w-fit flex flex-col"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+              type: "spring",
+              duration: 1.2,
+              ease: "easeInOut",
+              bounce: 0.7,
+            },
+          }}
         >
           <div className=" flex justify-between items-center">
             <div className=" flex flex-row items-center justify-center">
@@ -181,14 +241,24 @@ const Experience = () => {
                 className=" w-auto h-6 ml-2"
               /> */}
             </div>
-            <span className="font-manrope">February 2024 - April 2024</span>
+            <span className="font-manrope hidden small:block">
+              February 2024 - April 2024
+            </span>
           </div>
           <div className=" flex justify-between mt-4 items-center">
-            <span className=" text-xl">Full Stack Web Developer Intern</span>
+            <span className=" text-base small:text-xl">
+              Full Stack Web Developer Intern
+            </span>
+            <span className=" hidden small:block">Remote</span>
+          </div>
+
+          <div className=" flex mt-4 items-center text-xs small:hidden ">
+            <span className="font-manrope">February 2024 - April 2024</span>
+            <span className=" mx-1">•</span>
             <span>Remote</span>
           </div>
 
-          <ul className=" text-zinc-300 mt-4">
+          <ul className=" text-zinc-300 mt-4 text-sm small:text-base">
             <li>
               • Developed a Document Generator using ReactJS and ExpressJS as an
               internal tool to automate the generation of documents like Offer
@@ -200,15 +270,32 @@ const Experience = () => {
               website using ReactJS, ExpressJS, Google Sheets API.
             </li>
           </ul>
-          <div className=" mt-4">
+          <div className=" mt-4 text-sm small:text-base">
             Tech Stack: ReactJS, NodeJS, ExpressJS, MongoDB, HTML5, CSS3
           </div>
-        </div>
+        </motion.div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        <div
+        <motion.div
           className=" m-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 font-manrope text-gray 
-        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[2px_6px_0px_1px_#A38F58] md:shadow-[6px_6px_0px_1px_#A38F58] md:w-[800px] w-fit flex flex-col"
+        border-t-[1px] border-solid border-l-[1px] px-8 py-4 rounded-xl shadow-[4px_6px_0px_1px_#A38F58] md:shadow-[6px_6px_0px_1px_#A38F58] md:w-[800px] w-fit flex flex-col"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+              type: "spring",
+              duration: 1.2,
+              ease: "easeInOut",
+              bounce: 0.7,
+            },
+          }}
         >
           <div className=" flex justify-between items-center">
             <div className=" flex flex-row items-center justify-center">
@@ -221,14 +308,24 @@ const Experience = () => {
                 className=" w-auto h-6 ml-2"
               /> */}
             </div>
-            <span className="font-manrope">August 2023 - January 2024</span>
+            <span className="font-manrope hidden small:block">
+              August 2023 - January 2024
+            </span>
           </div>
           <div className=" flex justify-between mt-4 items-center">
-            <span className=" text-xl">UI/UX + Frontend Developer</span>
-            <span>Bhagalpur, Bihar, India</span>
+            <span className=" text-base small:text-lg">
+              UI/UX + Frontend Developer
+            </span>
+            <span className="hidden small:block">Bhagalpur, Bihar, India</span>
           </div>
 
-          <ul className=" text-zinc-300 mt-4">
+          <div className=" flex mt-4 items-center text-xs small:hidden ">
+            <span className="font-manrope">August 2023 - January 2024</span>
+            <span className=" mx-1">•</span>
+            <span>Remote</span>
+          </div>
+
+          <ul className=" text-zinc-300 mt-4 text-sm small:text-base">
             <li>
               • Received Project offer from Bhagalpur Police: Member of a team
               of 10+ students, collaborated with 6 officers to simplify the FIR
@@ -255,8 +352,10 @@ const Experience = () => {
               </Link>
             </li>
           </ul>
-          <div className=" mt-4">Tech Stack: ReactJS, HTML5, CSS3, Figma</div>
-        </div>
+          <div className=" mt-4 text-sm small:text-base">
+            Tech Stack: ReactJS, HTML5, CSS3, Figma
+          </div>
+        </motion.div>
       </CustomTabPanel>
       {/* <CustomTabPanel value={value} index={3}>
         <div

@@ -8,6 +8,7 @@ import { useState } from "react";
 import petProjects from "../utils/petProjects";
 import { noOfMegaProjects } from "../utils/megaProjects";
 import { noOfPetProjects } from "../utils/petProjects";
+import { motion } from "framer-motion";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -43,6 +44,10 @@ function a11yProps(index: number) {
 }
 const Projects = () => {
   const [value, setValue] = useState(0);
+  const text =
+    "What value does that skill hold if you're unable to apply it to the project?".split(
+      " "
+    );
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -63,8 +68,20 @@ const Projects = () => {
         Projects
       </div>
       <div className=" heading text-center mb-8">
-        What value does that skill hold if you're unable to apply it to the
-        project?
+        {text.map((el, i) => (
+          <motion.span
+            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.25,
+              delay: i / 10,
+            }}
+            key={i}
+          >
+            {el}{" "}
+          </motion.span>
+        ))}
       </div>
       <Tabs
         value={value}

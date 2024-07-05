@@ -4,6 +4,7 @@ import {
   getStatusBackgroundColor,
   getStatusTextColor,
 } from "../utils/statusColor";
+import { motion } from "framer-motion";
 
 interface CardProps {
   title: string;
@@ -25,9 +26,23 @@ const Card: React.FC<CardProps> = ({
   liveLink,
 }) => {
   return (
-    <div
+    <motion.div
       className=" rounded-lg mb-8 font-manrope"
       style={{ backgroundColor: "#2b2b2bc6", border: ".5px solid #5a5a5a" }}
+      viewport={{ once: true }}
+      initial={{
+        opacity: 0,
+        x: -100,
+        scale: 1,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        scale: 1,
+        transition: {
+          duration: 0.5,
+        },
+      }}
     >
       <a href={liveLink} target="_blank">
         <img
@@ -86,7 +101,7 @@ const Card: React.FC<CardProps> = ({
       background-color: rgba(55, 103, 81, .262); color: #83ffb1; -> SIH Project
       backgroundColor: "rgba(87, 103, 55, .262)"; color: "#dcff83", -> Deployed
       */}
-    </div>
+    </motion.div>
   );
 };
 

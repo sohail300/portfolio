@@ -1,5 +1,5 @@
 // import { useEffect, useRef, useState } from "react";
-// import { HashLink } from "react-router-hash-link";
+// import { Link } from "react-router-hash-link";
 // import "./chatbot.css";
 
 // const Chatbot = () => {
@@ -72,11 +72,11 @@
 
 //   return (
 //     <>
-//       <HashLink to="#chatbot">
+//       <Link to="#chatbot">
 //         <div className="rounded-full fixed w-[5%] bottom-5 right-5 bg-white animate-bounce cursor-pointer">
 //           <img src="./chatbot.png" alt="" className="" />
 //         </div>
-//       </HashLink>
+//       </Link>
 //       <div
 //         id="chatbot"
 //         style={{

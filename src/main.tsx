@@ -4,16 +4,12 @@ import App from "./App.tsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { NextUIProvider } from "@nextui-org/system";
 
-ReactDOM.hydrateRoot(
-  document.getElementById("root")!,
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <NextUIProvider>
-        <App />
-        <ToastContainer />
-      </NextUIProvider>
+      <App />
+      <ToastContainer />
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -12,10 +12,8 @@ const Hero = () => {
       await navigator.clipboard.write([clipboardItem]);
       toast.success(
         <>
-          <div className=" font-medium text-lg">
-            <b>Copied to clipboard!</b>
-          </div>
-          <div className=" text-[13px]">
+          <div className="text-base">Copied to clipboard!</div>
+          <div className=" text-[12px]">
             Make sure you run this on your terminal.
           </div>
         </>,
@@ -29,6 +27,7 @@ const Hero = () => {
           progress: undefined,
           theme: "dark",
           transition: Bounce,
+          style: { fontFamily: "Manrope" },
         }
       );
       console.log("Text copied to clipboard as ClipboardItem");
@@ -50,10 +49,11 @@ const Hero = () => {
     >
       <motion.div
         className=" flex flex-col items-center justify-center lg:w-2/5 lg:items-start"
+        viewport={{ once: true }}
         initial={{
           opacity: 0,
-          y: 100,
-          scale: 0,
+          y: -100,
+          scale: 1,
         }}
         whileInView={{
           opacity: 1,
@@ -117,16 +117,24 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
+        className="animate-upDown"
+        viewport={{ once: true }}
         initial={{
           opacity: 0,
-          x: 0,
+          y: 100,
+          scale: 1,
         }}
         whileInView={{
           opacity: 1,
-          x: 0,
+          y: 0,
+          scale: 1,
           transition: {
             duration: 1,
           },
+        }}
+        style={{
+          transform:
+            "translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)",
         }}
       >
         <img

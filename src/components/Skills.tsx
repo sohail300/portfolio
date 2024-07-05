@@ -1,12 +1,18 @@
 import { skills } from "../utils/skills";
+import { motion } from "framer-motion";
 
 const Skills = () => {
+  const text =
+    "Skills in which I have invested significant time and have consistently applied its knowledge to real-time tasks.".split(
+      " "
+    );
   return (
     <div
       className=" flex flex-col z-0 px-8 py-8 lg:px-24"
       id="skills"
       style={{
-        backgroundImage: "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
+        backgroundImage:
+          "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
         backgroundPosition: "center",
       }}
     >
@@ -14,11 +20,39 @@ const Skills = () => {
         Skills That Matters
       </div>
       <div className=" heading text-center mb-8">
-        Skills in which I have invested significant time and have consistently
-        applied its knowledge to real-time tasks.
+        {text.map((el, i) => (
+          <motion.span
+            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              duration: 0.25,
+              delay: i / 10,
+            }}
+            key={i}
+          >
+            {el}{" "}
+          </motion.span>
+        ))}
       </div>
       <div className=" lg:px-32">
-        <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
+        <motion.div
+          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            x: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
           <span
             className=" py-2 px-8 rounded-md md:mr-16"
             style={{
@@ -50,9 +84,25 @@ const Skills = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
 
-        <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
+        <motion.div
+          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            x: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
           <span
             className=" py-2 px-8 rounded-md md:mr-16"
             style={{
@@ -84,9 +134,25 @@ const Skills = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
 
-        <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
+        <motion.div
+          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            x: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
           <span
             className=" py-2 px-8 rounded-md md:mr-16"
             style={{
@@ -118,9 +184,25 @@ const Skills = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
 
-        <div className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between">
+        <motion.div
+          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            x: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
           <span
             className=" py-2 px-8 rounded-md md:mr-16"
             style={{
@@ -152,7 +234,7 @@ const Skills = () => {
               );
             })}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

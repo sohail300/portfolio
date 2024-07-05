@@ -12,13 +12,16 @@ const Education = () => {
       id="education"
     >
       <motion.div
+        viewport={{ once: true }}
         initial={{
           opacity: 0,
-          x: -50,
+          y: 100,
+          scale: 1,
         }}
         whileInView={{
           opacity: 1,
-          x: 0,
+          y: 0,
+          scale: 1,
           transition: {
             duration: 1,
           },
@@ -32,14 +35,16 @@ const Education = () => {
       </motion.div>
 
       <motion.div
-        className=" "
+        viewport={{ once: true }}
         initial={{
           opacity: 0,
-          x: 0,
+          y: -100,
+          scale: 1,
         }}
         whileInView={{
           opacity: 1,
-          x: 0,
+          y: 0,
+          scale: 1,
           transition: {
             duration: 1,
           },
