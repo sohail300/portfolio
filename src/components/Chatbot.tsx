@@ -1,5 +1,5 @@
 // import { useEffect, useRef, useState } from "react";
-// import { Link } from "react-router-hash-link";
+// import { Link } from "react-router-dom";
 // import "./chatbot.css";
 
 // const Chatbot = () => {
@@ -11,17 +11,6 @@
 //     "Nice to meet you",
 //     "How are you?",
 //     "Not too bad, thanks",
-//     "What do you do?",
-//     "That's awesome",
-//     "Codepen is a nice place to stay",
-//     "I think you're a nice person",
-//     "Why do you think that?",
-//     "Can you explain?",
-//     "Anyway I've gotta go now",
-//     "It was a pleasure chat with you",
-//     "Time to make a new codepen",
-//     "Bye",
-//     ":)",
 //   ];
 //   let i = 0;
 
@@ -73,7 +62,7 @@
 //   return (
 //     <>
 //       <Link to="#chatbot">
-//         <div className="rounded-full fixed w-[5%] bottom-5 right-5 bg-white animate-bounce cursor-pointer">
+//         <div className="rounded-full fixed w-[10%] small:w-[5%] bottom-5 right-5 bg-white animate-bounce cursor-pointer">
 //           <img src="./chatbot.png" alt="" className="" />
 //         </div>
 //       </Link>

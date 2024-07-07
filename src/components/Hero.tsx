@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Hero = () => {
   async function copytoClipboard() {
-    const blob = new Blob(["npx sohail"], { type: "text/plain" });
+    const blob = new Blob(["npx sohaildev"], { type: "text/plain" });
     const clipboardItem = new ClipboardItem({ "text/plain": blob });
 
     try {
@@ -96,7 +96,7 @@ const Hero = () => {
           onClick={() => copytoClipboard()}
         >
           <div className=" text-green-500 text-2xl font-robot">
-            👨🏻‍💻 npx sohail
+            👨🏻‍💻 npx sohaildev
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

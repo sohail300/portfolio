@@ -1,4 +1,4 @@
-export const data = [
+[
   {
     "id": 1,
     "title": "Name",
@@ -62,17 +62,17 @@ export const data = [
   {
     "id": 13,
     "title": "Tools - Skills",
-    "description": "WordPress, Networking, Linux, Git, GitHub, Figma"
+    "description": "WordPress, Linux, Git, GitHub, Figma"
   },
   {
     "id": 14,
     "title": "Databases - Skills",
-    "description": "MongoDB, Firebase, MySQL, PostgreSQL, Prisma"
+    "description": "MongoDB, Firebase, PostgreSQL, Prisma"
   },
   {
     "id": 15,
     "title": "Deployment - Skills",
-    "description": "AWS, Vercel"
+    "description": "AWS, Vercel, Cloudfare"
   },
   {
     "id": 16,
