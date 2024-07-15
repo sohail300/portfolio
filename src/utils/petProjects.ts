@@ -3,29 +3,29 @@ const petProjects = [
     title: "Whatspp Chat Service",
     status: "Deployed",
     description:
-      "It is a chat app which uses Meta API to send messages to a Whatsapp number and webhooks to receive messages from a Whatsapp number.",
+      "It is a chat app which uses Meta API to send messages to a Whatsapp number and webhooks to receive messages.",
     imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872085/portfolio/petprojects/pet1_yoz2kj.png",
-    techStack: ["HTML", "CSS", "JavaScript", "NodeJS", "Socket", "Meta"],
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/c_scale,h_832,w_1280/f_auto/v1720870887/portfolio/petprojects/pet7_o0c0zs.png",
+    techStack: ["JavaScript", "NodeJS", "Sockets", "MetaAPI"],
     gitLink: "https://github.com/sohail300/Customer-Service-Chat-App",
     liveLink: "https://youtu.be/ZULRNwPldPw?si=1lHGP6jVhwMFAddW",
   },
-  {
-    title: "Hotstar Ad Muter",
-    status: "Deployed",
-    description:
-      "It is a chrome extension which mutes Hotstar tab during ads and unmutes it when the match continues.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872085/portfolio/petprojects/pet1_yoz2kj.png",
-    techStack: ["HTML", "CSS", "JavaScript", "Web APIs"],
-    gitLink: "https://github.com/sohail300/Hotstar-Ad-Muter",
-    liveLink: "",
-  },
+  // {
+  //   title: "Hotstar Ad Muter",
+  //   status: "Deployed",
+  //   description:
+  //     "It is a chrome extension which mutes Hotstar tab during ads and unmutes it when the match continues.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872085/portfolio/petprojects/pet1_yoz2kj.png",
+  //   techStack: ["HTML", "CSS", "JavaScript", "Web APIs"],
+  //   gitLink: "https://github.com/sohail300/Hotstar-Ad-Muter",
+  //   liveLink: "",
+  // },
   {
     title: "Hangman Game",
     status: "Deployed",
     description:
-      "Hangman is a classic word guessing game where one player thinks of a word and the other player tries to guess it by suggesting letters within a certain number of guesses.",
+      "A word guessing game where the player tries to guess a word it by suggesting letters within a certain number of guesses.",
     imageUrl:
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872085/portfolio/petprojects/pet1_yoz2kj.png",
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -33,7 +33,7 @@ const petProjects = [
     liveLink: "https://sohail300.github.io/06-Hangman-Game/",
   },
   {
-    title: "Exchange Rate Calculator",
+    title: "Exchange Rate Calc",
     status: "Deployed",
     description:
       "An exchange rate calculator is a tool that allows users to convert the value of one currency into another currency.",
@@ -65,17 +65,17 @@ const petProjects = [
     gitLink: "https://github.com/sohail300/color-guesser-game",
     liveLink: "https://sohail300.github.io/Color-Guesser-Game/",
   },
-  {
-    title: "Dice Game",
-    status: "Deployed",
-    description:
-      "A dice game involves rolling one or more dice to achieve a certain outcome, often involving points or a race to reach a target score.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872090/portfolio/petprojects/pet5_f7y4yr.png",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    gitLink: "https://github.com/sohail300/dice-game",
-    liveLink: "https://sohail300.github.io/Dice-Game/",
-  },
+  // {
+  //   title: "Dice Game",
+  //   status: "Deployed",
+  //   description:
+  //     "A dice game involves rolling one or more dice to achieve a certain outcome, often involving points or a race to reach a target score.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872090/portfolio/petprojects/pet5_f7y4yr.png",
+  //   techStack: ["HTML", "CSS", "JavaScript"],
+  //   gitLink: "https://github.com/sohail300/dice-game",
+  //   liveLink: "https://sohail300.github.io/Dice-Game/",
+  // },
   {
     title: "Score Keeper",
     status: "Deployed",

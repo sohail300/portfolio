@@ -2,6 +2,7 @@ import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
+import { RESUME_LINK } from "../utils/links";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -79,7 +80,7 @@ const Navbar = () => {
           </li>
           <li className=" mb-2 lg:mb-0">
             <a
-              href="https://drive.google.com/file/d/1Epfou21Jc4W7V-2c-oQdYLXBd_fkxWhR/view?usp=drive_link"
+              href={RESUME_LINK}
               target="_blank"
               className=" px-8 py-2 bg-white text-black text-center rounded-md font-semibold"
               style={{ color: "#004632" }}
