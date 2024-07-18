@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Designs from "./components/Designs";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import GithubHeatmap from "./components/GithubHeatmap";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
@@ -21,6 +22,7 @@ function App() {
       <Designs />
       <Skills />
       <Achievements />
+      <GithubHeatmap />
       {/* <Chatbot /> */}
       <Contact />
     </>
