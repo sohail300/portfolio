@@ -1,1 +1,1 @@
-export const RESUME_LINK = "https://dub.sh/GJGQCk9";
+export const RESUME_LINK = "https://links.heysohail.me/2-page";

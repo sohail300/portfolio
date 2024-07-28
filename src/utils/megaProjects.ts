@@ -3,10 +3,19 @@ const megaProjects = [
     title: "E-Kaksha",
     status: "Deployed",
     description:
-      "An innovative online course selling platform. Different interface for two levels of users - Admin and Student. Integrated secure payment gateway using Stripe. Implemented verification using OTP via email.",
+      "An innovative online course selling platform with an integrated LMS. Different interface for Admin and Students. Integrated secure payment gateway using Stripe. Used Firebase as object store. Implemented features such as wishlist, reviews.",
     imageUrl:
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872083/portfolio/megaprojects/ekaksha_axlrtv.png",
-    techStack: ["React", "TypeScript", "ExpressJS", "MongoDB", "CMS"],
+    techStack: [
+      "React",
+      "Tailwind",
+      "TypeScript",
+      "ExpressJS",
+      "MongoDB",
+      "Firebase",
+      "LMS",
+      "Azure",
+    ],
     gitLink: "https://github.com/sohail300/E-Kaksha",
     liveLink: "https://e-kaksha.heysohail.me/",
   },
@@ -17,7 +26,15 @@ const megaProjects = [
       "Spill is an anonymous feedback platform. Implemented Next Auth for Login purpose. Implemented verification of account via OTP sent through email. Utilized React Hook Form in developing UI.",
     imageUrl:
       "https://res.cloudinary.com/dwuzfbivo/image/upload/v1720871264/portfolio/megaprojects/spill_vwyuyb.png",
-    techStack: ["NextJS", "TypeScript", "MongoDB", "Next Auth", "Zod"],
+    techStack: [
+      "NextJS",
+      "Tailwind",
+      "ShadCN",
+      "TypeScript",
+      "MongoDB",
+      "Next Auth",
+      "Zod",
+    ],
     gitLink: "https://github.com/sohail300/Spill-App",
     liveLink: "https://spill.heysohail.me/",
   },
@@ -30,6 +47,7 @@ const megaProjects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/v1721058340/portfolio/megaprojects/blogflow_xxzfap.png",
     techStack: [
       "React",
+      "ShadCN",
       "TypeScript",
       "Hono",
       "Cloudflare",
