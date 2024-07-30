@@ -1,6 +1,6 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import YoutubeIcon from "@mui/icons-material/Youtube";
+import YoutubeIcon from "@mui/icons-material/YouTube";
 import {
   getStatusBackgroundColor,
   getStatusTextColor,
