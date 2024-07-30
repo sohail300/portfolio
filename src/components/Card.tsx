@@ -1,5 +1,6 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import YoutubeIcon from "@mui/icons-material/Youtube";
 import {
   getStatusBackgroundColor,
   getStatusTextColor,
@@ -14,6 +15,7 @@ interface CardProps {
   techStack: string[];
   gitLink: string;
   liveLink: string;
+  youtubeLink?: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -24,6 +26,7 @@ const Card: React.FC<CardProps> = ({
   techStack,
   gitLink,
   liveLink,
+  youtubeLink = "",
 }) => {
   return (
     <motion.div
@@ -75,6 +78,15 @@ const Card: React.FC<CardProps> = ({
             <a href={liveLink} target="_blank" className=" text-white ml-2">
               <OpenInNewIcon />
             </a>
+            {!(youtubeLink?.length === 0) && (
+              <a
+                href={youtubeLink}
+                target="_blank"
+                className=" text-white ml-2"
+              >
+                <YoutubeIcon />
+              </a>
+            )}
           </div>
         </div>
 

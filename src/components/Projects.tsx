@@ -49,9 +49,8 @@ const Projects = () => {
       " "
     );
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
-    console.log(event);
   };
 
   return (
@@ -150,6 +149,7 @@ const Projects = () => {
                   techStack={item.techStack}
                   gitLink={item.gitLink}
                   liveLink={item.liveLink}
+                  youtubeLink={item.youtubeLink}
                 />
               </div>
             );

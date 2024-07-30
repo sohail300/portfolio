@@ -18,6 +18,7 @@ const megaProjects = [
     ],
     gitLink: "https://github.com/sohail300/E-Kaksha",
     liveLink: "https://e-kaksha.heysohail.me/",
+    youtubeLink: "https://youtu.be/onl838TfhYE",
   },
   {
     title: "Spill",
@@ -37,6 +38,7 @@ const megaProjects = [
     ],
     gitLink: "https://github.com/sohail300/Spill-App",
     liveLink: "https://spill.heysohail.me/",
+    youtubeLink: "https://youtu.be/YVMaOys-c2g",
   },
   {
     title: "BlogFlow",
@@ -57,6 +59,7 @@ const megaProjects = [
     ],
     gitLink: "https://github.com/sohail300/Blog-Flow",
     liveLink: "https://blogflow.heysohail.me/",
+    youtubeLink: "",
   },
   // {
   //   title: "Expense Tracker",
