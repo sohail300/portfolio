@@ -61,6 +61,25 @@ const megaProjects = [
     liveLink: "https://blogflow.heysohail.me/",
     youtubeLink: "",
   },
+  {
+    title: "Sahayta",
+    status: "Under Development",
+    description:
+      "An application under which all rescue agencies are registered and which can display the location of other rescue relief agencies during natural/man made calamities. Implemented three levels of users.",
+    imageUrl:
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/v1723382434/portfolio/megaprojects/Sahayta_fvraph.png",
+    techStack: [
+      "React",
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+      "Kotlin",
+      "Maps API",
+    ],
+    gitLink: "https://github.com/sohail300/Sahayata",
+    liveLink: "https://sohail300.github.io/Sahayta-Coming-Soon/",
+  },
   // {
   //   title: "Expense Tracker",
   //   status: "Deployed",
@@ -72,27 +91,8 @@ const megaProjects = [
   //   gitLink: "https://github.com/sohail300/Expense-Tracker",
   //   liveLink: "https://expense-tracker-sohail300.vercel.app/",
   // },
-  // {
-  //   title: "Rescue Radar",
-  //   status: "SIH Project",
-  //   description:
-  //     "An application under which all rescue agencies are registered and which can display the location of other rescue relief agencies during natural/man made calamities. Implemented three levels of users.",
-  //   imageUrl:
-  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872085/portfolio/megaprojects/rescueradar_zyabzp.png",
-  //   techStack: [
-  //     "React",
-  //     "JavaScript",
-  //     "NodeJS",
-  //     "ExpressJS",
-  //     "MongoDB",
-  //     "Kotlin",
-  //     "Maps API",
-  //   ],
-  //   gitLink: "https://github.com/RescueRadar-SIH/backend",
-  //   liveLink: "https://sohail300.github.io/Rescue-Radar-Coming-Soon/",
-  // },
 ];
 
 export default megaProjects;
 
-export const noOfMegaProjects = 3;
+export const noOfMegaProjects = 4;

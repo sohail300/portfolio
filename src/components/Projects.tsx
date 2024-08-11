@@ -9,6 +9,9 @@ import petProjects from "../utils/petProjects";
 import { noOfMegaProjects } from "../utils/megaProjects";
 import { noOfPetProjects } from "../utils/petProjects";
 import { motion } from "framer-motion";
+import innovativeProjects, {
+  noOfInnovativeProjects,
+} from "../utils/innovativeProjects";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -117,8 +120,21 @@ const Projects = () => {
           }}
         />
         <Tab
-          label="Pet Projects"
+          label="Innovative Projects"
           {...a11yProps(1)}
+          sx={{
+            flexGrow: 1,
+            border: "1px solid rgba(66, 66, 66, .623)",
+            color: "#fff",
+            borderRadius: "4px",
+            fontWeight: "500",
+            marginRight: "20px",
+            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
+          }}
+        />
+        <Tab
+          label="Pet Projects"
+          {...a11yProps(2)}
           sx={{
             flexGrow: 1,
             border: "1px solid rgba(66, 66, 66, .623)",
@@ -158,6 +174,33 @@ const Projects = () => {
       </CustomTabPanel>
 
       <CustomTabPanel value={value} index={1}>
+        <div className=" flex flex-col sm:flex-row sm:flex-wrap">
+          {innovativeProjects.map((item) => {
+            return (
+              <div
+                key={item.title}
+                className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
+                  noOfInnovativeProjects % 4 == 0 ? "large:w-1/4" : ""
+                }`}
+              >
+                <Card
+                  key={item.title}
+                  title={item.title}
+                  description={item.description}
+                  status={item.status}
+                  imageUrl={item.imageUrl}
+                  techStack={item.techStack}
+                  gitLink={item.gitLink}
+                  liveLink={item.liveLink}
+                  // youtubeLink={item.youtubeLink}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </CustomTabPanel>
+
+      <CustomTabPanel value={value} index={2}>
         <div className=" flex flex-col sm:flex-row sm:flex-wrap">
           {petProjects.map((item) => {
             return (
