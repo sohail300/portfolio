@@ -10,6 +10,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Web3 from "./components/Web3";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Education />
       <Experience />
       <Projects />
+      <Web3 />
       <Designs />
       <Skills />
       <Achievements />
