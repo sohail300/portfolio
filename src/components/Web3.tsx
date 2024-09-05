@@ -4,9 +4,7 @@ import web3Projects, { noOfWeb3Projects } from "../utils/web3Projects";
 
 const Web3 = () => {
   const text =
-    "What value does that skill hold if you're unable to apply it to the project?".split(
-      " "
-    );
+    "Revolutionizing industries through decentralized technologies".split(" ");
 
   return (
     <div
@@ -19,7 +17,7 @@ const Web3 = () => {
       }}
     >
       <div className=" font-heading text-heading heading text-center">
-        Projects
+        Web3 Projects
       </div>
       <div className=" heading text-center mb-8">
         {text.map((el, i) => (

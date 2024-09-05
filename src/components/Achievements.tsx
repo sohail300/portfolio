@@ -57,8 +57,6 @@ const Achievements = () => {
                   delay: 0.5 * index,
                 },
               }}
-              href={item.figmaLink}
-              target="_blank"
               key={index}
               className="w-full sm:w-1/2 px-0 py-4 sm:px-4 lg:w-1/3 "
             >

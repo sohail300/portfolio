@@ -28,7 +28,7 @@ const Education = () => {
         }}
       >
         <img
-          src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872077/portfolio/education/about_ivy7bs.png"
+          src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1725573820/portfolio/education/Education_qvybxo.png"
           alt=""
           className=" w-full lg:h-80 large:h-96"
         />

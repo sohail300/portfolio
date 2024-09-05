@@ -4,6 +4,7 @@ export const skills = {
   database: ["mongodb.png", "firebase.png", "postgresql.webp", "prisma.png"],
   tools: ["figma.png", "git.png", "github.png", "api.webp"],
   devops: ["docker.webp", "aws.png", "azure.png", "cloudflare.png"],
+  web3: ["solana.png", "ethereum.png", "solidity.png", "rust.png"],
 };
 
 //  'linux.png'

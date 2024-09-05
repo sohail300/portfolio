@@ -1,10 +1,5 @@
 import Card from "./Card";
 import megaProjects from "../utils/megaProjects";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { useState } from "react";
 import petProjects from "../utils/petProjects";
 import { noOfMegaProjects } from "../utils/megaProjects";
 import { noOfPetProjects } from "../utils/petProjects";
@@ -12,49 +7,13 @@ import { motion } from "framer-motion";
 import innovativeProjects, {
   noOfInnovativeProjects,
 } from "../utils/innovativeProjects";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-}
-
-function CustomTabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
 const Projects = () => {
-  const [value, setValue] = useState(0);
   const text =
     "What value does that skill hold if you're unable to apply it to the project?".split(
       " "
     );
-
-  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
 
   return (
     <div
@@ -85,147 +44,97 @@ const Projects = () => {
           </motion.span>
         ))}
       </div>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          outline: "none",
-          margin: "auto",
-          marginBottom: "16px",
-          "& button.Mui-selected": {
-            background:
+
+      {/* background:
               "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
-            color: "#fff",
-          },
-        }}
-        TabIndicatorProps={{
-          style: {
-            background: "none",
-          },
-        }}
-      >
-        <Tab
-          label="Mega Projects"
-          {...a11yProps(0)}
-          sx={{
-            flexGrow: 1,
-            border: "1px solid rgba(66, 66, 66, .623)",
-            color: "#fff",
-            borderRadius: "4px",
-            fontWeight: "500",
-            marginRight: "20px",
-            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
-          }}
-        />
-        <Tab
-          label="Innovative Projects"
-          {...a11yProps(1)}
-          sx={{
-            flexGrow: 1,
-            border: "1px solid rgba(66, 66, 66, .623)",
-            color: "#fff",
-            borderRadius: "4px",
-            fontWeight: "500",
-            marginRight: "20px",
-            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
-          }}
-        />
-        <Tab
-          label="Pet Projects"
-          {...a11yProps(2)}
-          sx={{
-            flexGrow: 1,
-            border: "1px solid rgba(66, 66, 66, .623)",
-            color: "#fff",
-            borderRadius: "4px",
-            fontWeight: "500",
-            marginLeft: "20px",
-            boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.8)",
-          }}
-        />
+            color: "#fff", */}
+
+      <Tabs defaultValue="mega" className=" flex flex-col">
+        <TabsList className=" m-auto bg-slate-800 text-white mb-8">
+          <TabsTrigger value="mega">Mega Projects</TabsTrigger>
+          <TabsTrigger value="innovative">Innovative Projects</TabsTrigger>
+          <TabsTrigger value="pet">Pet Projects</TabsTrigger>
+        </TabsList>
+        <TabsContent value="mega">
+          <div className=" flex flex-col sm:flex-row sm:flex-wrap">
+            {megaProjects.map((item) => {
+              return (
+                <div
+                  key={item.title}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
+                    noOfMegaProjects % 4 == 0 ? "large:w-1/4" : ""
+                  }`}
+                >
+                  <Card
+                    key={item.title}
+                    title={item.title}
+                    description={item.description}
+                    status={item.status}
+                    imageUrl={item.imageUrl}
+                    techStack={item.techStack}
+                    gitLink={item.gitLink}
+                    liveLink={item.liveLink}
+                    youtubeLink={item.youtubeLink}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </TabsContent>
+        <TabsContent value="innovative">
+          <div className=" flex flex-col sm:flex-row sm:flex-wrap">
+            {innovativeProjects.map((item) => {
+              return (
+                <div
+                  key={item.title}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
+                    noOfInnovativeProjects % 4 == 0 ? "large:w-1/4" : ""
+                  }`}
+                >
+                  <Card
+                    key={item.title}
+                    title={item.title}
+                    description={item.description}
+                    status={item.status}
+                    imageUrl={item.imageUrl}
+                    techStack={item.techStack}
+                    gitLink={item.gitLink}
+                    liveLink={item.liveLink}
+                    // youtubeLink={item.youtubeLink}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </TabsContent>
+        <TabsContent value="pet">
+          {" "}
+          <div className=" flex flex-col sm:flex-row sm:flex-wrap">
+            {petProjects.map((item) => {
+              return (
+                //
+                <div
+                  key={item.title}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
+                    noOfPetProjects % 4 == 0 ? "large:w-1/4" : ""
+                  }`}
+                >
+                  <Card
+                    key={item.title}
+                    title={item.title}
+                    description={item.description}
+                    status={item.status}
+                    imageUrl={item.imageUrl}
+                    techStack={item.techStack}
+                    gitLink={item.gitLink}
+                    liveLink={item.liveLink}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </TabsContent>
       </Tabs>
-      <CustomTabPanel value={value} index={0}>
-        <div className=" flex flex-col sm:flex-row sm:flex-wrap">
-          {megaProjects.map((item) => {
-            return (
-              <div
-                key={item.title}
-                className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                  noOfMegaProjects % 4 == 0 ? "large:w-1/4" : ""
-                }`}
-              >
-                <Card
-                  key={item.title}
-                  title={item.title}
-                  description={item.description}
-                  status={item.status}
-                  imageUrl={item.imageUrl}
-                  techStack={item.techStack}
-                  gitLink={item.gitLink}
-                  liveLink={item.liveLink}
-                  youtubeLink={item.youtubeLink}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </CustomTabPanel>
-
-      <CustomTabPanel value={value} index={1}>
-        <div className=" flex flex-col sm:flex-row sm:flex-wrap">
-          {innovativeProjects.map((item) => {
-            return (
-              <div
-                key={item.title}
-                className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                  noOfInnovativeProjects % 4 == 0 ? "large:w-1/4" : ""
-                }`}
-              >
-                <Card
-                  key={item.title}
-                  title={item.title}
-                  description={item.description}
-                  status={item.status}
-                  imageUrl={item.imageUrl}
-                  techStack={item.techStack}
-                  gitLink={item.gitLink}
-                  liveLink={item.liveLink}
-                  // youtubeLink={item.youtubeLink}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </CustomTabPanel>
-
-      <CustomTabPanel value={value} index={2}>
-        <div className=" flex flex-col sm:flex-row sm:flex-wrap">
-          {petProjects.map((item) => {
-            return (
-              //
-              <div
-                key={item.title}
-                className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                  noOfPetProjects % 4 == 0 ? "large:w-1/4" : ""
-                }`}
-              >
-                <Card
-                  key={item.title}
-                  title={item.title}
-                  description={item.description}
-                  status={item.status}
-                  imageUrl={item.imageUrl}
-                  techStack={item.techStack}
-                  gitLink={item.gitLink}
-                  liveLink={item.liveLink}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </CustomTabPanel>
     </div>
   );
 };
