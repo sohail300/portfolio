@@ -1,8 +1,8 @@
 import { Menu } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
 import { RESUME_LINK } from "../utils/links";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -55,28 +55,28 @@ const Navbar = () => {
       >
         <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4 lg:flex-row ">
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <Link to="#home">Home</Link>
+            <HashLink to="#home">Home</HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <Link to="#education">Education</Link>
+            <HashLink to="#education">Education</HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <Link to="#experience">Experience</Link>
+            <HashLink to="#experience">Experience</HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <Link to="#projects">Projects</Link>
+            <HashLink to="#projects">Projects</HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <Link to="#designs">Designs</Link>
+            <HashLink to="#designs">Designs</HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <Link to="#skills">Skills</Link>
+            <HashLink to="#skills">Skills</HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <Link to="#achievements">Achievements</Link>
+            <HashLink to="#achievements">Achievements</HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <Link to="#contact">Contact Me</Link>
+            <HashLink to="#contact">Contact Me</HashLink>
           </li>
           <li className=" mb-2 lg:mb-0">
             <a
@@ -119,33 +119,33 @@ const Navbar = () => {
             ref={listRef}
           >
             <motion.li className=" cursor-pointer font-heading mb-6 lg:mb-0 text-sm text-red-500">
-              <Link to="#home" onClick={() => setOpen(false)}>
+              <HashLink to="#home" onClick={() => setOpen(false)}>
                 Close
-              </Link>
+              </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <Link to="#home">Home</Link>
+              <HashLink to="#home">Home</HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <Link to="#education">Education</Link>
+              <HashLink to="#education">Education</HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <Link to="#experience">Experience</Link>
+              <HashLink to="#experience">Experience</HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <Link to="#projects">Projects</Link>
+              <HashLink to="#projects">Projects</HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <Link to="#designs">Designs</Link>
+              <HashLink to="#designs">Designs</HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <Link to="#skills">Skills</Link>
+              <HashLink to="#skills">Skills</HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <Link to="#achievements">Achievements</Link>
+              <HashLink to="#achievements">Achievements</HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <Link to="#contact">Contact Me</Link>
+              <HashLink to="#contact">Contact Me</HashLink>
             </motion.li>
             <motion.li className=" mb-2 lg:mb-0">
               <a
