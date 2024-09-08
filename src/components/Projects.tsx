@@ -50,10 +50,25 @@ const Projects = () => {
             color: "#fff", */}
 
       <Tabs defaultValue="mega" className=" flex flex-col">
-        <TabsList className=" m-auto bg-slate-800 text-white mb-8">
-          <TabsTrigger value="mega">Mega Projects</TabsTrigger>
-          <TabsTrigger value="innovative">Innovative Projects</TabsTrigger>
-          <TabsTrigger value="pet">Pet Projects</TabsTrigger>
+        <TabsList className="m-auto mb-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-sm shadow-lg text-white overflow-hidden">
+          <TabsTrigger
+            value="mega"
+            className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
+          >
+            Mega Projects
+          </TabsTrigger>
+          <TabsTrigger
+            value="innovative"
+            className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
+          >
+            Innovative Projects
+          </TabsTrigger>
+          <TabsTrigger
+            value="pet"
+            className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
+          >
+            Pet Projects
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="mega">
           <div className=" flex flex-col sm:flex-row sm:flex-wrap">
