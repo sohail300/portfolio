@@ -141,7 +141,17 @@ const Experience = () => {
   );
 };
 
-const ExperienceCard = ({
+interface ExperienceCardProps {
+  company: string;
+  period: string;
+  position: string;
+  location: string;
+  description: (string | React.ReactNode)[];
+  techStack: string;
+  shadowColor: string;
+}
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({
   company,
   period,
   position,

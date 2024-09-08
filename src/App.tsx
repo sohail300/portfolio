@@ -1,6 +1,6 @@
 import "./App.css";
 import Achievements from "./components/Achievements";
-// import Chatbot from "./components/Chatbot";
+import Chatbot from "./components/Chatbot";
 import Contact from "./components/Contact";
 import Designs from "./components/Designs";
 import Education from "./components/Education";
@@ -25,7 +25,7 @@ function App() {
       <Skills />
       <Achievements />
       <GithubHeatmap />
-      {/* <Chatbot /> */}
+      <Chatbot />
       <Contact />
     </>
   );
