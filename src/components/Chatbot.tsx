@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import avatarPhoto from "../../public/chat.jpeg";
 import userAvatar from "../../public/user-avatar.png";
-import axios from "axios";
 import { motion } from "framer-motion";
+import { api } from "@/utils/config";
 
 export default function Component() {
   const text =
@@ -14,8 +14,17 @@ export default function Component() {
       " "
     );
 
-  const [messages, setMessages] = useState([]);
-  const [requestMessages, setRequestMessages] = useState([]);
+  interface SingleMessage {
+    type: string;
+    content: string;
+  }
+
+  interface Message {
+    content: string;
+  }
+
+  const [messages, setMessages] = useState<SingleMessage[]>([]);
+  const [requestMessages, setRequestMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,6 +37,7 @@ export default function Component() {
     };
 
     setMessages((prevMessages) => [...prevMessages, newMessage]);
+
     const updatedRequestMessages = [
       ...requestMessages,
       { content: inputMessage },
@@ -39,7 +49,7 @@ export default function Component() {
 
     try {
       console.log(updatedRequestMessages);
-      const response = await axios.post("http://127.0.0.1:8000/api/chat", {
+      const response = await api.post("/api/chat", {
         messages: updatedRequestMessages,
       });
 
@@ -189,7 +199,11 @@ export default function Component() {
   );
 }
 
-function SendIcon(props) {
+interface SendIconProps extends React.SVGProps<SVGSVGElement> {
+  // You can add any additional specific props here
+}
+
+function SendIcon(props: SendIconProps) {
   return (
     <svg
       {...props}
