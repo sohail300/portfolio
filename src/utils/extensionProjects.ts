@@ -3,9 +3,9 @@ const extensionProjects = [
     title: "Hotstar Ad Muter",
     status: "Deployed",
     description:
-      "An intelligent PDF processing application that automatically extracts critical information from invoice documents and displays them in a tabular format. Process images in the same way.",
+      "Developed a browser extension to automatically mute the Hotstar tab during ads and unmute when live matches resume, enhancing user experience. Implemented efficient event detection and audio control for seamless transitions.",
     imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/v1723379028/portfolio/innovative%20projects/invoicescan_pn9nry.png",
+      "https://m.media-amazon.com/images/I/41F9mjnTWpL._AC_UF1000,1000_QL80_.jpg",
     techStack: [
       "React",
       "ShadCN",

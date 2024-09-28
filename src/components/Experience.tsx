@@ -4,9 +4,29 @@ import { motion } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
 
 const Experience = () => {
-  const text = "Companies where I can applied my skills".split(" ");
+  const text = "Companies where I applied my skills".split(" ");
 
   const data = [
+    {
+      title: {
+        company: "Logitrix",
+        period: "Aug 2024 - Present",
+      },
+      content: (
+        <ExperienceCard
+          company="Logitrix"
+          period="Aug 2024 - Present"
+          position="Frontend Web Developer Intern"
+          location="Remote"
+          description={[
+            "Developed a responsive ERP (Enterprise Resource Planning) website using ReactJS and Material UI (MUI) to fulfill specific client requirements",
+            "Worked closely with designers and stakeholders to ensure seamless communication and precise translation of design mockups from Figma into a polished, professional website.",
+          ]}
+          techStack="ReactJS, Typescript, MUI, Figma"
+          shadowColor="#fc3736"
+        />
+      ),
+    },
     {
       title: {
         company: "Webyapar",

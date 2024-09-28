@@ -107,12 +107,6 @@ const Card: React.FC<CardProps> = ({
           })}
         </div>
       </div>
-      {/* 
-      background-color: rgba(62, 55, 103, .262); color: #8394ff;
-      background-color: rgba(101, 55, 103, .262); color: #de83ff; -> Under Development
-      background-color: rgba(55, 103, 81, .262); color: #83ffb1; -> SIH Project
-      backgroundColor: "rgba(87, 103, 55, .262)"; color: "#dcff83", -> Deployed
-      */}
     </motion.div>
   );
 };
