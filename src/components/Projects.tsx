@@ -50,7 +50,7 @@ const Projects = () => {
               "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
             color: "#fff", */}
 
-      <Tabs defaultValue="mega" className=" flex flex-col">
+      <Tabs defaultValue="web" className=" flex flex-col">
         <TabsList className="m-auto mb-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-sm shadow-lg text-white overflow-hidden">
           <TabsTrigger
             value="web"

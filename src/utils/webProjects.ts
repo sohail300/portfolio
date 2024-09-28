@@ -44,7 +44,7 @@ const webProjects = [
     title: "BlogFlow",
     status: "Deployed",
     description:
-      "A blogging website where users will be able to write blogs using markdown. Built an in-house CMS for blogs. Implemented verification of account and Forgot Password feature via OTP sent through email.",
+      "A blogging website where users will be able to write blogs using markdown. Built an in-house CMS for blogs. Implemented verification of account and Forgot Password feature via OTP sent through email. Users can also subscribe to blogs, the notification for which will be sent to the user via email.",
     imageUrl:
       "https://res.cloudinary.com/dwuzfbivo/image/upload/v1721058340/portfolio/megaprojects/blogflow_xxzfap.png",
     techStack: [
@@ -52,10 +52,10 @@ const webProjects = [
       "ShadCN",
       "TypeScript",
       "Hono",
-      "Cloudflare",
-      "Prisma",
       "PostgreSQL",
-      "Zod",
+      "Prisma",
+      "Cloudflare",
+      "Gemini AI",
     ],
     gitLink: "https://github.com/sohail300/Blog-Flow",
     liveLink: "https://blogflow.heysohail.me/",

@@ -5,7 +5,7 @@ const extensionProjects = [
     description:
       "Developed a browser extension to automatically mute the Hotstar tab during ads and unmute when live matches resume, enhancing user experience. Implemented efficient event detection and audio control for seamless transitions.",
     imageUrl:
-      "https://m.media-amazon.com/images/I/41F9mjnTWpL._AC_UF1000,1000_QL80_.jpg",
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/v1727548983/portfolio/Misc%20Projects/Hotstar_r3b6oo.png",
     techStack: [
       "React",
       "ShadCN",
