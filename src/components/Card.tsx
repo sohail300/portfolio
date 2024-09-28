@@ -14,7 +14,7 @@ interface CardProps {
   imageUrl: string;
   techStack: string[];
   gitLink: string;
-  liveLink: string;
+  liveLink?: string;
   youtubeLink?: string;
 }
 

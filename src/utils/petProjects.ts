@@ -6,7 +6,7 @@ const petProjects = [
       "It is a chat app which uses Meta API to send messages to a Whatsapp number and webhooks to receive messages.",
     imageUrl:
       "https://res.cloudinary.com/dwuzfbivo/image/upload/c_scale,h_832,w_1280/f_auto/v1720870887/portfolio/petprojects/pet7_o0c0zs.png",
-    techStack: ["JavaScript", "NodeJS", "Sockets", "MetaAPI"],
+    techStack: ["JavaScript", "NodeJS", "Web Socket", "MetaAPI"],
     gitLink: "https://github.com/sohail300/Customer-Service-Chat-App",
     liveLink: "https://youtu.be/ZULRNwPldPw?si=1lHGP6jVhwMFAddW",
   },

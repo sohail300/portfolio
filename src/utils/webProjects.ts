@@ -1,4 +1,4 @@
-const megaProjects = [
+const webProjects = [
   {
     title: "E-Kaksha",
     status: "Deployed",
@@ -79,20 +79,10 @@ const megaProjects = [
     ],
     gitLink: "https://github.com/sohail300/Sahayata",
     liveLink: "https://sohail300.github.io/Sahayta-Coming-Soon/",
+    youtubeLink: "",
   },
-  // {
-  //   title: "Expense Tracker",
-  //   status: "Deployed",
-  //   description:
-  //     "Implemented secure user authentication and user profiles. Designed interactive graphs and an intuitive dashboard for expense tracking and financial analysis. Expense exporting feature. Reminder and Notification feature.",
-  //   imageUrl:
-  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872083/portfolio/megaprojects/expenseease_l2xhyd.png",
-  //   techStack: ["React", "TypeScript", "NodeJS", "ExpressJS", "MongoDB"],
-  //   gitLink: "https://github.com/sohail300/Expense-Tracker",
-  //   liveLink: "https://expense-tracker-sohail300.vercel.app/",
-  // },
 ];
 
-export default megaProjects;
+export default webProjects;
 
-export const noOfMegaProjects = 4;
+export const noOfWebProjects = 4;
