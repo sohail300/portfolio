@@ -1,10 +1,12 @@
 export const skills = {
   language: ["java.png", "javascript.png", "typescript.png", "python.png"],
-  framework: ["nodejs.png", "reactjs.png", "nextjs.webp", "hono.webp"],
+  frontend: ["reactjs.png", "nextjs.webp", "tailwind.png"],
+  backend: ["nodejs.png", "hono.webp", "fastapi.webp", "django.png"],
+  app: ["reactjs.png", "flutter.png"],
   database: ["mongodb.png", "firebase.png", "postgresql.webp", "prisma.png"],
-  tools: ["figma.png", "git.png", "github.png", "api.webp"],
   devops: ["docker.webp", "aws.png", "azure.png", "cloudflare.png"],
   web3: ["solana.png", "ethereum.png", "solidity.png", "rust.png"],
+  tools: ["figma.png", "git.png", "github.png", "api.webp"],
 };
 
 //  'linux.png'

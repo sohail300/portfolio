@@ -115,10 +115,10 @@ const Skills = () => {
               boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.1)",
             }}
           >
-            Frameworks/Libraries
+            Frontend
           </span>
           <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
-            {skills.framework.map((item, index) => {
+            {skills.frontend.map((item, index) => {
               return (
                 <div
                   key={index}
@@ -126,10 +126,106 @@ const Skills = () => {
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img
-                    src={`./skills/framework/${item}`}
+                    src={`./skills/frontend/${item}`}
                     alt=""
                     className=" h-12"
                   />
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            x: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
+          <span
+            className=" py-2 px-8 rounded-md md:mr-16"
+            style={{
+              background:
+                "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
+              color: "#fff",
+              outline: "none",
+              border: "1px solid rgba(66, 66, 66, .623)",
+              fontWeight: "500",
+              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            Backend
+          </span>
+          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
+            {skills.backend.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  style={{ backgroundColor: "#0d0d0d9d" }}
+                >
+                  <img
+                    src={`./skills/backend/${item}`}
+                    alt=""
+                    className=" h-12"
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            x: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
+          <span
+            className=" py-2 px-8 rounded-md md:mr-16"
+            style={{
+              background:
+                "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
+              color: "#fff",
+              outline: "none",
+              border: "1px solid rgba(66, 66, 66, .623)",
+              fontWeight: "500",
+              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            App Development
+          </span>
+          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
+            {skills.app.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  style={{ backgroundColor: "#0d0d0d9d" }}
+                >
+                  <img src={`./skills/app/${item}`} alt="" className=" h-12" />
                 </div>
               );
             })}
@@ -177,56 +273,6 @@ const Skills = () => {
                 >
                   <img
                     src={`./skills/database/${item}`}
-                    alt=""
-                    className=" h-12"
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </motion.div>
-
-        <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
-          viewport={{ once: true }}
-          initial={{
-            opacity: 0,
-            x: -100,
-            scale: 1,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            scale: 1,
-            transition: {
-              duration: 1,
-            },
-          }}
-        >
-          <span
-            className=" py-2 px-8 rounded-md md:mr-16"
-            style={{
-              background:
-                "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
-              color: "#fff",
-              outline: "none",
-              border: "1px solid rgba(66, 66, 66, .623)",
-              fontWeight: "500",
-              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.1)",
-            }}
-          >
-            Tools
-          </span>
-          <div className=" flex flex-row w-full justify-between mt-4 md:justify-center md:w-fit">
-            {skills.tools.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
-                  style={{ backgroundColor: "#0d0d0d9d" }}
-                >
-                  <img
-                    src={`./skills/tools/${item}`}
                     alt=""
                     className=" h-12"
                   />
@@ -326,6 +372,56 @@ const Skills = () => {
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img src={`./skills/web3/${item}`} alt="" className=" h-12" />
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            x: -100,
+            scale: 1,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
+          <span
+            className=" py-2 px-8 rounded-md md:mr-16"
+            style={{
+              background:
+                "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
+              color: "#fff",
+              outline: "none",
+              border: "1px solid rgba(66, 66, 66, .623)",
+              fontWeight: "500",
+              boxShadow: "0px 7px 7px -5px rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            Tools
+          </span>
+          <div className=" flex flex-row w-full justify-between mt-4 md:justify-center md:w-fit">
+            {skills.tools.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  style={{ backgroundColor: "#0d0d0d9d" }}
+                >
+                  <img
+                    src={`./skills/tools/${item}`}
+                    alt=""
+                    className=" h-12"
+                  />
                 </div>
               );
             })}

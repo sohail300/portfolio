@@ -9,17 +9,37 @@ const Experience = () => {
   const data = [
     {
       title: {
-        company: "Logitrix",
-        period: "Aug 2024 - Present",
+        company: "Sociolinq",
+        period: "Nov 2024 - Present",
       },
       content: (
         <ExperienceCard
-          company="Logitrix"
+          company="Sociolinq"
           period="Aug 2024 - Present"
           position="Frontend Web Developer Intern"
           location="Remote"
           description={[
-            "Developed a responsive ERP (Enterprise Resource Planning) website using ReactJS and Material UI (MUI) to fulfill specific client requirements",
+            "Directly got hired by the company for which I was working for in my previous internship.",
+            "Continued the work of developving a ERP (Enterprise Resource Planning) website using ReactJS and Material UI (MUI).",
+          ]}
+          techStack="ReactJS, Typescript, MUI, Figma"
+          shadowColor="#004AAC"
+        />
+      ),
+    },
+    {
+      title: {
+        company: "Logitrix",
+        period: "Aug 2024 - Sep 2024",
+      },
+      content: (
+        <ExperienceCard
+          company="Logitrix"
+          period="Aug 2024 - Sep 2024"
+          position="Frontend Web Developer Intern"
+          location="Remote"
+          description={[
+            "Developed a ERP (Enterprise Resource Planning) website using ReactJS and Material UI (MUI) to fulfill specific client requirements.",
             "Worked closely with designers and stakeholders to ensure seamless communication and precise translation of design mockups from Figma into a polished, professional website.",
           ]}
           techStack="ReactJS, Typescript, MUI, Figma"
