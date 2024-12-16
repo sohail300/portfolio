@@ -1,82 +1,87 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
 
-const Experience = () => {
-  const text = "Companies where I applied my skills".split(" ");
+const Freelancing = () => {
+  const text = "Independent Work That Speaks for Itself".split(" ");
 
   const data = [
+    // {
+    //   title: {
+    //     company: "Webyapar",
+    //     period: "May 2024 - Jun 2024",
+    //   },
+    //   content: (
+    //     <ExperienceCard
+    //       company="Webyapar"
+    //       period="May 2024 - Jun 2024"
+    //       position="App Developer and Web Developer"
+    //       location="Remote"
+    //       description={[
+    //         "Developed a News mobile app using React Native and Expo.",
+    //         "Developed a dashboard to manage users, ads and reporters used in the mobile app.",
+    //       ]}
+    //       techStack="React Native, Expo, NextJS, TailwindCSS, ShadCN, ExpressJS, PostgreSQL, Prisma"
+    //       shadowColor="#ec3242"
+    //     />
+    //   ),
+    // },
     {
       title: {
-        company: "Sociolinq",
-        period: "Nov 2024 - Present",
+        company: "Career Charcha",
+        period: "Jun 2024",
       },
       content: (
         <ExperienceCard
-          company="Sociolinq"
-          period="Aug 2024 - Present"
-          position="Frontend Web Developer Intern"
+          company="Career Charcha"
+          period="Jun 2024"
+          position="Full Stack Web Developer"
           location="Remote"
           description={[
-            "Developed an ERP (Enterprise Resource Planning) website using ReactJS and Material UI (MUI).",
+            "Rebuilt their website using ReactJS, ExpressJS and gave an improvement in performance.",
+            "Integrated Google Sheets API to collect form data from the website.",
           ]}
-          techStack="ReactJS, Typescript, MUI, Figma"
-          shadowColor="#004AAC"
+          techStack="ReactJS, ExpressJS, Google Sheets API"
+          shadowColor="#057B80"
         />
       ),
     },
     {
       title: {
-        company: "Glocybs",
-        period: "Feb 2024 - Apr 2024",
+        company: "Webyapar",
+        period: "May 2024 - Jun 2024",
       },
       content: (
         <ExperienceCard
-          company="Glocybs"
-          period="Feb 2024 - Apr 2024"
-          position="Full Stack Web Developer Intern"
+          company="Webyapar"
+          period="May 2024 - Jun 2024"
+          position="Frontend Web Developer"
           location="Remote"
           description={[
-            "Developed a Document Generator using ReactJS and ExpressJS as an internal tool to automate the generation of documents like Offer Letters, Non-Disclosure Agreements, Bonds etc, in the organization.",
+            "Developed a static and responsive website using HTML5, CSS3, Javascript and Bootstrap to meet the requirements of the client.",
           ]}
-          techStack="ReactJS, NodeJS, ExpressJS, MongoDB"
-          shadowColor="#06b6d4"
+          techStack="HTML5, CSS3, Bootstrap, Figma"
+          shadowColor="#ec3242"
         />
       ),
     },
     {
       title: {
-        company: "Bhagalpur Police",
-        period: "Aug 2023 - Jan 2024",
+        company: "Streeya",
+        period: "Jul 2023 - Aug 2023",
       },
       content: (
         <ExperienceCard
-          company="Bhagalpur Police"
-          period="Aug 2023 - Jan 2024"
-          position="UI/UX + Frontend Developer"
-          location="Bhagalpur, Bihar, India"
+          company="Streeya"
+          period="Jul 2023 - Aug 2023"
+          position="UI/UX Designer"
+          location="Remote"
           description={[
-            "Received Project offer from Bhagalpur Police: Member of a team of 10+ students, collaborated with 6 officers to simplify the FIR progress tracking, multilevel reporting and analytics.",
-            <>
-              Featured in Newspapers,
-              <Link
-                to="https://timesofindia.indiatimes.com/city/patna/iiit-bhagalpur-and-police-ink-mou-to-develop-ai-based-app/articleshow/102066581.cms"
-                className="underline mx-1"
-              >
-                TimesofIndia
-              </Link>
-              and Youtube Channels,
-              <Link
-                to="https://timesofindia.indiatimes.com/city/patna/iiit-bhagalpur-and-police-ink-mou-to-develop-ai-based-app/articleshow/102066581.cms"
-                className="underline mx-1"
-              >
-                The Bihar Bulletin
-              </Link>
-            </>,
+            "Designed 50+ web pages for their website establishing a strong brand identity.",
+            "Crafted a responsive design strategy, ensuring a seamless user experience across various devices.",
           ]}
-          techStack="ReactJS, HTML5, CSS3, Figma"
-          shadowColor="#A38F58"
+          techStack="Figma"
+          shadowColor="#a52241"
         />
       ),
     },
@@ -93,7 +98,7 @@ const Experience = () => {
       }}
     >
       <div className="font-heading text-heading heading text-center">
-        Experience
+        Freelancing
       </div>
       <div className="heading text-center mb-8">
         {text.map((el, i) => (
@@ -186,4 +191,4 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   </motion.div>
 );
 
-export default Experience;
+export default Freelancing;

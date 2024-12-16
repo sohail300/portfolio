@@ -61,26 +61,26 @@ const webProjects = [
     liveLink: "https://blogflow.heysohail.me/",
     youtubeLink: "",
   },
-  {
-    title: "Sahayta",
-    status: "Under Development",
-    description:
-      "An application under which all rescue agencies are registered and which can display the location of other rescue relief agencies during natural/man made calamities. Implemented three levels of users.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/v1723382434/portfolio/megaprojects/Sahayta_fvraph.png",
-    techStack: [
-      "React",
-      "JavaScript",
-      "NodeJS",
-      "ExpressJS",
-      "MongoDB",
-      "Kotlin",
-      "Maps API",
-    ],
-    gitLink: "https://github.com/sohail300/Sahayata",
-    liveLink: "https://sohail300.github.io/Sahayta-Coming-Soon/",
-    youtubeLink: "",
-  },
+  // {
+  //   title: "Sahayta",
+  //   status: "Under Development",
+  //   description:
+  //     "An application under which all rescue agencies are registered and which can display the location of other rescue relief agencies during natural/man made calamities. Implemented three levels of users.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/v1723382434/portfolio/megaprojects/Sahayta_fvraph.png",
+  //   techStack: [
+  //     "React",
+  //     "JavaScript",
+  //     "NodeJS",
+  //     "ExpressJS",
+  //     "MongoDB",
+  //     "Kotlin",
+  //     "Maps API",
+  //   ],
+  //   gitLink: "https://github.com/sohail300/Sahayata",
+  //   liveLink: "https://sohail300.github.io/Sahayta-Coming-Soon/",
+  //   youtubeLink: "",
+  // },
 ];
 
 export default webProjects;

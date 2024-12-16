@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Designs from "./components/Designs";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import Freelancing from "./components/Freelancing";
 import GithubHeatmap from "./components/GithubHeatmap";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -19,6 +20,7 @@ function App() {
       <Hero />
       <Education />
       <Experience />
+      <Freelancing />
       <Projects />
       {/* <Web3 /> */}
       <Designs />

@@ -332,7 +332,7 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
           viewport={{ once: true }}
           initial={{
@@ -376,7 +376,7 @@ const Skills = () => {
               );
             })}
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
