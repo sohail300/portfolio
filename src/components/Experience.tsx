@@ -15,7 +15,7 @@ const Experience = () => {
       content: (
         <ExperienceCard
           company="Sociolinq"
-          period="Aug 2024 - Present"
+          period="Nov 2024 - Present"
           position="Frontend Web Developer Intern"
           location="Remote"
           description={[

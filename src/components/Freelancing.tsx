@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
 
 const Freelancing = () => {
-  const text = "Independent Work That Speaks for Itself".split(" ");
+  const text = "Independent work that speaks for itself".split(" ");
 
   const data = [
     // {
