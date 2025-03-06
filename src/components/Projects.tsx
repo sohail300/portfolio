@@ -1,9 +1,8 @@
 import Card from "./Card";
-import petProjects from "../utils/petProjects";
-import { noOfPetProjects } from "../utils/petProjects";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import genAIProjects, { noOfGenAIProjects } from "@/utils/genAIProjects";
+import petProjects, { noOfPetProjects } from "../utils/petProjects";
 import extensionProjects, {
   noOfExtensionProjects,
 } from "@/utils/extensionProjects";
