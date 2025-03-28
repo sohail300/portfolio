@@ -1,7 +1,29 @@
 const webProjects = [
   {
+    title: "Cuberto",
+    status: "Frontend",
+    description:
+      "A visually stunning and creative agency website inspired by Cuberto’s signature animations and smooth UI/UX interactions. Implemented Lenis smooth scrolling, GSAP animations, and fluid motion effects for a seamless user experience.",
+    imageUrl:
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1743155164/portfolio/megaprojects/cuberto_skgeb0.png",
+    techStack: ["NextJS", "Tailwind", "GSAP", "Lenis", "Motion"],
+    gitLink: "https://github.com/sohail300/cuberto",
+    liveLink: "http://cuberto.heysohail.me/",
+  },
+  {
+    title: "VisualiseAI",
+    status: "Full Stack",
+    description:
+      "An AI-powered image and video editing tool offering content-aware cropping, generative fill, AI-generated video previews, and background removal. Integrated with Cloudinary AI for intelligent image processing.",
+    imageUrl:
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1741267235/portfolio/megaprojects/visualise_mr0bs8.png",
+    techStack: ["NextJS", "Tailwind", "ShadCN", "TypeScript", "CloudinaryAI"],
+    gitLink: "https://github.com/sohail300/visualise",
+    liveLink: "https://www.visualiseai.site/",
+  },
+  {
     title: "E-Kaksha",
-    status: "Deployed",
+    status: "Full Stack",
     description:
       "An innovative online course selling platform with an integrated LMS. Different interface for Admin and Students. Integrated secure payment gateway using Stripe. Used Firebase as object store. Implemented features such as wishlist, reviews.",
     imageUrl:
@@ -21,19 +43,8 @@ const webProjects = [
     youtubeLink: "https://youtu.be/onl838TfhYE",
   },
   {
-    title: "Visualise",
-    status: "Deployed",
-    description:
-      "An AI-powered image and video editing tool offering content-aware cropping, generative fill, AI-generated video previews, and background removal. Integrated with Cloudinary AI for intelligent image processing.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1741267235/portfolio/megaprojects/visualise_mr0bs8.png",
-    techStack: ["NextJS", "Tailwind", "ShadCN", "TypeScript", "CloudinaryAI"],
-    gitLink: "https://github.com/sohail300/visualise",
-    liveLink: "https://www.visualiseai.site/",
-  },
-  {
     title: "Spill",
-    status: "Deployed",
+    status: "Full Stack",
     description:
       "Spill is an anonymous feedback platform. Implemented Next Auth for Login purpose. Implemented verification of account via OTP sent through email. Utilized React Hook Form in developing UI.",
     imageUrl:
@@ -53,7 +64,7 @@ const webProjects = [
   },
   {
     title: "BlogFlow",
-    status: "Deployed",
+    status: "Full Stack",
     description:
       "A blogging website where users will be able to write blogs using markdown. Built an in-house CMS for blogs. Implemented verification of account and Forgot Password feature via OTP sent through email. Users can also subscribe to blogs, the notification for which will be sent to the user via email.",
     imageUrl:

@@ -1,5 +1,16 @@
 const genAIProjects = [
   {
+    title: "VisualiseAI",
+    status: "Deployed",
+    description:
+      "An AI-powered image and video editing tool offering content-aware cropping, generative fill, AI-generated video previews, and background removal. Integrated with Cloudinary AI for intelligent image processing.",
+    imageUrl:
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1741267235/portfolio/megaprojects/visualise_mr0bs8.png",
+    techStack: ["NextJS", "Tailwind", "ShadCN", "TypeScript", "CloudinaryAI"],
+    gitLink: "https://github.com/sohail300/visualise",
+    liveLink: "https://www.visualiseai.site/",
+  },
+  {
     title: "Mail Mind",
     status: "Under Development",
     description:
