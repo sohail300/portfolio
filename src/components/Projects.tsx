@@ -8,6 +8,9 @@ import extensionProjects, {
 } from "@/utils/extensionProjects";
 import appProjects, { noOfAppProjects } from "@/utils/appProjects";
 import webProjects, { noOfWebProjects } from "@/utils/webProjects";
+import animationProjects, {
+  noOfAnimationProjects,
+} from "@/utils/animationProjects";
 
 const Projects = () => {
   const text =
@@ -58,6 +61,12 @@ const Projects = () => {
             Web Projects
           </TabsTrigger>
           <TabsTrigger
+            value="animation"
+            className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
+          >
+            Animation Projects
+          </TabsTrigger>
+          <TabsTrigger
             value="genai"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
@@ -102,6 +111,31 @@ const Projects = () => {
                     gitLink={item.gitLink}
                     liveLink={item.liveLink}
                     youtubeLink={item.youtubeLink}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </TabsContent>
+        <TabsContent value="animation">
+          <div className=" flex flex-col sm:flex-row sm:flex-wrap">
+            {animationProjects.map((item) => {
+              return (
+                <div
+                  key={item.title}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
+                    noOfAnimationProjects % 4 == 0 ? "large:w-1/4" : ""
+                  }`}
+                >
+                  <Card
+                    key={item.title}
+                    title={item.title}
+                    description={item.description}
+                    status={item.status}
+                    imageUrl={item.imageUrl}
+                    techStack={item.techStack}
+                    gitLink={item.gitLink}
+                    liveLink={item.liveLink}
                   />
                 </div>
               );

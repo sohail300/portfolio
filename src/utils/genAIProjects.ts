@@ -54,4 +54,4 @@ const genAIProjects = [
 
 export default genAIProjects;
 
-export const noOfGenAIProjects = 2;
+export const noOfGenAIProjects = 3;

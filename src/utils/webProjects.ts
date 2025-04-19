@@ -1,27 +1,5 @@
 const webProjects = [
   {
-    title: "Cuberto",
-    status: "Frontend",
-    description:
-      "A visually stunning and creative agency website inspired by Cuberto’s signature animations and smooth UI/UX interactions. Implemented Lenis smooth scrolling, GSAP animations, and fluid motion effects for a seamless user experience.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1743155164/portfolio/megaprojects/cuberto_skgeb0.png",
-    techStack: ["NextJS", "Tailwind", "GSAP", "Lenis", "Motion"],
-    gitLink: "https://github.com/sohail300/cuberto",
-    liveLink: "http://cuberto.heysohail.me/",
-  },
-  {
-    title: "VisualiseAI",
-    status: "Full Stack",
-    description:
-      "An AI-powered image and video editing tool offering content-aware cropping, generative fill, AI-generated video previews, and background removal. Integrated with Cloudinary AI for intelligent image processing.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1741267235/portfolio/megaprojects/visualise_mr0bs8.png",
-    techStack: ["NextJS", "Tailwind", "ShadCN", "TypeScript", "CloudinaryAI"],
-    gitLink: "https://github.com/sohail300/visualise",
-    liveLink: "https://www.visualiseai.site/",
-  },
-  {
     title: "E-Kaksha",
     status: "Full Stack",
     description:
@@ -107,4 +85,4 @@ const webProjects = [
 
 export default webProjects;
 
-export const noOfWebProjects = 4;
+export const noOfWebProjects = 3;
