@@ -17,7 +17,7 @@ const webProjects = [
       "Azure",
     ],
     gitLink: "https://github.com/sohail300/E-Kaksha",
-    liveLink: "https://e-kaksha.heysohail.me/",
+    liveLink: "https://e-kaksha.heysohail.xyz/",
     youtubeLink: "https://youtu.be/onl838TfhYE",
   },
   {
@@ -37,7 +37,7 @@ const webProjects = [
       "Zod",
     ],
     gitLink: "https://github.com/sohail300/Spill-App",
-    liveLink: "https://spill.heysohail.me/",
+    liveLink: "https://spill.heysohail.xyz/",
     youtubeLink: "https://youtu.be/YVMaOys-c2g",
   },
   {
@@ -58,7 +58,7 @@ const webProjects = [
       "Gemini AI",
     ],
     gitLink: "https://github.com/sohail300/Blog-Flow",
-    liveLink: "https://blogflow.heysohail.me/",
+    liveLink: "https://blogflow.heysohail.xyz/",
     youtubeLink: "",
   },
   // {

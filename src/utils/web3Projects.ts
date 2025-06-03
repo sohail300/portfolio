@@ -8,7 +8,7 @@ const web3Projects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872083/portfolio/megaprojects/ekaksha_axlrtv.png",
     techStack: ["NextJS", "Tailwind", "Shadcn", "Solana"],
     gitLink: "https://github.com/sohail300/sohailx-airdrop",
-    liveLink: "https://sohailx-airdrop.heysohail.me/",
+    liveLink: "https://sohailx-airdrop.heysohail.xyz/",
     youtubeLink: "",
   },
   {
@@ -20,7 +20,7 @@ const web3Projects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872083/portfolio/megaprojects/ekaksha_axlrtv.png",
     techStack: ["NextJS", "Tailwind", "Shadcn", "Solana"],
     gitLink: "https://github.com/sohail300/sohailx-airdrop",
-    liveLink: "https://sohailx-airdrop.heysohail.me/",
+    liveLink: "https://sohailx-airdrop.heysohail.xyz/",
     youtubeLink: "",
   },
   {
@@ -32,7 +32,7 @@ const web3Projects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872083/portfolio/megaprojects/ekaksha_axlrtv.png",
     techStack: ["NextJS", "Tailwind", "Shadcn", "Solana"],
     gitLink: "https://github.com/sohail300/sohailx-airdrop",
-    liveLink: "https://sohailx-airdrop.heysohail.me/",
+    liveLink: "https://sohailx-airdrop.heysohail.xyz/",
     youtubeLink: "",
   },
   {
@@ -43,7 +43,7 @@ const web3Projects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872083/portfolio/megaprojects/ekaksha_axlrtv.png",
     techStack: ["NextJS", "Tailwind", "Shadcn", "Solana"],
     gitLink: "https://github.com/sohail300/sohailx-airdrop",
-    liveLink: "https://sohailx-airdrop.heysohail.me/",
+    liveLink: "https://sohailx-airdrop.heysohail.xyz/",
     youtubeLink: "",
   },
 ];

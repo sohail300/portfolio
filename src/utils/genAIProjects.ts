@@ -27,7 +27,7 @@ const genAIProjects = [
       "Gemini AI",
     ],
     gitLink: "https://github.com/sohail300/Mail-Mind",
-    liveLink: "https://mail-mind.heysohail.me/",
+    liveLink: "https://mail-mind.heysohail.xyz/",
     youtubeLink: "",
   },
   {
@@ -47,7 +47,7 @@ const genAIProjects = [
       "Zod",
     ],
     gitLink: "https://github.com/sohail300/Invoice-Scan",
-    liveLink: "https://invoice-scan.heysohail.me/",
+    liveLink: "https://invoice-scan.heysohail.xyz/",
     youtubeLink: "https://youtu.be/_EOL17Mne7w",
   },
 ];

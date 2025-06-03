@@ -8,7 +8,7 @@ const animationProjects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1743155164/portfolio/megaprojects/cuberto_skgeb0.png",
     techStack: ["NextJS", "Tailwind", "GSAP", "Lenis", "Motion"],
     gitLink: "https://github.com/sohail300/cuberto",
-    liveLink: "http://cuberto.heysohail.me/",
+    liveLink: "http://cuberto.heysohail.xyz/",
   },
   {
     title: "Dropbox",
@@ -19,7 +19,7 @@ const animationProjects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1745050957/portfolio/megaprojects/dropbox_luqxqf.png",
     techStack: ["NextJS", "Tailwind", "GSAP", "Lenis", "Motion"],
     gitLink: "https://github.com/sohail300/dropbox-brand",
-    liveLink: "https://dropbox.heysohail.me/",
+    liveLink: "https://dropbox.heysohail.xyz/",
   },
 ];
 

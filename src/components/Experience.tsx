@@ -10,16 +10,17 @@ const Experience = () => {
     {
       title: {
         company: "Sociolinq",
-        period: "Nov 2024 - Present",
+        period: "Nov 2024 - Apr 2025",
       },
       content: (
         <ExperienceCard
           company="Sociolinq"
-          period="Nov 2024 - Present"
+          period="Nov 2024 - Apr 2025"
           position="Frontend Web Developer Intern"
           location="Remote"
           description={[
-            "Developed an ERP (Enterprise Resource Planning) website using ReactJS and Material UI (MUI).",
+            "Developed a robust HRMS frontend for the company using React, MUI, TailwindCSS ensuring a responsive and user-friendly interface as part of an agile development process.",
+            "Worked on the backend using FastAPI, PostgreSQL, SQLAlchemy for building APIs for features like employee profiles, attendance, and leaves and so on.",
           ]}
           techStack="ReactJS, Typescript, MUI, Figma"
           shadowColor="#004AAC"
