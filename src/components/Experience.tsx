@@ -10,19 +10,38 @@ const Experience = () => {
     {
       title: {
         company: "Sociolinq",
+        period: "May 2025 - Jul 2025",
+      },
+      content: (
+        <ExperienceCard
+          company="Sociolinq"
+          period="May 2025 - Jul 2025"
+          position="Full Stack Web Developer"
+          location="Remote"
+          description={[
+            "Developed over 200 backend APIs with FastAPI, using concepts like pydantic validation, and custom error handling to keep data flow smooth and reliable.",
+          ]}
+          techStack="FastAPI, PostgreSQL, SQLAlchemy, Pydantic"
+          shadowColor="#004AAC"
+        />
+      ),
+    },
+    {
+      title: {
+        company: "Sociolinq",
         period: "Nov 2024 - Apr 2025",
       },
       content: (
         <ExperienceCard
           company="Sociolinq"
           period="Nov 2024 - Apr 2025"
-          position="Frontend Web Developer Intern"
+          position="Full Stack Web Developer Intern"
           location="Remote"
           description={[
-            "Developed a robust HRMS frontend for the company using React, MUI, TailwindCSS ensuring a responsive and user-friendly interface as part of an agile development process.",
-            "Worked on the backend using FastAPI, PostgreSQL, SQLAlchemy for building APIs for features like employee profiles, attendance, and leaves and so on.",
+            "Built a modular HRMS frontend using React, MUI, and TailwindCSS, creating a responsive design and reducing UI issues by using reusable components.",
+            "Designed and organized 50+ relational database schemas to support HR features like leave management, payroll, and recruitment, ensuring data accuracy and scalability.",
           ]}
-          techStack="ReactJS, Typescript, MUI, Figma"
+          techStack="ReactJS, Typescript, MUI, TailwindCSS, PostgreSQL, SQLAlchemy"
           shadowColor="#004AAC"
         />
       ),
@@ -39,7 +58,8 @@ const Experience = () => {
           position="Full Stack Web Developer Intern"
           location="Remote"
           description={[
-            "Developed a Document Generator using ReactJS and ExpressJS as an internal tool to automate the generation of documents like Offer Letters, Non-Disclosure Agreements, Bonds etc, in the organization.",
+            "Developed a Document Generator using ReactJS and ExpressJS as an internal tool that significantly reduced document creation time and greatly improved accuracy.",
+            "Developed a website using ReactJS, ExpressJS and Google Sheets API, resulting in 100+ user registrations and a significant boost in engagement.",
           ]}
           techStack="ReactJS, NodeJS, ExpressJS, MongoDB"
           shadowColor="#06b6d4"

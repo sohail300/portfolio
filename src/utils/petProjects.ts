@@ -91,4 +91,4 @@ const petProjects = [
 
 export default petProjects;
 
-export const noOfPetProjects = 6;
+export const noOfPetProjects = petProjects.length;

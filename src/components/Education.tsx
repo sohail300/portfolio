@@ -52,7 +52,7 @@ const Education = () => {
       >
         <div className=" font-heading text-heading mb-8 heading">Education</div>
         <img
-          src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872078/portfolio/education/svg_yywt4z.png"
+          src="/education.png"
           alt=""
           className=" w-full lg:h-64 large:h-72"
         />

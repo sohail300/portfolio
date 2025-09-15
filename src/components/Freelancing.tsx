@@ -6,6 +6,26 @@ const Freelancing = () => {
   const text = "Independent work that speaks for itself".split(" ");
 
   const data = [
+    {
+      title: {
+        company: "Innew",
+        period: "Aug 2025",
+      },
+      content: (
+        <ExperienceCard
+          company="Innew"
+          period="Aug 2025"
+          position="Frontend Web Developer"
+          location="Remote"
+          description={[
+            "Built the landing page using Next.js with smooth animations powered by Framer Motion.",
+            "Improved website performance and accessibility based on Lighthouse audits.",
+          ]}
+          techStack="NextJS, Framer Motion, Lighthouse Audits"
+          shadowColor="#1432e0"
+        />
+      ),
+    },
     // {
     //   title: {
     //     company: "Webyapar",

@@ -16,4 +16,4 @@ const appProjects = [
 
 export default appProjects;
 
-export const noOfAppProjects = 1;
+export const noOfAppProjects = appProjects.length;

@@ -10,26 +10,26 @@ const genAIProjects = [
     gitLink: "https://github.com/sohail300/visualise",
     liveLink: "https://www.visualiseai.site/",
   },
-  {
-    title: "Mail Mind",
-    status: "Under Development",
-    description:
-      "A sophisticated web application that integrates with Gmail API to access and analyze users' emails. Uses Gemini API to automatically categorize emails into various user-defined classifications.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/v1723379025/portfolio/innovative%20projects/mailmind_nw9mk5.png",
-    techStack: [
-      "ReactJS",
-      "ShadCN",
-      "TypeScript",
-      "ExpressJS",
-      "MongoDB",
-      "Google API",
-      "Gemini AI",
-    ],
-    gitLink: "https://github.com/sohail300/Mail-Mind",
-    liveLink: "https://mail-mind.heysohail.xyz/",
-    youtubeLink: "",
-  },
+  // {
+  //   title: "Mail Mind",
+  //   status: "Under Development",
+  //   description:
+  //     "A sophisticated web application that integrates with Gmail API to access and analyze users' emails. Uses Gemini API to automatically categorize emails into various user-defined classifications.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/v1723379025/portfolio/innovative%20projects/mailmind_nw9mk5.png",
+  //   techStack: [
+  //     "ReactJS",
+  //     "ShadCN",
+  //     "TypeScript",
+  //     "ExpressJS",
+  //     "MongoDB",
+  //     "Google API",
+  //     "Gemini AI",
+  //   ],
+  //   gitLink: "https://github.com/sohail300/Mail-Mind",
+  //   liveLink: "https://mail-mind.heysohail.xyz/",
+  //   youtubeLink: "",
+  // },
   {
     title: "Invoice Scan",
     status: "Deployed",
@@ -54,4 +54,4 @@ const genAIProjects = [
 
 export default genAIProjects;
 
-export const noOfGenAIProjects = 3;
+export const noOfGenAIProjects = genAIProjects.length;

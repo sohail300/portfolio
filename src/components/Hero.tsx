@@ -73,8 +73,6 @@ const Hero = () => {
               1000,
               "Hey, I'm an App Developer",
               1000,
-              "Hey, I'm a Designer",
-              1000,
             ]}
             wrapper="div"
             speed={50}

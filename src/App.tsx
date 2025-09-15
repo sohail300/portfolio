@@ -12,23 +12,26 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 // import Web3 from "./components/Web3";
+import LenisProvider from "./components/LenisProvider";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Education />
-      <Experience />
-      <Freelancing />
-      <Projects />
-      {/* <Web3 /> */}
-      <Designs />
-      <Skills />
-      <Achievements />
-      <GithubHeatmap />
-      {/* <Chatbot /> */}
-      <Contact />
+      <LenisProvider>
+        <Navbar />
+        <Hero />
+        <Education />
+        <Experience />
+        <Freelancing />
+        <Projects />
+        {/* <Web3 /> */}
+        <Designs />
+        <Skills />
+        <Achievements />
+        <GithubHeatmap />
+        {/* <Chatbot /> */}
+        <Contact />
+      </LenisProvider>
     </>
   );
 }

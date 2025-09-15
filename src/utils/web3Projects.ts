@@ -50,4 +50,4 @@ const web3Projects = [
 
 export default web3Projects;
 
-export const noOfWeb3Projects = 4;
+export const noOfWeb3Projects = web3Projects.length;

@@ -25,4 +25,4 @@ const animationProjects = [
 
 export default animationProjects;
 
-export const noOfAnimationProjects = 2;
+export const noOfAnimationProjects = animationProjects.length;

@@ -23,4 +23,4 @@ const extensionProjects = [
 
 export default extensionProjects;
 
-export const noOfExtensionProjects = 1;
+export const noOfExtensionProjects = extensionProjects.length;

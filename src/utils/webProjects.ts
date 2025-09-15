@@ -1,5 +1,26 @@
 const webProjects = [
   {
+    title: "Ping Bot",
+    status: "Full Stack",
+    description:
+      "A full-stack API monitoring tool. Prevents cold starts by scheduled pings using APScheduler, Celery, and Redis. Sends email alerts on downtime. Built a modern React dashboard integrated with Clerk authentication.",
+    imageUrl:
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1757949031/portfolio/megaprojects/pingbot_bbpcvp.png",
+    techStack: [
+      "React",
+      "Clerk",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "APScheduler",
+      "Celery",
+      "Redis",
+    ],
+    gitLink: "https://github.com/sohail300/PingBot",
+    liveLink: "https://pingbot.heysohail.xyz/",
+    youtubeLink: "",
+  },
+  {
     title: "E-Kaksha",
     status: "Full Stack",
     description:
@@ -40,27 +61,27 @@ const webProjects = [
     liveLink: "https://spill.heysohail.xyz/",
     youtubeLink: "https://youtu.be/YVMaOys-c2g",
   },
-  {
-    title: "BlogFlow",
-    status: "Full Stack",
-    description:
-      "A blogging website where users will be able to write blogs using markdown. Built an in-house CMS for blogs. Implemented verification of account and Forgot Password feature via OTP sent through email. Users can also subscribe to blogs, the notification for which will be sent to the user via email.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/v1721058340/portfolio/megaprojects/blogflow_xxzfap.png",
-    techStack: [
-      "React",
-      "ShadCN",
-      "TypeScript",
-      "Hono",
-      "PostgreSQL",
-      "Prisma",
-      "Cloudflare",
-      "Gemini AI",
-    ],
-    gitLink: "https://github.com/sohail300/Blog-Flow",
-    liveLink: "https://blogflow.heysohail.xyz/",
-    youtubeLink: "",
-  },
+  // {
+  //   title: "BlogFlow",
+  //   status: "Full Stack",
+  //   description:
+  //     "A blogging website where users will be able to write blogs using markdown. Built an in-house CMS for blogs. Implemented verification of account and Forgot Password feature via OTP sent through email. Users can also subscribe to blogs, the notification for which will be sent to the user via email.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/v1721058340/portfolio/megaprojects/blogflow_xxzfap.png",
+  //   techStack: [
+  //     "React",
+  //     "ShadCN",
+  //     "TypeScript",
+  //     "Hono",
+  //     "PostgreSQL",
+  //     "Prisma",
+  //     "Cloudflare",
+  //     "Gemini AI",
+  //   ],
+  //   gitLink: "https://github.com/sohail300/Blog-Flow",
+  //   liveLink: "https://blogflow.heysohail.xyz/",
+  //   youtubeLink: "",
+  // },
   // {
   //   title: "Sahayta",
   //   status: "Under Development",
@@ -85,4 +106,4 @@ const webProjects = [
 
 export default webProjects;
 
-export const noOfWebProjects = 3;
+export const noOfWebProjects = webProjects.length;

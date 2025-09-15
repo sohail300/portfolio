@@ -4,6 +4,21 @@ import { useAnimate, stagger, motion } from "framer-motion";
 import { RESUME_LINK } from "../utils/links";
 import { HashLink } from "react-router-hash-link";
 
+function smoothTo(hash: string) {
+  const id = hash.replace("#", "");
+  const el = document.getElementById(id);
+  const lenis = (
+    window as unknown as {
+      __lenis?: { scrollTo: (t: HTMLElement | string, o?: unknown) => void };
+    }
+  ).__lenis;
+  if (el && lenis) {
+    lenis.scrollTo(el, { offset: 0 });
+  } else if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scope, animate] = useAnimate();
@@ -55,28 +70,92 @@ const Navbar = () => {
       >
         <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4 lg:flex-row ">
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <HashLink to="#home">Home</HashLink>
+            <HashLink
+              to="#home"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothTo("#home");
+              }}
+            >
+              Home
+            </HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <HashLink to="#education">Education</HashLink>
+            <HashLink
+              to="#education"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothTo("#education");
+              }}
+            >
+              Education
+            </HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <HashLink to="#experience">Experience</HashLink>
+            <HashLink
+              to="#experience"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothTo("#experience");
+              }}
+            >
+              Experience
+            </HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <HashLink to="#projects">Projects</HashLink>
+            <HashLink
+              to="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothTo("#projects");
+              }}
+            >
+              Projects
+            </HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <HashLink to="#designs">Designs</HashLink>
+            <HashLink
+              to="#designs"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothTo("#designs");
+              }}
+            >
+              Designs
+            </HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <HashLink to="#skills">Skills</HashLink>
+            <HashLink
+              to="#skills"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothTo("#skills");
+              }}
+            >
+              Skills
+            </HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <HashLink to="#achievements">Achievements</HashLink>
+            <HashLink
+              to="#achievements"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothTo("#achievements");
+              }}
+            >
+              Achievements
+            </HashLink>
           </li>
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
-            <HashLink to="#contact">Contact Me</HashLink>
+            <HashLink
+              to="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothTo("#contact");
+              }}
+            >
+              Contact Me
+            </HashLink>
           </li>
           <li className=" mb-2 lg:mb-0">
             <a
@@ -119,33 +198,112 @@ const Navbar = () => {
             ref={listRef}
           >
             <motion.li className=" cursor-pointer font-heading mb-6 lg:mb-0 text-sm text-red-500">
-              <HashLink to="#home" onClick={() => setOpen(false)}>
+              <HashLink
+                to="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#home");
+                  setOpen(false);
+                }}
+              >
                 Close
               </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <HashLink to="#home">Home</HashLink>
+              <HashLink
+                to="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#home");
+                  setOpen(false);
+                }}
+              >
+                Home
+              </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <HashLink to="#education">Education</HashLink>
+              <HashLink
+                to="#education"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#education");
+                  setOpen(false);
+                }}
+              >
+                Education
+              </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <HashLink to="#experience">Experience</HashLink>
+              <HashLink
+                to="#experience"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#experience");
+                  setOpen(false);
+                }}
+              >
+                Experience
+              </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <HashLink to="#projects">Projects</HashLink>
+              <HashLink
+                to="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#projects");
+                  setOpen(false);
+                }}
+              >
+                Projects
+              </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <HashLink to="#designs">Designs</HashLink>
+              <HashLink
+                to="#designs"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#designs");
+                  setOpen(false);
+                }}
+              >
+                Designs
+              </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <HashLink to="#skills">Skills</HashLink>
+              <HashLink
+                to="#skills"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#skills");
+                  setOpen(false);
+                }}
+              >
+                Skills
+              </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <HashLink to="#achievements">Achievements</HashLink>
+              <HashLink
+                to="#achievements"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#achievements");
+                  setOpen(false);
+                }}
+              >
+                Achievements
+              </HashLink>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
-              <HashLink to="#contact">Contact Me</HashLink>
+              <HashLink
+                to="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothTo("#contact");
+                  setOpen(false);
+                }}
+              >
+                Contact Me
+              </HashLink>
             </motion.li>
             <motion.li className=" mb-2 lg:mb-0">
               <a
