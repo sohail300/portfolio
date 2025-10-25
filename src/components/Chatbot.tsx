@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import avatarPhoto from "../../public/chat.jpeg";
 import userAvatar from "../../public/user-avatar.png";
 import { motion } from "framer-motion";
-import { api } from "@/utils/config";
+import { useChat } from "@/hooks/useChat";
 
 export default function Component() {
   const text =
@@ -14,58 +14,17 @@ export default function Component() {
       " "
     );
 
-  interface SingleMessage {
-    type: string;
-    content: string;
-  }
+  // Use our custom useChat hook that works with the existing backend
+  const { messages, input, handleInputChange, handleSubmit, isLoading, setMessages } = useChat({
+    onError: (error) => {
+      console.error('Chat error:', error);
+    },
+  });
 
-  interface Message {
-    content: string;
-  }
-
-  const [messages, setMessages] = useState<SingleMessage[]>([]);
-  const [requestMessages, setRequestMessages] = useState<Message[]>([]);
-  const [inputMessage, setInputMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const sendMessage = async () => {
-    if (inputMessage.trim() === "") return;
-
-    const newMessage = {
-      type: "user",
-      content: inputMessage,
-    };
-
-    setMessages((prevMessages) => [...prevMessages, newMessage]);
-
-    const updatedRequestMessages = [
-      ...requestMessages,
-      { content: inputMessage },
-    ];
-    setRequestMessages(updatedRequestMessages);
-
-    setInputMessage("");
-    setIsLoading(true);
-
-    try {
-      console.log(updatedRequestMessages);
-      const response = await api.post("/api/chat", {
-        messages: updatedRequestMessages,
-      });
-
-      console.log(response.data);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        {
-          type: "bot",
-          content: response.data.msg, // Assuming the response contains the bot's message
-        },
-      ]);
-    } catch (error) {
-      console.error("Error getting response:", error);
-    } finally {
-      setIsLoading(false);
-    }
+  const sendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (input.trim() === "") return;
+    handleSubmit(e);
   };
 
   useEffect(() => {
@@ -127,10 +86,10 @@ export default function Component() {
             <div
               key={index}
               className={`flex items-start gap-3 mt-4 ${
-                message.type === "user" ? "justify-end" : ""
+                message.role === "user" ? "justify-end" : ""
               }`}
             >
-              {message.type === "bot" && (
+              {message.role === "assistant" && (
                 <Avatar className="w-8 h-8 bg-secondary text-secondary-foreground">
                   <AvatarImage
                     src={avatarPhoto}
@@ -142,14 +101,14 @@ export default function Component() {
               )}
               <div
                 className={`rounded-lg p-3 max-w-[75%] ${
-                  message.type === "user"
+                  message.role === "user"
                     ? "bg-primary text-primary-foreground bg-[#3796f1]"
                     : "bg-muted"
                 }`}
               >
                 <p>{message.content}</p>
               </div>
-              {message.type === "user" && (
+              {message.role === "user" && (
                 <Avatar className="w-8 h-8">
                   <AvatarImage src={userAvatar} alt="Your avatar" />
                   <AvatarFallback>U</AvatarFallback>
@@ -172,28 +131,29 @@ export default function Component() {
             </div>
           )}
         </ScrollArea>
-        <div className="bg-muted px-4 py-3 flex items-center gap-2">
+        <form onSubmit={sendMessage} className="bg-muted px-4 py-3 flex items-center gap-2">
           <Textarea
             placeholder="Type your message..."
             className="flex-1 resize-none rounded-lg px-3 py-2 text-sm"
-            value={inputMessage}
-            onChange={(e) => setInputMessage(e.target.value)}
+            value={input}
+            onChange={handleInputChange}
             onKeyPress={(e) => {
               if (e.key === "Enter" && !e.shiftKey) {
                 e.preventDefault();
-                sendMessage();
+                sendMessage(e);
               }
             }}
           />
           <Button
+            type="submit"
             size="icon"
             className="bg-[#3796f1] text-primary-foreground"
-            onClick={sendMessage}
+            disabled={isLoading}
           >
             <SendIcon className="w-5 h-5" />
             <span className="sr-only">Send</span>
           </Button>
-        </div>
+        </form>
       </div>
     </div>
   );

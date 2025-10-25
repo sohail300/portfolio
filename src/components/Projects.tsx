@@ -60,36 +60,37 @@ const Projects = () => {
           >
             Web Projects
           </TabsTrigger>
+  
+          <TabsTrigger
+            value="genai"
+            className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
+          >
+            AI AgentProjects
+          </TabsTrigger>
           <TabsTrigger
             value="animation"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
             Animation Projects
           </TabsTrigger>
-          <TabsTrigger
-            value="genai"
-            className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
-          >
-            GenAI Projects
-          </TabsTrigger>
-          <TabsTrigger
+          {/* <TabsTrigger
             value="app"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
             Apps & S/W
-          </TabsTrigger>
+          </TabsTrigger> */}
           <TabsTrigger
             value="extension"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
             Extensions
           </TabsTrigger>
-          <TabsTrigger
+          {/* <TabsTrigger
             value="pet"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
             Web Pet Projects
-          </TabsTrigger>
+          </TabsTrigger> */}
         </TabsList>
         <TabsContent value="web">
           <div className=" flex flex-col sm:flex-row sm:flex-wrap">
