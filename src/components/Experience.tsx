@@ -9,39 +9,40 @@ const Experience = () => {
   const data = [
     {
       title: {
-        company: "Sociolinq",
-        period: "May 2025 - Jul 2025",
+        company: "StudyHQ",
+        period: "Aug 2025 - Present",
       },
       content: (
         <ExperienceCard
-          company="Sociolinq"
-          period="May 2025 - Jul 2025"
-          position="Full Stack Web Developer"
-          location="Remote"
+          company="StudyHQ"
+          period="Aug 2025 - Present"
+          position="Junior Software Engineer"
+          location="Hyderabad, Telangana, India"
           description={[
-            "Developed over 200 backend APIs with FastAPI, using concepts like pydantic validation, and custom error handling to keep data flow smooth and reliable.",
+            "Built and deployed a career guidance SaaS using Spring Boot, ReactJS, and MongoDB, enabling institutes to conduct MCQ-based assessments and generate personalized course recommendations.",
+            "Designed a multi-role architecture (Admin, Institute, Student) with JWT auth and secure link-based test access.",
           ]}
-          techStack="FastAPI, PostgreSQL, SQLAlchemy, Pydantic"
-          shadowColor="#004AAC"
+          techStack="Spring Boot, MongoDB, Redis, Cloudflare, React Router v7, Typescript, TailwindCSS"
+          shadowColor="#6d41e8"
         />
       ),
     },
     {
       title: {
         company: "Sociolinq",
-        period: "Nov 2024 - Apr 2025",
+        period: "Nov 2024 - Jul 2025",
       },
       content: (
         <ExperienceCard
           company="Sociolinq"
-          period="Nov 2024 - Apr 2025"
-          position="Full Stack Web Developer Intern"
+          period="Nov 2024 - Jul 2025"
+          position="Full Stack Web Developer"
           location="Remote"
           description={[
+            "Designed and delivered 200+ scalable APIs using FastAPI with Pydantic validation and custom error handling, while architecting and normalizing 80+ relational database schemas for HR modules, achieving <100ms average response time and ensuring data accuracy and scalability.",
             "Built a modular HRMS frontend using React, MUI, and TailwindCSS, creating a responsive design and reducing UI issues by using reusable components.",
-            "Designed and organized 50+ relational database schemas to support HR features like leave management, payroll, and recruitment, ensuring data accuracy and scalability.",
           ]}
-          techStack="ReactJS, Typescript, MUI, TailwindCSS, PostgreSQL, SQLAlchemy"
+          techStack="FastAPI, PostgreSQL, SQLAlchemy, Redis, Pydantic, AWS, ReactJS, Typescript, MUI, TailwindCSS"
           shadowColor="#004AAC"
         />
       ),
