@@ -9,13 +9,34 @@ const Experience = () => {
   const data = [
     {
       title: {
+        company: "Synexis AI Pvt. Ltd.",
+        period: "Feb 2026 - Present",
+      },
+      content: (
+        <ExperienceCard
+          company="Synexis AI Pvt. Ltd."
+          period="Feb 2026 - Present"
+          position="Full Stack Engineer"
+          location="Remote"
+          description={[
+            "Working on Project SPAIDER SPACE for SPAIDER SPACE S.à r.l. (Luxembourg), contributing to the development of AI-driven platforms and intelligent systems.",
+            "Building and maintaining scalable fullstack applications with a focus on performance, usability, and clean architecture.",
+          ]}
+          techStack="React, TypeScript, TailwindCSS, Python, Docker, AWS"
+          shadowColor="#5de1e7"
+        />
+      ),
+    },
+
+    {
+      title: {
         company: "StudyHQ",
-        period: "Aug 2025 - Present",
+        period: "Aug 2025 - Jan 2026",
       },
       content: (
         <ExperienceCard
           company="StudyHQ"
-          period="Aug 2025 - Present"
+          period="Aug 2025 - Jan 2026"
           position="Junior Software Engineer"
           location="Hyderabad, Telangana, India"
           description={[

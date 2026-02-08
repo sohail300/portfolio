@@ -14,7 +14,7 @@ interface CardProps {
   description: string;
   imageUrl: string;
   techStack: string[];
-  gitLink: string;
+  gitLink?: string;
   liveLink?: string;
   youtubeLink?: string;
 }
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
   description,
   imageUrl,
   techStack,
-  gitLink,
+  gitLink = "",
   liveLink,
   youtubeLink = "",
 }) => {

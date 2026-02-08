@@ -15,7 +15,7 @@ import animationProjects, {
 const Projects = () => {
   const text =
     "What value does that skill hold if you're unable to apply it to the project?".split(
-      " "
+      " ",
     );
 
   return (
@@ -58,27 +58,27 @@ const Projects = () => {
             value="web"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
-            Web Projects
+            Web Apps
           </TabsTrigger>
-  
+
           <TabsTrigger
             value="genai"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
-            AI AgentProjects
+            AI Agent Projects
           </TabsTrigger>
           <TabsTrigger
             value="animation"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
-            Animation Projects
+            UI Animations
           </TabsTrigger>
-          {/* <TabsTrigger
+          <TabsTrigger
             value="app"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
-            Apps & S/W
-          </TabsTrigger> */}
+            Mobile Apps
+          </TabsTrigger>
           <TabsTrigger
             value="extension"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
@@ -162,7 +162,6 @@ const Projects = () => {
                     techStack={item.techStack}
                     gitLink={item.gitLink}
                     liveLink={item.liveLink}
-                    youtubeLink={item.youtubeLink}
                   />
                 </div>
               );
@@ -186,7 +185,6 @@ const Projects = () => {
                     status={item.status}
                     imageUrl={item.imageUrl}
                     techStack={item.techStack}
-                    gitLink={item.gitLink}
                     liveLink={item.liveLink}
                     youtubeLink={item.youtubeLink}
                   />

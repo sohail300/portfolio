@@ -21,12 +21,37 @@ function smoothTo(hash: string) {
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [scope, animate] = useAnimate();
   const navRef = useRef(null);
   const listRef = useRef<HTMLUListElement>(null);
 
   // the stagger effect
   const staggerList = stagger(0.1, { startDelay: 0.25 });
+
+  // Top progress bar: scroll progress (0–1), bar grows from center
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      if (docHeight <= 0) {
+        setProgress(0);
+        return;
+      }
+
+      const scrolled = scrollTop / docHeight;
+      setProgress(scrolled);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const initialWidth = 0.2;
+  const finalScale = initialWidth + (1 - initialWidth) * progress;
 
   useEffect(() => {
     if (listRef.current) {
@@ -41,7 +66,7 @@ const Navbar = () => {
           type: "spring",
           bounce: 0.3,
           duration: 0.4,
-        }
+        },
       );
       animate(
         listRef.current.querySelectorAll("li"),
@@ -51,13 +76,42 @@ const Navbar = () => {
         {
           duration: 0.2,
           delay: open ? staggerList : 0,
-        }
+        },
       );
     }
   }, [open, animate, staggerList]);
 
+  const progressBar = (
+    <div
+      className="absolute bottom-0 left-0 w-full h-[2px] overflow-hidden"
+      style={{ backgroundColor: "transparent" }}
+      aria-hidden
+    >
+      <div
+        className="h-full"
+        style={{
+          position: "absolute",
+          left: "50%",
+          transform: `translateX(-50%) scaleX(${finalScale})`,
+          transformOrigin: "center",
+          width: "100%",
+          background:
+            "linear-gradient(90deg, rgba(212,175,55,0.4) -25%, #D4AF37 54.33%, rgba(212,175,55,0.4) 125%)",
+          boxShadow:
+            "0 0 8px rgba(212,175,55,0.7), 0 0 16px rgba(212,175,55,0.4)",
+          transition: "transform 0.1s ease-out",
+        }}
+      />
+    </div>
+  );
+
   return (
     <>
+      {/* Progress bar on mobile (at top when nav is just the menu icon) */}
+      <div className="fixed top-0 left-0 w-full h-[2px] z-50 overflow-hidden lg:hidden">
+        {progressBar}
+      </div>
+
       <div
         style={{
           position: "fixed",
@@ -66,7 +120,7 @@ const Navbar = () => {
           backdropFilter: "blur(10px)",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
         }}
-        className="w-56 top-0 right-0 z-10 hidden lg:block lg:w-screen"
+        className="w-56 top-0 right-0 z-10 hidden lg:block lg:w-screen relative"
       >
         <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4 lg:flex-row ">
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
@@ -168,6 +222,8 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        {/* Progress bar at bottom of navbar (desktop) */}
+        {progressBar}
       </div>
 
       {open === false ? (

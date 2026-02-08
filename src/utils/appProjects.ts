@@ -1,15 +1,14 @@
 const appProjects = [
   {
-    title: "File Shield",
+    title: "Turant News",
     status: "Deployed",
     description:
-      "A robust Java-based file encryption and decryption application with a user-friendly GUI. Implemented a custom cryptography algorithm.  Features include batch file processing and maintaining original file structure.",
+    "A real-time news aggregation mobile application deployed on the Google Play Store with 100+ installs. Built with a smooth user experience and an optimized backend ensuring fast content delivery and scalable API performance.",  
     imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1723377765/portfolio/innovative%20projects/FileShield_ndq603.png",
-    techStack: ["Java", "OOPs", "Java Swing", "JAR", "Launch4J"],
-    gitLink: "https://github.com/sohail300/File-Shield-App",
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1770541864/portfolio/megaprojects/turant-news_q7rdru.png",
+    techStack: ["React Native", "Express.js", "PostgreSQL"],
     liveLink:
-      "https://drive.google.com/drive/u/1/folders/1e2FGQ726U3LaO8w75n5di12SaYJ3x6wG",
+      "https://play.google.com/store/apps/details?id=com.anonymous.turantnews&hl=en_IN",
     youtubeLink: "",
   },
 ];

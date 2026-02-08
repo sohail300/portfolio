@@ -1,42 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { Bounce, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { RESUME_LINK } from "../utils/links";
 
 const Hero = () => {
-  async function copytoClipboard() {
-    const blob = new Blob(["npx sohail"], { type: "text/plain" });
-    const clipboardItem = new ClipboardItem({ "text/plain": blob });
-
-    try {
-      await navigator.clipboard.write([clipboardItem]);
-      toast.success(
-        <>
-          <div className="text-base">Copied to clipboard!</div>
-          <div className=" text-[12px]">
-            Make sure you run this on your terminal.
-          </div>
-        </>,
-        {
-          position: "bottom-right",
-          autoClose: 2500,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          transition: Bounce,
-          style: { fontFamily: "Manrope" },
-        }
-      );
-      console.log("Text copied to clipboard as ClipboardItem");
-    } catch (err) {
-      toast("Opsiee! Error occured.");
-      console.error("Failed to copy: ", err);
-    }
-  }
-
   return (
     <div
       style={{
@@ -88,32 +54,16 @@ const Hero = () => {
         </div>
 
         <div className=" flex flex-row items-center justify-center lg:justify-start lg:w-72 lg:mb-8 navbar-link font-heading ">
-          I convert air💨 into code💻!
+          Engineering ideas 💡 into reality 🚀
         </div>
-
-        <div
-          className=" mt-8 lg:mt-0 lg:self-start bg-black py-4 px-8 rounded-md flex flex-row items-center justify-between cursor-pointer"
-          onClick={() => copytoClipboard()}
+        <a
+          href={RESUME_LINK}
+          target="_blank"
+          className=" px-8 py-2 bg-white text-black text-center rounded-md font-semibold"
+          style={{ color: "#004632" }}
         >
-          <div className=" text-green-500 text-2xl font-robot">
-            👨🏻‍💻 npx sohail
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            className="lucide lucide-clipboard text-green-500 ml-6"
-          >
-            <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
-            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-          </svg>
-        </div>
+          View Resume ⚡
+        </a>
       </motion.div>
 
       <motion.div
