@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 interface FreelanceItem {
@@ -25,6 +25,17 @@ const freelanceData: FreelanceItem[] = [
     shadowColor: "#1432e0",
   },
   {
+    company: "Webyapar",
+    period: "May 2024 – Jun 2024",
+    position: "Frontend Web Developer",
+    location: "Remote",
+    description: [
+      "Developed a static and responsive website using HTML5, CSS3, Javascript and Bootstrap to meet the requirements of the client.",
+    ],
+    techStack: "HTML5, CSS3, Bootstrap, Figma",
+    shadowColor: "#ec3242",
+  },
+  {
     company: "Career Charcha",
     period: "Jun 2024",
     position: "Full Stack Web Developer",
@@ -37,19 +48,8 @@ const freelanceData: FreelanceItem[] = [
     shadowColor: "#057B80",
   },
   {
-    company: "Webyapar",
-    period: "May 2024 - Jun 2024",
-    position: "Frontend Web Developer",
-    location: "Remote",
-    description: [
-      "Developed a static and responsive website using HTML5, CSS3, Javascript and Bootstrap to meet the requirements of the client.",
-    ],
-    techStack: "HTML5, CSS3, Bootstrap, Figma",
-    shadowColor: "#ec3242",
-  },
-  {
     company: "Streeya",
-    period: "Jul 2023 - Aug 2023",
+    period: "Jul 2023 – Aug 2023",
     position: "UI/UX Designer",
     location: "Remote",
     description: [
@@ -64,14 +64,7 @@ const freelanceData: FreelanceItem[] = [
 function hexToRgba(hex: string, alpha: number): string {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   if (!result) return `rgba(66, 66, 66, ${alpha})`;
-  const r = parseInt(result[1], 16);
-  const g = parseInt(result[2], 16);
-  const b = parseInt(result[3], 16);
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-}
-
-function cardGradientFromShadowColor(shadowColor: string): string {
-  return `linear-gradient(268.23deg, rgba(66, 66, 66, 0.5) 2.85%, ${hexToRgba(shadowColor, 0.25)} 94.71%)`;
+  return `rgba(${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}, ${alpha})`;
 }
 
 const Freelancing = () => {
@@ -90,16 +83,13 @@ const Freelancing = () => {
       <div className="font-heading text-heading heading text-center">
         Freelancing
       </div>
-      <div className="heading text-center mb-8">
+      <div className="heading text-center mb-10">
         {text.map((el, i) => (
           <motion.span
             viewport={{ once: true }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{
-              duration: 0.25,
-              delay: i / 10,
-            }}
+            transition={{ duration: 0.25, delay: i / 10 }}
             key={i}
           >
             {el}{" "}
@@ -107,109 +97,121 @@ const Freelancing = () => {
         ))}
       </div>
 
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
         {freelanceData.map((item, index) => (
-          <FlipCard key={index} item={item} index={index} />
+          <FreelanceCard key={index} item={item} index={index} />
         ))}
       </div>
     </div>
   );
 };
 
-interface FlipCardProps {
+interface FreelanceCardProps {
   item: FreelanceItem;
   index: number;
 }
 
-const FlipCard: React.FC<FlipCardProps> = ({ item, index }) => {
+const FreelanceCard: React.FC<FreelanceCardProps> = ({ item, index }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [spotlight, setSpotlight] = useState({ x: 0, y: 0, active: false });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    setSpotlight({ x: e.clientX - rect.left, y: e.clientY - rect.top, active: true });
+  };
+
   return (
     <motion.div
-      className="flip-card h-[220px] min-h-[220px] w-full"
-      style={{ perspective: "1000px", perspectiveOrigin: "center center" }}
+      ref={cardRef}
+      className="relative rounded-2xl overflow-hidden cursor-default"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => setSpotlight((s) => ({ ...s, active: false }))}
       viewport={{ once: true }}
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{
         opacity: 1,
         y: 0,
-        transition: { duration: 0.4, delay: index * 0.08 },
+        transition: { duration: 0.55, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] },
       }}
+      whileHover={{ y: -3, transition: { duration: 0.2, ease: "easeOut" } }}
     >
+      {/* Cursor spotlight */}
       <div
-        className="flip-card-inner h-full w-full relative"
+        className="absolute inset-0 pointer-events-none rounded-2xl"
         style={{
-          transformStyle: "preserve-3d",
-          transition: "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+          opacity: spotlight.active ? 1 : 0,
+          transition: "opacity 0.3s ease",
+          background: `radial-gradient(340px circle at ${spotlight.x}px ${spotlight.y}px, ${hexToRgba(item.shadowColor, 0.13)}, transparent 68%)`,
         }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "rotateY(180deg)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "rotateY(0deg)";
+      />
+
+      {/* Card body */}
+      <div
+        className="relative h-full flex flex-col px-6 py-5 rounded-2xl overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10"
+        style={{
+          border: "1px solid rgba(255,255,255,0.1)",
+          borderTop: `2px solid ${item.shadowColor}`,
         }}
       >
-        {/* Front */}
-        <div
-          className="flip-card-front absolute inset-0 rounded-xl border border-gray-100 flex flex-col items-center justify-center px-6 py-4"
-          style={{
-            boxShadow: `4px 4px 0px 1px ${item.shadowColor}`,
-            background: cardGradientFromShadowColor(item.shadowColor),
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "rotateY(0deg) translateZ(1px)",
-          }}
+        {/* Watermark index */}
+        <span
+          className="absolute right-3 -top-1 font-space font-bold select-none pointer-events-none leading-none"
+          style={{ fontSize: "88px", color: item.shadowColor, opacity: 0.065 }}
         >
-          <span className="text-heading font-space heading text-2xl sm:text-3xl text-center">
-            {item.company}
-          </span>
-          <span className="font-manrope text-base sm:text-lg mt-2 text-zinc-300">
-            {item.position}
-          </span>
-          <span className="font-manrope text-sm sm:text-base text-zinc-400 mt-1">
-            {item.period}
-          </span>
-          <span className="text-sm text-zinc-400 mt-0.5">{item.location}</span>
+          {String(index + 1).padStart(2, "0")}
+        </span>
+
+        {/* Header row */}
+        <div className="flex items-start justify-between gap-4 mb-4 relative">
+          <div className="flex flex-col min-w-0">
+            <h3 className="text-xl sm:text-2xl font-bold font-space text-white/90 leading-tight">
+              {item.company}
+            </h3>
+            <span
+              className="text-sm font-semibold font-manrope mt-1"
+              style={{ color: item.shadowColor }}
+            >
+              {item.position}
+            </span>
+          </div>
+          <div className="text-right shrink-0 mt-0.5">
+            <span className="text-xs text-zinc-400 block font-manrope">{item.period}</span>
+            <span className="text-xs text-zinc-500 block mt-0.5 font-manrope">{item.location}</span>
+          </div>
         </div>
 
-        {/* Back */}
+        {/* Accent divider */}
         <div
-          className="flip-card-back absolute inset-0 rounded-xl border border-gray-100 overflow-y-auto px-4 sm:px-5 py-4"
+          className="h-px mb-4"
           style={{
-            boxShadow: `4px 4px 0px 1px ${item.shadowColor}`,
-            background: cardGradientFromShadowColor(item.shadowColor),
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "rotateY(180deg) translateZ(1px)",
+            background: `linear-gradient(to right, ${hexToRgba(item.shadowColor, 0.5)}, ${hexToRgba(item.shadowColor, 0.05)} 60%, transparent)`,
           }}
-        >
-          <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2.5">
-            What I did
-          </p>
-          <ul className="text-zinc-300 text-xs sm:text-sm space-y-2">
-            {item.description.map((point, i) => (
-              <li
-                key={i}
-                className="pl-3 border-l-2 border-zinc-600/80 leading-snug"
-                style={{ borderLeftColor: item.shadowColor }}
-              >
-                {point}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-4 pt-3 border-t border-zinc-600/40">
-            <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2">
-              Tech
-            </p>
-            <div className="flex flex-wrap gap-1.5">
-              {item.techStack.split(", ").map((tech, i) => (
-                <span
-                  key={i}
-                  className="text-[10px] sm:text-xs px-2 py-0.5 rounded-md font-medium text-zinc-300 bg-zinc-800/60 border border-zinc-600/50"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+        />
+
+        {/* Description */}
+        <ul className="flex-1 space-y-2.5 mb-5">
+          {item.description.map((point, i) => (
+            <li key={i} className="flex items-start gap-2.5 text-sm text-zinc-400 leading-relaxed font-manrope">
+              <span
+                className="mt-[7px] h-[5px] w-[5px] rounded-full shrink-0"
+                style={{ backgroundColor: item.shadowColor }}
+              />
+              {point}
+            </li>
+          ))}
+        </ul>
+
+        {/* Tech badges */}
+        <div className="flex flex-wrap gap-1.5">
+          {item.techStack.split(", ").map((tech, i) => (
+            <span
+              key={i}
+              className="text-[11px] px-2.5 py-[3px] rounded-full font-medium font-manrope text-zinc-300 bg-zinc-800/70 border border-zinc-700/40"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
       </div>
     </motion.div>

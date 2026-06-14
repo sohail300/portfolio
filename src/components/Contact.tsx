@@ -52,7 +52,7 @@ const Contact = () => {
         </div>
         <div className=" flex flex-row justify-between mt-4">
           <a
-            href="https://www.linkedin.com/in/md-sohail-ansari-b51201278/"
+            href="https://www.linkedin.com/in/sohailcodes/"
             target="_blank"
           >
             <svg

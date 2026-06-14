@@ -61,12 +61,12 @@ const Projects = () => {
             Web Apps
           </TabsTrigger>
 
-          <TabsTrigger
+          {/* <TabsTrigger
             value="genai"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
           >
             AI Agent Projects
-          </TabsTrigger>
+          </TabsTrigger> */}
           <TabsTrigger
             value="animation"
             className="px-4 py-2 transition-all duration-300 hover:bg-white/20"
@@ -98,9 +98,8 @@ const Projects = () => {
               return (
                 <div
                   key={item.title}
-                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                    noOfWebProjects % 4 == 0 ? "large:w-1/4" : ""
-                  }`}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${noOfWebProjects % 4 == 0 ? "large:w-1/4" : ""
+                    }`}
                 >
                   <Card
                     key={item.title}
@@ -124,9 +123,8 @@ const Projects = () => {
               return (
                 <div
                   key={item.title}
-                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                    noOfAnimationProjects % 4 == 0 ? "large:w-1/4" : ""
-                  }`}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${noOfAnimationProjects % 4 == 0 ? "large:w-1/4" : ""
+                    }`}
                 >
                   <Card
                     key={item.title}
@@ -149,9 +147,8 @@ const Projects = () => {
               return (
                 <div
                   key={item.title}
-                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                    noOfGenAIProjects % 4 == 0 ? "large:w-1/4" : ""
-                  }`}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${noOfGenAIProjects % 4 == 0 ? "large:w-1/4" : ""
+                    }`}
                 >
                   <Card
                     key={item.title}
@@ -174,9 +171,8 @@ const Projects = () => {
               return (
                 <div
                   key={item.title}
-                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                    noOfAppProjects % 4 == 0 ? "large:w-1/4" : ""
-                  }`}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${noOfAppProjects % 4 == 0 ? "large:w-1/4" : ""
+                    }`}
                 >
                   <Card
                     key={item.title}
@@ -199,9 +195,8 @@ const Projects = () => {
               return (
                 <div
                   key={item.title}
-                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                    noOfExtensionProjects % 4 == 0 ? "large:w-1/4" : ""
-                  }`}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${noOfExtensionProjects % 4 == 0 ? "large:w-1/4" : ""
+                    }`}
                 >
                   <Card
                     key={item.title}
@@ -225,9 +220,8 @@ const Projects = () => {
               return (
                 <div
                   key={item.title}
-                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${
-                    noOfPetProjects % 4 == 0 ? "large:w-1/4" : ""
-                  }`}
+                  className={`w-full sm:w-1/2 pt-2 px-0 sm:px-4 lg:w-1/3 ${noOfPetProjects % 4 == 0 ? "large:w-1/4" : ""
+                    }`}
                 >
                   <Card
                     key={item.title}

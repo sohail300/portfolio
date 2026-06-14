@@ -1,24 +1,35 @@
 const webProjects = [
+  // {
+  //   title: "Ping Bot",
+  //   status: "Full Stack",
+  //   description:
+  //     "A full-stack API monitoring tool. Prevents cold starts by scheduled pings using APScheduler, Celery, and Redis. Sends email alerts on downtime. Built a modern React dashboard integrated with Clerk authentication.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1757949031/portfolio/megaprojects/pingbot_bbpcvp.png",
+  //   techStack: [
+  //     "React",
+  //     "Clerk",
+  //     "FastAPI",
+  //     "PostgreSQL",
+  //     "SQLAlchemy",
+  //     "APScheduler",
+  //     "Celery",
+  //     "Redis",
+  //   ],
+  //   gitLink: "https://github.com/sohail300/PingBot",
+  //   liveLink: "https://pingbot.heysohail.xyz/",
+  //   youtubeLink: "",
+  // },
   {
-    title: "Ping Bot",
-    status: "Full Stack",
+    title: "VisualiseAI",
+    status: "Deployed",
     description:
-      "A full-stack API monitoring tool. Prevents cold starts by scheduled pings using APScheduler, Celery, and Redis. Sends email alerts on downtime. Built a modern React dashboard integrated with Clerk authentication.",
+      "An AI-powered image and video editing tool offering content-aware cropping, generative fill, AI-generated video previews, and background removal. Integrated with Cloudinary AI for intelligent image processing.",
     imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1757949031/portfolio/megaprojects/pingbot_bbpcvp.png",
-    techStack: [
-      "React",
-      "Clerk",
-      "FastAPI",
-      "PostgreSQL",
-      "SQLAlchemy",
-      "APScheduler",
-      "Celery",
-      "Redis",
-    ],
-    gitLink: "https://github.com/sohail300/PingBot",
-    liveLink: "https://pingbot.heysohail.xyz/",
-    youtubeLink: "",
+      "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1741267235/portfolio/megaprojects/visualise_mr0bs8.png",
+    techStack: ["NextJS", "Tailwind", "ShadCN", "TypeScript", "CloudinaryAI"],
+    gitLink: "https://github.com/sohail300/visualise",
+    liveLink: "https://visualiseai.heysohail.xyz/",
   },
   {
     title: "E-Kaksha",

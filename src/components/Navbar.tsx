@@ -4,6 +4,8 @@ import { useAnimate, stagger, motion } from "framer-motion";
 import { RESUME_LINK } from "../utils/links";
 import { HashLink } from "react-router-hash-link";
 
+const NAV_OFFSET = -80;
+
 function smoothTo(hash: string) {
   const id = hash.replace("#", "");
   const el = document.getElementById(id);
@@ -13,9 +15,10 @@ function smoothTo(hash: string) {
     }
   ).__lenis;
   if (el && lenis) {
-    lenis.scrollTo(el, { offset: 0 });
+    lenis.scrollTo(el, { offset: NAV_OFFSET });
   } else if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
+    const y = el.getBoundingClientRect().top + window.scrollY + NAV_OFFSET;
+    window.scrollTo({ top: y, behavior: "smooth" });
   }
 }
 

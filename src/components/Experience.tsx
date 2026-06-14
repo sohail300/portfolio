@@ -88,41 +88,41 @@ const Experience = () => {
         />
       ),
     },
-    {
-      title: {
-        company: "Bhagalpur Police",
-        period: "Aug 2023 - Jan 2024",
-      },
-      content: (
-        <ExperienceCard
-          company="Bhagalpur Police"
-          period="Aug 2023 - Jan 2024"
-          position="UI/UX + Frontend Developer"
-          location="Bhagalpur, Bihar, India"
-          description={[
-            "Received Project offer from Bhagalpur Police: Member of a team of 10+ students, collaborated with 6 officers to simplify the FIR progress tracking, multilevel reporting and analytics.",
-            <>
-              Featured in Newspapers,
-              <Link
-                to="https://timesofindia.indiatimes.com/city/patna/iiit-bhagalpur-and-police-ink-mou-to-develop-ai-based-app/articleshow/102066581.cms"
-                className="underline mx-1"
-              >
-                TimesofIndia
-              </Link>
-              and Youtube Channels,
-              <Link
-                to="https://timesofindia.indiatimes.com/city/patna/iiit-bhagalpur-and-police-ink-mou-to-develop-ai-based-app/articleshow/102066581.cms"
-                className="underline mx-1"
-              >
-                The Bihar Bulletin
-              </Link>
-            </>,
-          ]}
-          techStack="ReactJS, HTML5, CSS3, Figma"
-          shadowColor="#A38F58"
-        />
-      ),
-    },
+    // {
+    //   title: {
+    //     company: "Bhagalpur Police",
+    //     period: "Aug 2023 - Jan 2024",
+    //   },
+    //   content: (
+    //     <ExperienceCard
+    //       company="Bhagalpur Police"
+    //       period="Aug 2023 - Jan 2024"
+    //       position="UI/UX + Frontend Developer"
+    //       location="Bhagalpur, Bihar, India"
+    //       description={[
+    //         "Received Project offer from Bhagalpur Police: Member of a team of 10+ students, collaborated with 6 officers to simplify the FIR progress tracking, multilevel reporting and analytics.",
+    //         <>
+    //           Featured in Newspapers,
+    //           <Link
+    //             to="https://timesofindia.indiatimes.com/city/patna/iiit-bhagalpur-and-police-ink-mou-to-develop-ai-based-app/articleshow/102066581.cms"
+    //             className="underline mx-1"
+    //           >
+    //             TimesofIndia
+    //           </Link>
+    //           and Youtube Channels,
+    //           <Link
+    //             to="https://timesofindia.indiatimes.com/city/patna/iiit-bhagalpur-and-police-ink-mou-to-develop-ai-based-app/articleshow/102066581.cms"
+    //             className="underline mx-1"
+    //           >
+    //             The Bihar Bulletin
+    //           </Link>
+    //         </>,
+    //       ]}
+    //       techStack="ReactJS, HTML5, CSS3, Figma"
+    //       shadowColor="#A38F58"
+    //     />
+    //   ),
+    // },
   ];
 
   return (
