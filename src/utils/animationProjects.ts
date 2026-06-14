@@ -1,6 +1,6 @@
 const animationProjects = [
   {
-    title: "Cuberto",
+    title: "Nexus",
     status: "Frontend",
     description:
       "A visually stunning and creative agency website inspired by Cuberto’s signature animations and smooth UI/UX interactions. Implemented Lenis smooth scrolling, GSAP animations, and fluid motion effects for a seamless user experience.",

@@ -247,9 +247,8 @@ const Navbar = () => {
             backdropFilter: "blur(10px)",
             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
           }}
-          className={`w-56 top-0 right-0 z-10 flex flex-col transform transition-transform duration-500 ${
-            open ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`w-56 top-0 right-0 z-10 flex flex-col transform transition-transform duration-500 ${open ? "translate-x-0" : "translate-x-full"
+            }`}
           ref={navRef}
         >
           <ul
