@@ -1,1 +1,1 @@
-export const RESUME_LINK = "https://links.heysohail.xyz/resume";
+export const RESUME_LINK = "https://links.sohailcodes.xyz/resume";

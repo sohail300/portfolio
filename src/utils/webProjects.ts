@@ -17,7 +17,7 @@ const webProjects = [
   //     "Redis",
   //   ],
   //   gitLink: "https://github.com/sohail300/PingBot",
-  //   liveLink: "https://pingbot.heysohail.xyz/",
+  //   liveLink: "https://pingbot.sohailcodes.xyz/",
   //   youtubeLink: "",
   // },
   {
@@ -29,7 +29,7 @@ const webProjects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1741267235/portfolio/megaprojects/visualise_mr0bs8.png",
     techStack: ["NextJS", "Tailwind", "ShadCN", "TypeScript", "CloudinaryAI"],
     gitLink: "https://github.com/sohail300/visualise",
-    liveLink: "https://visualiseai.heysohail.xyz/",
+    liveLink: "https://visualiseai.sohailcodes.xyz/",
   },
   {
     title: "E-Kaksha",
@@ -49,7 +49,7 @@ const webProjects = [
       "Azure",
     ],
     gitLink: "https://github.com/sohail300/E-Kaksha",
-    liveLink: "https://e-kaksha.heysohail.xyz/",
+    liveLink: "https://e-kaksha.sohailcodes.xyz/",
     youtubeLink: "https://youtu.be/onl838TfhYE",
   },
   {
@@ -69,7 +69,7 @@ const webProjects = [
       "Zod",
     ],
     gitLink: "https://github.com/sohail300/Spill-App",
-    liveLink: "https://spill.heysohail.xyz/",
+    liveLink: "https://spill.sohailcodes.xyz/",
     youtubeLink: "https://youtu.be/YVMaOys-c2g",
   },
   // {
@@ -90,7 +90,7 @@ const webProjects = [
   //     "Gemini AI",
   //   ],
   //   gitLink: "https://github.com/sohail300/Blog-Flow",
-  //   liveLink: "https://blogflow.heysohail.xyz/",
+  //   liveLink: "https://blogflow.sohailcodes.xyz/",
   //   youtubeLink: "",
   // },
   // {

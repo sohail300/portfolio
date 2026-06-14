@@ -8,7 +8,7 @@ const genAIProjects = [
       "https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1741267235/portfolio/megaprojects/visualise_mr0bs8.png",
     techStack: ["NextJS", "Tailwind", "ShadCN", "TypeScript", "CloudinaryAI"],
     gitLink: "https://github.com/sohail300/visualise",
-    liveLink: "https://visualiseai.heysohail.xyz/",
+    liveLink: "https://visualiseai.sohailcodes.xyz/",
   },
   // {
   //   title: "Invoice Scan",
@@ -27,7 +27,7 @@ const genAIProjects = [
   //     "Zod",
   //   ],
   //   gitLink: "https://github.com/sohail300/Invoice-Scan",
-  //   liveLink: "https://invoice-scan.heysohail.xyz/",
+  //   liveLink: "https://invoice-scan.sohailcodes.xyz/",
   //   youtubeLink: "https://youtu.be/_EOL17Mne7w",
   // },
 ];
