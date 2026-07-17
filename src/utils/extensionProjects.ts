@@ -1,7 +1,7 @@
 const extensionProjects = [
   {
     title: "Hotstar Ad Muter",
-    status: "Deployed",
+    status: "",
     description:
       "Developed a browser extension to automatically mute the Hotstar tab during ads and unmute when live matches resume, enhancing user experience. Implemented efficient event detection and audio control for seamless transitions.",
     imageUrl:

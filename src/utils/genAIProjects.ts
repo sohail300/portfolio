@@ -1,7 +1,7 @@
 const genAIProjects = [
   {
     title: "VisualiseAI",
-    status: "Deployed",
+    status: "Full Stack",
     description:
       "An AI-powered image and video editing tool offering content-aware cropping, generative fill, AI-generated video previews, and background removal. Integrated with Cloudinary AI for intelligent image processing.",
     imageUrl:

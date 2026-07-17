@@ -60,15 +60,17 @@ const Card: React.FC<CardProps> = ({
             {title}
           </div>
           <div className="flex flex-row justify-between items-center">
-            <span
-              className="rounded-2xl text-center py-1 px-2 text-8px md:text-10px"
-              style={{
-                backgroundColor: getStatusBackgroundColor(status),
-                color: getStatusTextColor(status),
-              }}
-            >
-              {status}
-            </span>
+            {status && (
+              <span
+                className="rounded-md text-center py-1 px-2 text-8px md:text-10px"
+                style={{
+                  backgroundColor: getStatusBackgroundColor(status),
+                  color: getStatusTextColor(status),
+                }}
+              >
+                {status}
+              </span>
+            )}
 
             {gitLink && (
               <a

@@ -110,7 +110,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://twitter.com/sohail_twts"
+            href="https://twitter.com/sohail_posts"
             target="_blank"
             className=" ml-5"
           >

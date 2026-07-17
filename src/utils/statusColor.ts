@@ -12,6 +12,8 @@ export function getStatusBackgroundColor(status: string) {
       return "rgba(111, 163, 239, 0.2)"; // Light blue tint
     case "Backend":
       return "rgba(255, 179, 71, 0.2)"; // Light orange tint
+    case "Private":
+      return "rgba(255, 99, 99, 0.2)"; // Light red tint
     default:
       return "rgba(62, 55, 103, .262)";
   }
@@ -31,6 +33,8 @@ export function getStatusTextColor(status: string) {
       return "#6fa3ef"; // Soft blue for UI/UX emphasis
     case "Backend":
       return "#ffb347"; // Warm orange for versatility
+    case "Private":
+      return "#ff8383"; // Red for private/restricted projects
     default:
       return "#8394ff";
   }

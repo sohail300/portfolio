@@ -22,7 +22,7 @@ const webProjects = [
   // },
   {
     title: "VisualiseAI",
-    status: "Deployed",
+    status: "Full Stack",
     description:
       "An AI-powered image and video editing tool offering content-aware cropping, generative fill, AI-generated video previews, and background removal. Integrated with Cloudinary AI for intelligent image processing.",
     imageUrl:
@@ -52,26 +52,26 @@ const webProjects = [
     liveLink: "https://e-kaksha.sohailcodes.xyz/",
     youtubeLink: "https://youtu.be/onl838TfhYE",
   },
-  {
-    title: "Spill",
-    status: "Full Stack",
-    description:
-      "Spill is an anonymous feedback platform. Implemented Next Auth for Login purpose. Implemented verification of account via OTP sent through email. Utilized React Hook Form in developing UI.",
-    imageUrl:
-      "https://res.cloudinary.com/dwuzfbivo/image/upload/v1720871264/portfolio/megaprojects/spill_vwyuyb.png",
-    techStack: [
-      "NextJS",
-      "Tailwind",
-      "ShadCN",
-      "TypeScript",
-      "MongoDB",
-      "Next Auth",
-      "Zod",
-    ],
-    gitLink: "https://github.com/sohail300/Spill-App",
-    liveLink: "https://spill.sohailcodes.xyz/",
-    youtubeLink: "https://youtu.be/YVMaOys-c2g",
-  },
+  // {
+  //   title: "Spill",
+  //   status: "Full Stack",
+  //   description:
+  //     "Spill is an anonymous feedback platform. Implemented Next Auth for Login purpose. Implemented verification of account via OTP sent through email. Utilized React Hook Form in developing UI.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dwuzfbivo/image/upload/v1720871264/portfolio/megaprojects/spill_vwyuyb.png",
+  //   techStack: [
+  //     "NextJS",
+  //     "Tailwind",
+  //     "ShadCN",
+  //     "TypeScript",
+  //     "MongoDB",
+  //     "Next Auth",
+  //     "Zod",
+  //   ],
+  //   gitLink: "https://github.com/sohail300/Spill-App",
+  //   liveLink: "https://spill.sohailcodes.xyz/",
+  //   youtubeLink: "https://youtu.be/YVMaOys-c2g",
+  // },
   // {
   //   title: "BlogFlow",
   //   status: "Full Stack",
