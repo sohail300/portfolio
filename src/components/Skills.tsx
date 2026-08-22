@@ -1,6 +1,9 @@
 import { skills } from "../utils/skills";
 import { motion } from "framer-motion";
 
+const skillAlt = (filename: string) =>
+  `${filename.replace(/\.\w+$/, "")} logo`;
+
 const Skills = () => {
   const text =
     "Skills in which I have invested significant time and have consistently applied its knowledge to real-time tasks.".split(
@@ -77,7 +80,7 @@ const Skills = () => {
                 >
                   <img
                     src={`./skills/language/${item}`}
-                    alt=""
+                    alt={skillAlt(item)}
                     className=" h-12"
                   />
                 </div>
@@ -127,7 +130,7 @@ const Skills = () => {
                 >
                   <img
                     src={`./skills/frontend/${item}`}
-                    alt=""
+                    alt={skillAlt(item)}
                     className=" h-12"
                   />
                 </div>
@@ -177,7 +180,7 @@ const Skills = () => {
                 >
                   <img
                     src={`./skills/backend/${item}`}
-                    alt=""
+                    alt={skillAlt(item)}
                     className=" h-12"
                   />
                 </div>
@@ -225,7 +228,7 @@ const Skills = () => {
                   className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
-                  <img src={`./skills/app/${item}`} alt="" className=" h-12" />
+                  <img src={`./skills/app/${item}`} alt={skillAlt(item)} className=" h-12" />
                 </div>
               );
             })}
@@ -273,7 +276,7 @@ const Skills = () => {
                 >
                   <img
                     src={`./skills/database/${item}`}
-                    alt=""
+                    alt={skillAlt(item)}
                     className=" h-12"
                   />
                 </div>
@@ -323,7 +326,7 @@ const Skills = () => {
                 >
                   <img
                     src={`./skills/devops/${item}`}
-                    alt=""
+                    alt={skillAlt(item)}
                     className=" h-12"
                   />
                 </div>
@@ -371,7 +374,7 @@ const Skills = () => {
                   className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
-                  <img src={`./skills/web3/${item}`} alt="" className=" h-12" />
+                  <img src={`./skills/web3/${item}`} alt={skillAlt(item)} className=" h-12" />
                 </div>
               );
             })}
@@ -419,7 +422,7 @@ const Skills = () => {
                 >
                   <img
                     src={`./skills/tools/${item}`}
-                    alt=""
+                    alt={skillAlt(item)}
                     className=" h-12"
                   />
                 </div>

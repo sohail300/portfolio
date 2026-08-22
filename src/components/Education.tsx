@@ -29,7 +29,7 @@ const Education = () => {
       >
         <img
           src="https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1725573820/portfolio/education/Education_qvybxo.png"
-          alt=""
+          alt="Education illustration"
           className=" w-full lg:h-80 large:h-96"
         />
       </motion.div>
@@ -53,7 +53,7 @@ const Education = () => {
         <div className="text-center font-heading text-heading mb-8 heading">Education</div>
         <img
           src="/education.png"
-          alt=""
+          alt="Sohail's education timeline"
           className=" w-full lg:h-64 large:h-72"
         />
       </motion.div>

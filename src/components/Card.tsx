@@ -49,7 +49,11 @@ const Card: React.FC<CardProps> = ({
       }}
     >
       <a href={liveLink} target="_blank" rel="noopener noreferrer">
-        <img src={imageUrl} alt="" className="w-full rounded-lg object-cover" />
+        <img
+          src={imageUrl}
+          alt={`${title} project screenshot`}
+          className="w-full rounded-lg object-cover"
+        />
       </a>
       <div className="rounded-lg px-3 py-4">
         <div className="flex flex-row justify-between items-center text-14px md:text-20px">

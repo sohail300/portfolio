@@ -62,7 +62,7 @@ const Achievements = () => {
             >
               <img
                 src={item.imageLink}
-                alt=""
+                alt={`Achievement ${index + 1}`}
                 className=" w-full rounded-lg cursor-pointer lg:rounded-sm lg:filter lg:grayscale lg:hover:filter-none "
               />
             </motion.a>

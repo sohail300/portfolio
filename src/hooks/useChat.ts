@@ -78,8 +78,10 @@ export function useChat(options: UseChatOptions = {}): UseChatReturn {
       const decoder = new TextDecoder();
       let buffer = '';
 
-      while (true) {
+      let streamDone = false;
+      while (!streamDone) {
         const { done, value } = await reader.read();
+        streamDone = done;
         if (done) break;
 
         buffer += decoder.decode(value, { stream: true });

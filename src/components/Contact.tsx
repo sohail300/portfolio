@@ -32,7 +32,7 @@ const Contact = () => {
       >
         <img
           src="https://res.cloudinary.com/dwuzfbivo/image/upload/v1711872073/portfolio/contact/contact1_j2rkzp.jpg"
-          alt=""
+          alt="Md Sohail Ansari"
           className=" rounded-full w-40 h-40 object-cover m-auto "
           style={{ border: "3px solid #bbbbbb", filter: "grayscale(25%)" }}
         />

@@ -40,7 +40,7 @@ const Hero = () => {
               "Hey, I'm an App Developer",
               1000,
             ]}
-            wrapper="div"
+            wrapper="h1"
             speed={50}
             style={{
               fontSize: "28px",
@@ -89,7 +89,7 @@ const Hero = () => {
       >
         <img
           src="https://res.cloudinary.com/dwuzfbivo/image/upload//v1720037749/portfolio/hero_ituxzz.jpg"
-          alt=""
+          alt="Sohail"
           className=" w-2/4 m-auto rounded-md mb-16 lg:rounded-3xl lg:w-[360px] lg:mb-0"
         />
       </motion.div>

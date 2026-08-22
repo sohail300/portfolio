@@ -62,7 +62,7 @@ const Designs = () => {
             >
               <img
                 src={item.imageLink}
-                alt=""
+                alt={`Design project ${index + 1} preview`}
                 className=" w-full rounded-lg cursor-pointer lg:rounded-sm lg:filter lg:grayscale lg:hover:filter-none"
               />
             </motion.a>
