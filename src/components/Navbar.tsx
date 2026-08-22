@@ -269,7 +269,7 @@ const Navbar = () => {
               backgroundColor: "#1f1f1f",
               boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
             }}
-            className="w-56 h-screen top-0 right-0 z-40 flex flex-col lg:hidden"
+            className="w-56 h-[100dvh] top-0 right-0 z-40 flex flex-col overflow-y-auto lg:hidden"
             ref={navRef}
           >
           <ul
