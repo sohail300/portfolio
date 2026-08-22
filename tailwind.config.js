@@ -15,15 +15,15 @@ export default {
       keyframes: {
         upDown: {
           '0%, 100%': {
-            transform: 'translateY(8px)'
+            transform: 'translateY(4px)'
           },
           '50%': {
-            transform: 'translateY(-8px)'
+            transform: 'translateY(-4px)'
           }
         }
       },
       animation: {
-        upDown: 'upDown 2s ease-in-out infinite'
+        upDown: 'upDown 4s ease-in-out infinite'
       },
       screens: {
         small: '550px',

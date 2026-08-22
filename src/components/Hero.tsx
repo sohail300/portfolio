@@ -30,7 +30,7 @@ const Hero = () => {
           },
         }}
       >
-        <div className=" text-white px-4 w-screen text-center lg:w-auto lg:px-0 lg:mx-0 lg:text-left">
+        <div className="type-animation-wrapper flex items-center justify-center text-white px-4 w-screen text-center lg:w-auto lg:px-0 lg:mx-0 lg:justify-start lg:text-left">
           <TypeAnimation
             sequence={[
               "Hey, I'm Sohail",
@@ -53,7 +53,7 @@ const Hero = () => {
           />
         </div>
 
-        <div className=" flex flex-row items-center justify-center lg:justify-start lg:w-72 lg:mb-8 navbar-link font-heading ">
+        <div className=" flex flex-row items-center justify-center lg:justify-start lg:w-72 mb-4 lg:mb-8 navbar-link font-heading ">
           Engineering ideas 💡 into reality 🚀
         </div>
         <a

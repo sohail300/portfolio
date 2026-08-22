@@ -95,15 +95,35 @@ body {
   background-color: transparent;
 }
 
+.type-animation-wrapper {
+  /* reserves room for the longest greeting to wrap onto 2 lines, so the
+     content below doesn't shift as react-type-animation cycles text */
+  min-height: 104px;
+}
+
 @media only screen and (min-width: 640px) {
   .text-animation {
     font-size: 36px !important;
+  }
+
+  .type-animation-wrapper {
+    min-height: 74px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .text-animation {
     font-size: 44px !important;
+  }
+
+  .type-animation-wrapper {
+    min-height: 152px;
+  }
+}
+
+@media only screen and (min-width: 1325px) {
+  .type-animation-wrapper {
+    min-height: 86px;
   }
 }
 

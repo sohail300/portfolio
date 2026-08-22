@@ -1,6 +1,6 @@
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { useAnimate, stagger, motion } from "framer-motion";
+import { useAnimate, stagger, motion, AnimatePresence } from "framer-motion";
 import { RESUME_LINK } from "../utils/links";
 import { HashLink } from "react-router-hash-link";
 
@@ -32,6 +32,25 @@ const Navbar = () => {
   // the stagger effect
   const staggerList = stagger(0.1, { startDelay: 0.25 });
 
+  // lock background scroll while the mobile menu is open
+  useEffect(() => {
+    const lenis = (
+      window as unknown as { __lenis?: { stop: () => void; start: () => void } }
+    ).__lenis;
+
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open) {
+      lenis?.stop();
+    } else {
+      lenis?.start();
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      lenis?.start();
+    };
+  }, [open]);
+
   // Top progress bar: scroll progress (0–1), bar grows from center
   useEffect(() => {
     const handleScroll = () => {
@@ -62,12 +81,12 @@ const Navbar = () => {
         listRef.current,
         {
           width: open ? 150 : 0,
-          height: open ? 600 : 0,
+          height: open ? "auto" : 0,
           opacity: open ? 1 : 0,
         },
         {
-          type: "spring",
-          bounce: 0.3,
+          type: "tween",
+          ease: "easeOut",
           duration: 0.4,
         },
       );
@@ -118,14 +137,12 @@ const Navbar = () => {
       <div
         style={{
           position: "fixed",
-          backgroundImage:
-            "linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1))",
-          backdropFilter: "blur(10px)",
+          backgroundColor: "#1f1f1f",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
         }}
         className="w-56 top-0 right-0 z-10 hidden lg:block lg:w-screen relative"
       >
-        <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4 lg:flex-row ">
+        <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4 lg:flex-row lg:justify-center lg:gap-8">
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink
               to="#home"
@@ -218,8 +235,8 @@ const Navbar = () => {
             <a
               href={RESUME_LINK}
               target="_blank"
-              className=" px-8 py-2 bg-white text-black text-center rounded-md font-semibold"
-              style={{ color: "#004632" }}
+              className=" text-center font-semibold"
+              style={{ color: "#D4AF37" }}
             >
               View Resume ⚡
             </a>
@@ -229,43 +246,40 @@ const Navbar = () => {
         {progressBar}
       </div>
 
-      {open === false ? (
-        <span className="fixed top-4 right-4" ref={scope}>
+      {open === false && (
+        <span className="fixed top-4 right-4 z-50 lg:hidden" ref={scope}>
           <motion.button
             onClick={() => setOpen(!open)}
             whileTap={{ scale: 0.95 }}
           >
-            <Menu className=" text-red-500 text-lg z-50" size={30} />
+            <Menu className=" text-green-500 text-lg z-50" size={30} />
           </motion.button>
         </span>
-      ) : (
-        <div
-          style={{
-            position: "fixed",
-            backgroundImage:
-              "linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1))",
-            backdropFilter: "blur(10px)",
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-          }}
-          className={`w-56 top-0 right-0 z-10 flex flex-col transform transition-transform duration-500 ${open ? "translate-x-0" : "translate-x-full"
-            }`}
-          ref={navRef}
-        >
+      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            key="mobile-menu"
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", ease: "easeOut", duration: 0.4 }}
+            style={{
+              position: "fixed",
+              backgroundColor: "#1f1f1f",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+            }}
+            className="w-56 h-screen top-0 right-0 z-40 flex flex-col lg:hidden"
+            ref={navRef}
+          >
           <ul
-            className="navbar w-0 flex flex-col justify-between mx-auto py-4 lg:flex-row h-0 opacity-0"
+            className="navbar w-0 flex flex-col justify-center gap-6 mx-auto py-4 lg:flex-row h-0 opacity-0"
             ref={listRef}
           >
-            <motion.li className=" cursor-pointer font-heading mb-6 lg:mb-0 text-sm text-red-500">
-              <HashLink
-                to="#home"
-                onClick={(e) => {
-                  e.preventDefault();
-                  smoothTo("#home");
-                  setOpen(false);
-                }}
-              >
-                Close
-              </HashLink>
+            <motion.li className=" cursor-pointer font-heading mb-6 lg:mb-0 text-sm text-green-500">
+              <button onClick={() => setOpen(false)} aria-label="Close menu">
+                <X size={24} />
+              </button>
             </motion.li>
             <motion.li className=" cursor-pointer navbar-link font-heading mb-6 lg:mb-0">
               <HashLink
@@ -367,15 +381,16 @@ const Navbar = () => {
               <a
                 href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
                 target="_blank"
-                className=" px-4 py-2 bg-white text-black text-center rounded-md font-semibold"
-                style={{ color: "#004632" }}
+                className=" text-center font-semibold"
+                style={{ color: "#D4AF37" }}
               >
                 Resume ⚡
               </a>
             </motion.li>
           </ul>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

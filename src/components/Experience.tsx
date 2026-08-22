@@ -17,6 +17,7 @@ const Experience = () => {
           period="Feb 2026 - Present"
           position="Full Stack Engineer"
           location="Remote"
+          shortDescription="Building AI-driven fullstack platforms for SPAIDER SPACE using React, TypeScript, and Python."
           description={[
             "Working on Project SPAIDER SPACE for SPAIDER SPACE S.à r.l. (Luxembourg), contributing to the development of AI-driven platforms and intelligent systems.",
             "Building and maintaining scalable fullstack applications with a focus on performance, usability, and clean architecture.",
@@ -38,6 +39,7 @@ const Experience = () => {
           period="Aug 2025 - Jan 2026"
           position="Junior Software Engineer"
           location="Hyderabad, Telangana, India"
+          shortDescription="Built a career guidance SaaS with Spring Boot, React, and MongoDB for MCQ-based assessments."
           description={[
             "Built and deployed a career guidance SaaS using Spring Boot, ReactJS, and MongoDB, enabling institutes to conduct MCQ-based assessments and generate personalized course recommendations.",
             "Designed a multi-role architecture (Admin, Institute, Student) with JWT auth and secure link-based test access.",
@@ -58,6 +60,7 @@ const Experience = () => {
           period="Nov 2024 - Jul 2025"
           position="Full Stack Web Developer"
           location="Remote"
+          shortDescription="Delivered 200+ scalable APIs and a modular HRMS frontend using FastAPI and React."
           description={[
             "Designed and delivered 200+ scalable APIs using FastAPI with Pydantic validation and custom error handling, while architecting and normalizing 80+ relational database schemas for HR modules, achieving <100ms average response time and ensuring data accuracy and scalability.",
             "Built a modular HRMS frontend using React, MUI, and TailwindCSS, creating a responsive design and reducing UI issues by using reusable components.",
@@ -78,6 +81,7 @@ const Experience = () => {
           period="Feb 2024 - Apr 2024"
           position="Full Stack Web Developer Intern"
           location="Remote"
+          shortDescription="Built internal tools and a registration website using ReactJS and ExpressJS."
           description={[
             "Developed a Document Generator using ReactJS and ExpressJS as an internal tool that significantly reduced document creation time and greatly improved accuracy.",
             "Developed a website using ReactJS, ExpressJS and Google Sheets API, resulting in 100+ user registrations and a significant boost in engagement.",
@@ -166,6 +170,7 @@ interface ExperienceCardProps {
   period: string;
   position: string;
   location: string;
+  shortDescription: string;
   description: (string | React.ReactNode)[];
   techStack: string;
   shadowColor: string;
@@ -176,6 +181,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   period,
   position,
   location,
+  shortDescription,
   description,
   techStack,
   shadowColor,
@@ -217,14 +223,27 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
       </div>
     </div>
 
-    <ul className="text-zinc-300 mt-4 text-sm sm:text-base">
+    <ul className="text-zinc-300 mt-4 text-sm sm:hidden">
+      <li>• {shortDescription}</li>
+    </ul>
+
+    <ul className="hidden sm:block text-zinc-300 mt-4 text-sm sm:text-base">
       {description.map((item, index) => (
         <li key={index} className={index > 0 ? "mt-2" : ""}>
           • {item}
         </li>
       ))}
     </ul>
-    <div className="mt-4 text-sm sm:text-base">Tech Stack: {techStack}</div>
+    <div className="mt-4 flex flex-wrap gap-1.5">
+      {techStack.split(", ").map((tech, i) => (
+        <span
+          key={i}
+          className="text-[11px] px-2.5 py-[3px] rounded-full font-medium font-manrope text-zinc-300 bg-zinc-800/70 border border-zinc-700/40"
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
   </motion.div>
 );
 

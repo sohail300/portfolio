@@ -50,7 +50,7 @@ const Education = () => {
           },
         }}
       >
-        <div className=" font-heading text-heading mb-8 heading">Education</div>
+        <div className="text-center font-heading text-heading mb-8 heading">Education</div>
         <img
           src="/education.png"
           alt=""
