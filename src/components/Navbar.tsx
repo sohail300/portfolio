@@ -118,9 +118,9 @@ const Navbar = () => {
           transformOrigin: "center",
           width: "100%",
           background:
-            "linear-gradient(90deg, rgba(212,175,55,0.4) -25%, #D4AF37 54.33%, rgba(212,175,55,0.4) 125%)",
+            "linear-gradient(90deg, rgba(34,197,94,0.4) -25%, #22c55e 54.33%, rgba(34,197,94,0.4) 125%)",
           boxShadow:
-            "0 0 8px rgba(212,175,55,0.7), 0 0 16px rgba(212,175,55,0.4)",
+            "0 0 8px rgba(34,197,94,0.7), 0 0 16px rgba(34,197,94,0.4)",
           transition: "transform 0.1s ease-out",
         }}
       />
@@ -142,7 +142,7 @@ const Navbar = () => {
         }}
         className="w-56 top-0 right-0 z-10 hidden lg:block lg:w-screen relative"
       >
-        <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4 lg:flex-row lg:justify-center lg:gap-8">
+        <ul className="navbar w-4/5 flex flex-col justify-between mx-auto py-4 lg:flex-row lg:justify-center lg:gap-14">
           <li className=" cursor-pointer navbar-link font-heading mb-4 lg:mb-0">
             <HashLink
               to="#home"
@@ -236,7 +236,7 @@ const Navbar = () => {
               href={RESUME_LINK}
               target="_blank"
               className=" text-center font-semibold"
-              style={{ color: "#D4AF37" }}
+              style={{ color: "#22c55e" }}
             >
               View Resume ⚡
             </a>
@@ -256,6 +256,19 @@ const Navbar = () => {
           </motion.button>
         </span>
       )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            key="mobile-menu-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-30 bg-black/60 backdrop-blur-sm lg:hidden"
+            onClick={() => setOpen(false)}
+          />
+        )}
+      </AnimatePresence>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -382,7 +395,7 @@ const Navbar = () => {
                 href="https://drive.google.com/file/d/1bVgqtiOsF9rqzj4ED7X_s1AhNL03_4dj/view?usp=drive_link"
                 target="_blank"
                 className=" text-center font-semibold"
-                style={{ color: "#D4AF37" }}
+                style={{ color: "#22c55e" }}
               >
                 Resume ⚡
               </a>

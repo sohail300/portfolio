@@ -46,7 +46,7 @@ const Contact = () => {
         </div>
         <div
           className=" text-center mt-1"
-          style={{ color: "#ff3f3f", fontSize: "14px" }}
+          style={{ color: "#22c55e", fontSize: "14px" }}
         >
           Connect With Me
         </div>

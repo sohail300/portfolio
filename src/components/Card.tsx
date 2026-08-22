@@ -58,7 +58,7 @@ const Card: React.FC<CardProps> = ({
       <div className="rounded-lg px-3 py-4">
         <div className="flex flex-row justify-between items-center text-14px md:text-20px">
           <div
-            style={{ color: "#2bd3fd", fontWeight: "500" }}
+            style={{ color: "#22c55e", fontWeight: "500" }}
             className="font-space"
           >
             {title}
@@ -132,7 +132,7 @@ const Card: React.FC<CardProps> = ({
             <span
               key={item}
               className="rounded-md border text-white py-1.5 px-2 mx-0.5 my-0.5 text-center"
-              style={{ color: "#b6b6b6", border: "1px solid #3ee5ff" }}
+              style={{ color: "#b6b6b6", border: "1px solid #22c55e" }}
             >
               {item}
             </span>

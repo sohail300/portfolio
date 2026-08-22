@@ -86,7 +86,7 @@ const GithubHeatmap = () => {
   return (
     <div
       className=" flex flex-col z-0 px-8 py-8 bg-transparent w-auto"
-      id="achievements"
+      id="github-streak"
       style={{
         backgroundImage:
           "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
