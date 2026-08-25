@@ -11,7 +11,7 @@ const Skills = () => {
     );
   return (
     <div
-      className=" flex flex-col z-0 px-8 py-8 lg:px-24"
+      className=" flex flex-col z-0 px-4 py-8 lg:px-8"
       id="skills"
       style={{
         backgroundImage:
@@ -38,9 +38,9 @@ const Skills = () => {
           </motion.span>
         ))}
       </div>
-      <div className=" lg:px-32">
+      <div className="max-w-7xl mx-auto w-full">
         <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          className=" flex flex-col items-center gap-4 mb-6 md:flex-row md:items-center md:justify-between md:w-full"
           viewport={{ once: true }}
           initial={{
             opacity: 0,
@@ -57,7 +57,7 @@ const Skills = () => {
           }}
         >
           <span
-            className=" py-2 px-8 rounded-md md:mr-16"
+            className=" py-2 px-6 rounded-md md:w-36 md:shrink-0 md:text-center"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -70,12 +70,12 @@ const Skills = () => {
           >
             Languages
           </span>
-          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
+          <div className=" flex flex-row flex-wrap items-center justify-center gap-3">
             {skills.language.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img
@@ -90,7 +90,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          className=" flex flex-col items-center gap-4 mb-6 md:flex-row md:items-center md:justify-between md:w-full"
           viewport={{ once: true }}
           initial={{
             opacity: 0,
@@ -107,7 +107,7 @@ const Skills = () => {
           }}
         >
           <span
-            className=" py-2 px-8 rounded-md md:mr-16"
+            className=" py-2 px-6 rounded-md md:w-36 md:shrink-0 md:text-center"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -120,12 +120,12 @@ const Skills = () => {
           >
             Frontend
           </span>
-          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
+          <div className=" flex flex-row flex-wrap items-center justify-center gap-3">
             {skills.frontend.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img
@@ -140,7 +140,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          className=" flex flex-col items-center gap-4 mb-6 md:flex-row md:items-center md:justify-between md:w-full"
           viewport={{ once: true }}
           initial={{
             opacity: 0,
@@ -157,7 +157,7 @@ const Skills = () => {
           }}
         >
           <span
-            className=" py-2 px-8 rounded-md md:mr-16"
+            className=" py-2 px-6 rounded-md md:w-36 md:shrink-0 md:text-center"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -170,12 +170,12 @@ const Skills = () => {
           >
             Backend
           </span>
-          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
+          <div className=" flex flex-row flex-wrap items-center justify-center gap-3">
             {skills.backend.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img
@@ -190,7 +190,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          className=" flex flex-col items-center gap-4 mb-6 md:flex-row md:items-center md:justify-between md:w-full"
           viewport={{ once: true }}
           initial={{
             opacity: 0,
@@ -207,7 +207,7 @@ const Skills = () => {
           }}
         >
           <span
-            className=" py-2 px-8 rounded-md md:mr-16"
+            className=" py-2 px-6 rounded-md md:w-36 md:shrink-0 md:text-center"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -220,12 +220,12 @@ const Skills = () => {
           >
             App Development
           </span>
-          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
+          <div className=" flex flex-row flex-wrap items-center justify-center gap-3">
             {skills.app.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img src={`./skills/app/${item}`} alt={skillAlt(item)} className=" h-12" />
@@ -236,7 +236,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          className=" flex flex-col items-center gap-4 mb-6 md:flex-row md:items-center md:justify-between md:w-full"
           viewport={{ once: true }}
           initial={{
             opacity: 0,
@@ -253,7 +253,7 @@ const Skills = () => {
           }}
         >
           <span
-            className=" py-2 px-8 rounded-md md:mr-16"
+            className=" py-2 px-6 rounded-md md:w-36 md:shrink-0 md:text-center"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -266,12 +266,12 @@ const Skills = () => {
           >
             Databases
           </span>
-          <div className=" flex flex-row w-full justify-between my-4 md:justify-center md:w-fit">
+          <div className=" flex flex-row flex-wrap items-center justify-center gap-3">
             {skills.database.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img
@@ -286,7 +286,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          className=" flex flex-col items-center gap-4 mb-6 md:flex-row md:items-center md:justify-between md:w-full"
           viewport={{ once: true }}
           initial={{
             opacity: 0,
@@ -303,7 +303,7 @@ const Skills = () => {
           }}
         >
           <span
-            className=" py-2 px-8 rounded-md md:mr-16"
+            className=" py-2 px-6 rounded-md md:w-36 md:shrink-0 md:text-center"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -316,12 +316,12 @@ const Skills = () => {
           >
             Devops
           </span>
-          <div className=" flex flex-row w-full justify-between mt-4 md:justify-center md:w-fit">
+          <div className=" flex flex-row flex-wrap items-center justify-center gap-3">
             {skills.devops.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img
@@ -336,7 +336,7 @@ const Skills = () => {
         </motion.div>
 
         {/* <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          className=" flex flex-col items-center gap-4 mb-6 md:flex-row md:items-center md:justify-between md:w-full"
           viewport={{ once: true }}
           initial={{
             opacity: 0,
@@ -353,7 +353,7 @@ const Skills = () => {
           }}
         >
           <span
-            className=" py-2 px-8 rounded-md md:mr-16"
+            className=" py-2 px-6 rounded-md md:w-36 md:shrink-0 md:text-center"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -366,12 +366,12 @@ const Skills = () => {
           >
             Web3
           </span>
-          <div className=" flex flex-row w-full justify-between mt-4 md:justify-center md:w-fit">
+          <div className=" flex flex-row flex-wrap items-center justify-center gap-3">
             {skills.web3.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img src={`./skills/web3/${item}`} alt={skillAlt(item)} className=" h-12" />
@@ -382,7 +382,7 @@ const Skills = () => {
         </motion.div> */}
 
         <motion.div
-          className=" flex flex-col items-center justify-between mb-6 md:flex-row md:w-full md:justify-between"
+          className=" flex flex-col items-center gap-4 mb-6 md:flex-row md:items-center md:justify-between md:w-full"
           viewport={{ once: true }}
           initial={{
             opacity: 0,
@@ -399,7 +399,7 @@ const Skills = () => {
           }}
         >
           <span
-            className=" py-2 px-8 rounded-md md:mr-16"
+            className=" py-2 px-6 rounded-md md:w-36 md:shrink-0 md:text-center"
             style={{
               background:
                 "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
@@ -412,12 +412,12 @@ const Skills = () => {
           >
             Tools
           </span>
-          <div className=" flex flex-row w-full justify-between mt-4 md:justify-center md:w-fit">
+          <div className=" flex flex-row flex-wrap items-center justify-center gap-3">
             {skills.tools.map((item, index) => {
               return (
                 <div
                   key={index}
-                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center mr-4"
+                  className=" rounded-md h-20 w-20 flex flex-row justify-center items-center"
                   style={{ backgroundColor: "#0d0d0d9d" }}
                 >
                   <img

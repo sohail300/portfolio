@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <div
-      className=" flex flex-col justify-center items-center z-0 px-8 py-8"
+      className=" flex flex-col justify-center items-center z-0 px-4 py-8 lg:px-8"
       id="contact"
       style={{
         backgroundImage:

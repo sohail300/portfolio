@@ -8,7 +8,7 @@ const Education = () => {
           "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
         backgroundPosition: "center",
       }}
-      className=" flex flex-col-reverse py-8 px-8 items-center lg:flex-row lg:justify-between large:justify-around lg:px-32 "
+      className=" flex flex-col-reverse py-8 px-4 items-center max-w-7xl mx-auto lg:flex-row lg:justify-between large:justify-around lg:px-8 "
       id="education"
     >
       <motion.div

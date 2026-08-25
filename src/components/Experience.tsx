@@ -130,7 +130,7 @@ const Experience = () => {
 
   return (
     <div
-      className="flex flex-col z-0 px-4 py-8 lg:py-12"
+      className="flex flex-col z-0 px-4 py-8 lg:px-8 lg:py-12"
       id="experience"
       style={{
         backgroundImage:

@@ -20,7 +20,7 @@ const Projects = () => {
 
   return (
     <div
-      className=" flex flex-col z-0 px-4 py-8 lg:px-24"
+      className=" flex flex-col z-0 px-4 py-8 lg:px-8"
       id="projects"
       style={{
         backgroundImage:
@@ -52,7 +52,7 @@ const Projects = () => {
               "linear-gradient(268.23deg, rgba(66, 66, 66, .4) 2.85%, rgba(66, 66, 66, .6) 94.71%)",
             color: "#fff", */}
 
-      <Tabs defaultValue="web" className=" flex flex-col">
+      <Tabs defaultValue="web" className=" flex flex-col w-full max-w-7xl mx-auto">
         <TabsList className="m-auto mb-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-sm shadow-lg text-white overflow-hidden">
           <TabsTrigger
             value="web"

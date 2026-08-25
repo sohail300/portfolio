@@ -20,14 +20,14 @@ function App() {
       <LenisProvider>
         <Navbar />
         <Hero />
-        <Education />
+        {/* <Education /> */}
         <Experience />
         <Freelancing />
         <Projects />
         {/* <Web3 /> */}
         <Designs />
         <Skills />
-        <Achievements />
+        {/* <Achievements /> */}
         <GithubHeatmap />
         <Contact />
         {/* <ChatbotButton /> */}

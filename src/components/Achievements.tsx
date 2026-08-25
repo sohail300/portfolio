@@ -9,7 +9,7 @@ const Achievements = () => {
 
   return (
     <div
-      className=" flex flex-col z-0 px-8 py-8"
+      className=" flex flex-col z-0 px-4 py-8 lg:px-8"
       id="achievements"
       style={{
         backgroundImage:
@@ -37,7 +37,7 @@ const Achievements = () => {
         ))}
       </div>
 
-      <div className=" flex flex-col items-center sm:flex-row sm:flex-wrap lg:mx-auto lg:justify-between lg:px-32">
+      <div className=" flex flex-col items-center sm:flex-row sm:flex-wrap max-w-7xl lg:mx-auto lg:justify-between">
         {achievements.map((item, index) => {
           return (
             <motion.a

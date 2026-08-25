@@ -14,7 +14,7 @@ const Designs = () => {
           "url(https://res.cloudinary.com/dwuzfbivo/image/upload/f_auto/v1711872115/portfolio/grid_ffmr1k.svg)",
         backgroundPosition: "center",
       }}
-      className=" flex flex-col z-0 px-8 pb-8 lg:px-24"
+      className=" flex flex-col z-0 px-4 pb-8 lg:px-8"
     >
       <div className=" font-heading text-heading heading text-center">
         Hello Designers
@@ -35,7 +35,7 @@ const Designs = () => {
           </motion.span>
         ))}
       </div>
-      <div className=" flex flex-col items-center sm:flex-row sm:flex-wrap lg:px-32">
+      <div className=" flex flex-col items-center sm:flex-row sm:flex-wrap max-w-7xl mx-auto">
         {designs.map((item, index) => {
           return (
             <motion.a

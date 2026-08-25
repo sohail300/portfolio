@@ -85,7 +85,7 @@ const GithubHeatmap = () => {
 
   return (
     <div
-      className=" flex flex-col z-0 px-8 py-8 bg-transparent w-auto"
+      className=" flex flex-col z-0 px-4 py-8 lg:px-8 bg-transparent w-auto"
       id="github-streak"
       style={{
         backgroundImage:

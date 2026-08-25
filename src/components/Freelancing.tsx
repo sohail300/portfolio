@@ -72,7 +72,7 @@ const Freelancing = () => {
 
   return (
     <div
-      className="flex flex-col z-0 px-4 py-8 lg:py-12"
+      className="flex flex-col z-0 px-4 py-8 lg:px-8 lg:py-12"
       id="experience"
       style={{
         backgroundImage:
@@ -97,7 +97,7 @@ const Freelancing = () => {
         ))}
       </div>
 
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
         {freelanceData.map((item, index) => (
           <FreelanceCard key={index} item={item} index={index} />
         ))}
