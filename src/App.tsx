@@ -1,9 +1,6 @@
 import "./App.css";
-import Achievements from "./components/Achievements";
-// import ChatbotButton from "./components/ChatbotButton";
 import Contact from "./components/Contact";
 import Designs from "./components/Designs";
-import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Freelancing from "./components/Freelancing";
 import GithubHeatmap from "./components/GithubHeatmap";
@@ -20,17 +17,13 @@ function App() {
       <LenisProvider>
         <Navbar />
         <Hero />
-        {/* <Education /> */}
         <Experience />
         <Freelancing />
         <Projects />
-        {/* <Web3 /> */}
         <Designs />
         <Skills />
-        {/* <Achievements /> */}
         <GithubHeatmap />
         <Contact />
-        {/* <ChatbotButton /> */}
       </LenisProvider>
     </>
   );
